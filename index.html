@@ -1,15 +1,17 @@
 <!DOCTYPE html>
-<html lang="tr">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Doguner's Tweak Repo - CarSplit</title>
+    <title>Doguner's Tweak Repo — CarSplit</title>
     <style>
         :root {
             --bg: #0a0a0c;
             --card: #15151a;
             --accent: #3b82f6;
             --accent-glow: rgba(59, 130, 246, 0.3);
+            --gumroad: #ec4899;
+            --gumroad-glow: rgba(236, 72, 153, 0.35);
             --text: #f3f4f6;
             --muted: #9ca3af;
         }
@@ -59,6 +61,17 @@
             display: inline-block;
             margin-bottom: 12px;
         }
+        .badge-free {
+            background: #059669;
+            color: white;
+            font-size: 0.75rem;
+            padding: 4px 10px;
+            border-radius: 12px;
+            font-weight: bold;
+            display: inline-block;
+            margin-bottom: 12px;
+            margin-left: 6px;
+        }
         .features {
             list-style: none;
             padding: 0;
@@ -102,6 +115,25 @@
             background: rgba(255, 255, 255, 0.1);
             box-shadow: none;
         }
+        .btn-donate {
+            display: block;
+            width: 100%;
+            box-sizing: border-box;
+            background: linear-gradient(135deg, #ec4899, #8b5cf6);
+            color: white;
+            text-decoration: none;
+            text-align: center;
+            padding: 14px 16px;
+            border-radius: 14px;
+            font-weight: 700;
+            margin-top: 14px;
+            transition: all 0.2s;
+            box-shadow: 0 6px 20px rgba(236, 72, 153, 0.35);
+        }
+        .btn-donate:hover {
+            opacity: 0.95;
+            transform: translateY(-2px);
+        }
         .footer {
             text-align: center;
             color: var(--muted);
@@ -119,35 +151,49 @@
 
         <div class="card">
             <span class="badge">BETA v1.0.0-beta1</span>
+            <span class="badge-free">100% FREE</span>
             <h2 style="margin: 0 0 10px 0;">CarSplit (CarPlay Dual-Screen)</h2>
             <p style="color: var(--muted); margin: 0;">
-                Apple CarPlay üzerinde aynı anda iki bağımsız uygulamayı (YouTube + Harita, vb.) yan yana bölünmüş ekranda (Split-Screen) çalıştırın.
+                Run two independent applications (Navigation + YouTube/Music, etc.) simultaneously side-by-side in Split-Screen mode on Apple CarPlay.
             </p>
 
             <ul class="features">
-                <li>Dopamine 2 Rootless (iOS 15.0 - 15.8.x) ile tam uyumlu</li>
-                <li>Saat veya Ana Ekran butonuna basılı tutarak anında geçiş</li>
-                <li>Çift dokunmatik giriş ve bağımsız pencere yönetimi</li>
-                <li>CarBridge entegrasyonu ile tam stabilite</li>
+                <li>Fully compatible with Dopamine 2 Rootless (iOS 15.0 – 15.8.x)</li>
+                <li>One-tap Split-Screen toggle directly from the CarPlay Status Bar Clock</li>
+                <li>Settings app integration with dynamic Enable/Disable control (Disabled by default)</li>
+                <li>Integrated one-tap diagnostic reporting for cross-vehicle compatibility</li>
+                <li>Full localization support in 10 languages</li>
+                <li>Dual independent touch input and window management</li>
             </ul>
 
             <div class="btn-group">
-                <a href="sileo://source/https://" class="btn" id="sileoBtn">Sileo'ya Ekle</a>
-                <a href="zbra://sources/add/https://" class="btn btn-secondary" id="zebraBtn">Zebra'ya Ekle</a>
+                <a href="sileo://source/https://" class="btn" id="sileoBtn">Add to Sileo</a>
+                <a href="zbra://sources/add/https://" class="btn btn-secondary" id="zebraBtn">Add to Zebra</a>
             </div>
         </div>
 
         <div class="card">
-            <h3 style="margin: 0 0 10px 0;">Nasıl Kurulur?</h3>
+            <h3 style="margin: 0 0 10px 0;">How to Install</h3>
             <ol style="color: var(--muted); padding-left: 20px; margin: 0; line-height: 1.6;">
-                <li>Yukarıdaki <b>Sileo'ya Ekle</b> butonuna dokunun (veya repo URL'sini kopyalayıp kaynaklara yapıştırın).</li>
-                <li>Kaynaklar yenilendikten sonra <b>CarSplit</b> paketini aratıp kurun.</li>
-                <li>Aracınıza bağlandığınızda saat butonuna veya Dashboard butonuna basılı tutarak split modunu açın.</li>
+                <li>Tap <b>Add to Sileo</b> above (or copy this repo URL into your package manager sources).</li>
+                <li>Refresh sources and install the <b>CarSplit</b> package.</li>
+                <li>Open <b>Settings → CarSplit</b> and toggle <b>Enable CarSplit</b> ON.</li>
+                <li>Connect to your car's CarPlay screen and tap the status bar clock icon to enter split-screen mode.</li>
             </ol>
         </div>
 
+        <div class="card" style="border: 1px solid rgba(236, 72, 153, 0.3);">
+            <h3 style="margin: 0 0 8px 0;">☕ Support Independent Development</h3>
+            <p style="color: var(--muted); margin: 0; font-size: 0.95rem; line-height: 1.5;">
+                All my tweaks are 100% free and open for the community. If CarSplit brought new life to your car's dashboard, consider buying me a coffee on Gumroad to support ongoing development and hardware testing!
+            </p>
+            <a href="https://aliciamaze.gumroad.com/l/doguner-tweak-lab" target="_blank" class="btn-donate">
+                ☕ Buy Me a Coffee on Gumroad
+            </a>
+        </div>
+
         <div class="footer">
-            <p>© 2026 Doguner. Sürüş güvenliğinizi tehlikeye atmayınız. Apple Inc. ile resmi bir bağı yoktur.</p>
+            <p>© 2026 Doguner. Drive safely and keep your attention on the road. Not affiliated with Apple Inc.</p>
         </div>
     </div>
 
