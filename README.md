@@ -27,19 +27,21 @@ Both applications remain completely active with independent touch input routing,
 Verified and tested on actual CarPlay vehicle displays:
 
 <p align="center">
-  <img src="demo1.png" alt="CarSplit - Google Maps & YouTube" width="48%" />
+  <img src="IMG_1188.PNG" alt="CarSplit - YouTube Music & Google Maps" width="48%" />
   &nbsp;
-  <img src="demo3.png" alt="CarSplit - ChatGPT AI & YouTube" width="48%" />
+  <img src="IMG_1190.PNG" alt="CarSplit - Google Maps & YouTube Music" width="48%" />
 </p>
 <p align="center">
-  <img src="demo4.png" alt="CarSplit - Yandex Maps & Media" width="48%" />
+  <img src="IMG_1192.PNG" alt="CarSplit - DeepSeek AI & YouTube" width="48%" />
   &nbsp;
-  <img src="demo2.png" alt="CarSplit - CarPlay Home & Video" width="48%" />
+  <img src="demo1.png" alt="CarSplit - Google Maps & YouTube Premium" width="48%" />
+</p>
+<p align="center">
+  <img src="demo2.png" alt="CarSplit - YouTube & Google Maps Reversed" width="48%" />
 </p>
 
 <p align="center">
-  <i>Top Left: Maps (50%) + Video (50%) &nbsp;|&nbsp; Top Right: AI Chat (50%) + Video (50%)<br>
-  Bottom Left: Yandex Navigation (50%) + Video (50%) &nbsp;|&nbsp; Bottom Right: Home Launcher (50%) + Media (50%)</i>
+  <i>Real CarPlay Screenshots: YouTube Music + Google Maps, Dual-Orientation Layouts, DeepSeek AI Assistant + Media Streaming.</i>
 </p>
 
 ---

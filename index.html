@@ -1109,6 +1109,7 @@
                         <div class="carousel-dot" onclick="goToSlide(1)"></div>
                         <div class="carousel-dot" onclick="goToSlide(2)"></div>
                         <div class="carousel-dot" onclick="goToSlide(3)"></div>
+                        <div class="carousel-dot" onclick="goToSlide(4)"></div>
                     </div>
 
                     <!-- Nav Buttons -->
@@ -1122,44 +1123,56 @@
                     <!-- Scrollview Viewport -->
                     <div class="carousel-viewport" id="carouselViewport" onscroll="handleCarouselScroll()">
                         
-                        <!-- Slide 1: Maps + YouTube -->
+                        <!-- Slide 1: Music + Maps -->
                         <div class="carousel-slide" onclick="openDetailsModalWithSlide(0)">
-                            <img src="demo1.png" alt="Google Maps and YouTube Split Screen on CarPlay">
+                            <img src="IMG_1188.PNG" alt="YouTube Music and Google Maps Split Screen on CarPlay">
                             <div class="slide-overlay">
                                 <div class="slide-caption">
-                                    <div class="slide-title">📍 Google Maps + 🎬 YouTube Premium</div>
-                                    <div class="slide-sub">True simultaneous 50/50 dual-view navigation & media</div>
+                                    <div class="slide-title">🎵 YouTube Music + 📍 Google Maps</div>
+                                    <div class="slide-sub">High-resolution CarPlay navigation and music playback</div>
                                 </div>
                                 <span class="slide-tag">Mode A (50/50)</span>
                             </div>
                         </div>
 
-                        <!-- Slide 2: AI ChatGPT + YouTube -->
+                        <!-- Slide 2: Maps + Music (Reversed) -->
                         <div class="carousel-slide" onclick="openDetailsModalWithSlide(1)">
-                            <img src="demo3.png" alt="ChatGPT AI Assistant and YouTube Split on CarPlay">
+                            <img src="IMG_1190.PNG" alt="Google Maps and YouTube Music Split Screen on CarPlay">
                             <div class="slide-overlay">
                                 <div class="slide-caption">
-                                    <div class="slide-title">💬 AI Chat Assistant + 🎬 YouTube</div>
-                                    <div class="slide-sub">Ask AI assistant questions while listening to streams</div>
+                                    <div class="slide-title">📍 Google Maps + 🎵 YouTube Music</div>
+                                    <div class="slide-sub">Reversed orientation - driver-focused navigation</div>
+                                </div>
+                                <span class="slide-tag">Mode B (Reversed)</span>
+                            </div>
+                        </div>
+
+                        <!-- Slide 3: DeepSeek AI + YouTube -->
+                        <div class="carousel-slide" onclick="openDetailsModalWithSlide(2)">
+                            <img src="IMG_1192.PNG" alt="DeepSeek AI Assistant and YouTube on CarPlay">
+                            <div class="slide-overlay">
+                                <div class="slide-caption">
+                                    <div class="slide-title">🤖 DeepSeek AI Assistant + 🎬 YouTube</div>
+                                    <div class="slide-sub">Interactive AI voice & chat companion side-by-side with video</div>
+                                </div>
+                                <span class="slide-tag">AI Assistant</span>
+                            </div>
+                        </div>
+
+                        <!-- Slide 4: Maps + YouTube Premium -->
+                        <div class="carousel-slide" onclick="openDetailsModalWithSlide(3)">
+                            <img src="demo1.png" alt="Google Maps and YouTube Premium Split Screen on CarPlay">
+                            <div class="slide-overlay">
+                                <div class="slide-caption">
+                                    <div class="slide-title">📍 Google Maps + 🎬 YouTube Premium</div>
+                                    <div class="slide-sub">True simultaneous 50/50 dual-view navigation & media</div>
                                 </div>
                                 <span class="slide-tag">Multitasking</span>
                             </div>
                         </div>
 
-                        <!-- Slide 3: Yandex Maps + Media -->
-                        <div class="carousel-slide" onclick="openDetailsModalWithSlide(2)">
-                            <img src="demo4.png" alt="Yandex Maps Navigation and YouTube Media">
-                            <div class="slide-overlay">
-                                <div class="slide-caption">
-                                    <div class="slide-title">🧭 Yandex Maps Navigation + 🎬 Media</div>
-                                    <div class="slide-sub">Any third-party navigation app works out of the box</div>
-                                </div>
-                                <span class="slide-tag">Universal Support</span>
-                            </div>
-                        </div>
-
-                        <!-- Slide 4: CarPlay SpringBoard Grid + YouTube -->
-                        <div class="carousel-slide" onclick="openDetailsModalWithSlide(3)">
+                        <!-- Slide 5: CarPlay Home Grid + Video -->
+                        <div class="carousel-slide" onclick="openDetailsModalWithSlide(4)">
                             <img src="demo2.png" alt="CarPlay App Grid and Video Split Screen">
                             <div class="slide-overlay">
                                 <div class="slide-caption">
@@ -1346,22 +1359,25 @@
                 
                 <!-- Modal Screenshot Switcher Tabs -->
                 <div class="modal-gallery-tabs">
-                    <button class="modal-tab-btn active" id="modalTab0" onclick="switchModalPhoto('demo1.png', 0)">
+                    <button class="modal-tab-btn active" id="modalTab0" onclick="switchModalPhoto('IMG_1188.PNG', 0)">
+                        🎵 Music + 📍 Maps
+                    </button>
+                    <button class="modal-tab-btn" id="modalTab1" onclick="switchModalPhoto('IMG_1190.PNG', 1)">
+                        📍 Maps + 🎵 Music
+                    </button>
+                    <button class="modal-tab-btn" id="modalTab2" onclick="switchModalPhoto('IMG_1192.PNG', 2)">
+                        🤖 DeepSeek + 🎬 Video
+                    </button>
+                    <button class="modal-tab-btn" id="modalTab3" onclick="switchModalPhoto('demo1.png', 3)">
                         📍 Maps + 🎬 YouTube
                     </button>
-                    <button class="modal-tab-btn" id="modalTab1" onclick="switchModalPhoto('demo3.png', 1)">
-                        💬 ChatGPT AI + 🎬 YouTube
-                    </button>
-                    <button class="modal-tab-btn" id="modalTab2" onclick="switchModalPhoto('demo4.png', 2)">
-                        🧭 Yandex Maps + 🎬 Media
-                    </button>
-                    <button class="modal-tab-btn" id="modalTab3" onclick="switchModalPhoto('demo2.png', 3)">
+                    <button class="modal-tab-btn" id="modalTab4" onclick="switchModalPhoto('demo2.png', 4)">
                         📱 Home Grid + 🎬 Media
                     </button>
                 </div>
 
                 <div class="modal-image-stage">
-                    <img id="modalImg" src="demo1.png" alt="CarPlay Screenshot">
+                    <img id="modalImg" src="IMG_1188.PNG" alt="CarPlay Screenshot">
                 </div>
                 <div style="font-size: 0.82rem; color: var(--text-sub); margin-bottom: 20px; text-align: center;">
                     📸 Authentic screenshot captured live from physical vehicle display.
@@ -1447,7 +1463,7 @@
 
         // Carousel Logic
         let currentSlide = 0;
-        const totalSlides = 4;
+        const totalSlides = 5;
         const viewport = document.getElementById('carouselViewport');
         const dots = document.querySelectorAll('.carousel-dot');
         let autoPlayTimer = null;
@@ -1505,7 +1521,7 @@
         startAutoPlay();
 
         // Modal Controllers
-        const photos = ['demo1.png', 'demo3.png', 'demo4.png', 'demo2.png'];
+        const photos = ['IMG_1188.PNG', 'IMG_1190.PNG', 'IMG_1192.PNG', 'demo1.png', 'demo2.png'];
 
         function openDetailsModal() {
             openDetailsModalWithSlide(currentSlide);
@@ -1515,7 +1531,7 @@
             const modal = document.getElementById('detailsModal');
             modal.classList.add('active');
             document.body.style.overflow = 'hidden';
-            switchModalPhoto(photos[slideIdx] || 'demo1.png', slideIdx);
+            switchModalPhoto(photos[slideIdx] || 'IMG_1188.PNG', slideIdx);
         }
 
         function closeDetailsModal() {

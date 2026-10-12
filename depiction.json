@@ -1,6 +1,6 @@
 {
   "minVersion": "0.1",
-  "headerImage": "https://doguner1.github.io/repo/demo1.png",
+  "headerImage": "https://doguner1.github.io/repo/IMG_1188.PNG",
   "tintColor": "#3b82f6",
   "tabs": [
     {
@@ -11,16 +11,20 @@
           "class": "DepictionScreenshotsView",
           "screenshots": [
             {
+              "url": "https://doguner1.github.io/repo/IMG_1188.PNG",
+              "accessibilityText": "YouTube Music & Google Maps Split Screen"
+            },
+            {
+              "url": "https://doguner1.github.io/repo/IMG_1190.PNG",
+              "accessibilityText": "Google Maps & YouTube Music Split Screen"
+            },
+            {
+              "url": "https://doguner1.github.io/repo/IMG_1192.PNG",
+              "accessibilityText": "DeepSeek AI Assistant & YouTube"
+            },
+            {
               "url": "https://doguner1.github.io/repo/demo1.png",
               "accessibilityText": "Google Maps & YouTube Split View"
-            },
-            {
-              "url": "https://doguner1.github.io/repo/demo3.png",
-              "accessibilityText": "ChatGPT AI Assistant & YouTube"
-            },
-            {
-              "url": "https://doguner1.github.io/repo/demo4.png",
-              "accessibilityText": "Yandex Maps Navigation & YouTube"
             },
             {
               "url": "https://doguner1.github.io/repo/demo2.png",
