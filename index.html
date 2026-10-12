@@ -3,25 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Doguner Tweak Lab — iOS & CarPlay Tweaks</title>
+    <title>Doguner Tweak Lab — Apple CarPlay & iOS Tweaks</title>
     <link rel="icon" type="image/png" href="CydiaIcon.png">
+    <meta name="theme-color" content="#0a0d14">
+    <meta name="description" content="Independent Apple CarPlay multitasking and next-generation rootless iOS tweaks. Tested in real vehicles, 100% free and open for the community.">
+
     <style>
         :root {
-            --bg: #090b10;
-            --card-bg: rgba(18, 22, 34, 0.72);
-            --card-border: rgba(255, 255, 255, 0.08);
-            --card-hover-border: rgba(59, 130, 246, 0.4);
+            --bg: #080b11;
+            --surface: rgba(17, 23, 38, 0.72);
+            --surface-elevated: rgba(26, 35, 58, 0.85);
+            --border: rgba(255, 255, 255, 0.08);
+            --border-hover: rgba(59, 130, 246, 0.45);
             --accent: #3b82f6;
-            --accent-gradient: linear-gradient(135deg, #3b82f6, #8b5cf6);
             --accent-glow: rgba(59, 130, 246, 0.35);
+            --accent-gradient: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
             --gumroad: #ec4899;
-            --gumroad-gradient: linear-gradient(135deg, #ec4899, #8b5cf6);
             --gumroad-glow: rgba(236, 72, 153, 0.35);
-            --text-primary: #f3f4f6;
-            --text-secondary: #9ca3af;
+            --gumroad-gradient: linear-gradient(135deg, #ec4899 0%, #8b5cf6 100%);
+            --text-main: #f9fafb;
+            --text-sub: #9ca3af;
+            --text-muted: #6b7280;
             --success: #10b981;
-            --radius-lg: 20px;
-            --radius-md: 14px;
+            --badge-bg: rgba(15, 23, 42, 0.75);
+            --radius-xl: 22px;
+            --radius-lg: 16px;
+            --radius-md: 12px;
             --radius-sm: 8px;
         }
 
@@ -29,19 +36,20 @@
             box-sizing: border-box;
             margin: 0;
             padding: 0;
+            -webkit-tap-highlight-color: transparent;
         }
 
         body {
             font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
             background-color: var(--bg);
-            color: var(--text-primary);
+            color: var(--text-main);
             min-height: 100vh;
             overflow-x: hidden;
+            line-height: 1.55;
             position: relative;
-            line-height: 1.6;
         }
 
-        /* Ambient Animated Mesh Background */
+        /* Ambient Dynamic Mesh Canvas */
         .ambient-mesh {
             position: fixed;
             top: 0;
@@ -56,84 +64,83 @@
         .orb {
             position: absolute;
             border-radius: 50%;
-            filter: blur(100px);
+            filter: blur(110px);
             opacity: 0.28;
-            animation: orbFloat 18s ease-in-out infinite alternate;
+            animation: orbFloat 20s ease-in-out infinite alternate;
         }
 
         .orb-1 {
-            width: 500px;
-            height: 500px;
+            width: 550px;
+            height: 550px;
             background: #2563eb;
-            top: -100px;
-            left: 15%;
+            top: -120px;
+            left: 10%;
         }
 
         .orb-2 {
-            width: 450px;
-            height: 450px;
+            width: 500px;
+            height: 500px;
             background: #7c3aed;
             top: 35%;
-            right: 10%;
-            animation-duration: 22s;
-            animation-delay: -5s;
+            right: 5%;
+            animation-duration: 25s;
+            animation-delay: -6s;
         }
 
         .orb-3 {
-            width: 400px;
-            height: 400px;
+            width: 450px;
+            height: 450px;
             background: #ec4899;
-            bottom: -50px;
-            left: 20%;
-            animation-duration: 25s;
-            animation-delay: -10s;
+            bottom: -80px;
+            left: 25%;
+            animation-duration: 22s;
+            animation-delay: -12s;
         }
 
         @keyframes orbFloat {
             0% { transform: translate(0, 0) scale(1); }
-            50% { transform: translate(60px, 40px) scale(1.1); }
-            100% { transform: translate(-40px, 70px) scale(0.95); }
+            50% { transform: translate(65px, 45px) scale(1.12); }
+            100% { transform: translate(-45px, 75px) scale(0.92); }
         }
 
         /* Container */
         .container {
-            max-width: 900px;
+            max-width: 960px;
             margin: 0 auto;
-            padding: 50px 20px 80px 20px;
+            padding: 45px 20px 80px 20px;
+            position: relative;
+            z-index: 1;
         }
 
-        /* Hero Header */
+        /* Hero Section */
         .hero {
-            text-align: center;
-            margin-bottom: 45px;
             display: flex;
             flex-direction: column;
             align-items: center;
+            text-align: center;
+            margin-bottom: 40px;
         }
 
-        .hero-logo-wrapper {
+        .hero-logo-box {
             position: relative;
             width: 96px;
             height: 96px;
-            margin-bottom: 20px;
+            margin-bottom: 22px;
         }
 
-        .hero-logo-ring {
+        .hero-logo-halo {
             position: absolute;
-            top: -4px;
-            left: -4px;
-            right: -4px;
-            bottom: -4px;
+            inset: -4px;
             border-radius: 26px;
             background: var(--accent-gradient);
-            opacity: 0.6;
-            filter: blur(10px);
+            filter: blur(12px);
+            opacity: 0.65;
             animation: pulseGlow 4s ease-in-out infinite alternate;
         }
 
         @keyframes pulseGlow {
-            0% { opacity: 0.4; transform: scale(0.98); }
-            100% { opacity: 0.8; transform: scale(1.04); }
+            0% { opacity: 0.45; transform: scale(0.97); }
+            100% { opacity: 0.85; transform: scale(1.05); }
         }
 
         .hero-logo {
@@ -144,38 +151,33 @@
             object-fit: cover;
             border: 2px solid rgba(255, 255, 255, 0.15);
             box-shadow: 0 12px 30px rgba(0, 0, 0, 0.6);
-            transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
-        }
-
-        .hero-logo:hover {
-            transform: scale(1.05) rotate(-2deg);
         }
 
         .hero h1 {
             font-size: 2.5rem;
             font-weight: 800;
-            letter-spacing: -0.03em;
-            margin-bottom: 8px;
-            background: linear-gradient(135deg, #ffffff 40%, #93c5fd 100%);
+            letter-spacing: -0.025em;
+            background: linear-gradient(180deg, #ffffff 0%, #d1d5db 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
+            margin-bottom: 12px;
         }
 
         .hero p {
-            font-size: 1.1rem;
-            color: var(--text-secondary);
-            max-width: 580px;
-            margin-bottom: 25px;
+            font-size: 1.08rem;
+            color: var(--text-sub);
+            max-width: 600px;
+            margin-bottom: 26px;
         }
 
-        /* Hero Quick Action Buttons */
+        /* Actions Bar */
         .hero-actions {
             display: flex;
             flex-wrap: wrap;
             gap: 12px;
             justify-content: center;
             width: 100%;
-            max-width: 550px;
+            max-width: 580px;
         }
 
         .btn {
@@ -183,37 +185,36 @@
             align-items: center;
             justify-content: center;
             gap: 8px;
-            padding: 12px 22px;
+            padding: 12px 24px;
             border-radius: var(--radius-md);
             font-size: 0.95rem;
             font-weight: 600;
             text-decoration: none;
             cursor: pointer;
-            transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+            transition: all 0.22s cubic-bezier(0.16, 1, 0.3, 1);
             border: none;
         }
 
         .btn-primary {
             background: var(--accent-gradient);
             color: #ffffff;
-            box-shadow: 0 6px 20px var(--accent-glow);
+            box-shadow: 0 6px 22px var(--accent-glow);
         }
 
         .btn-primary:hover {
             transform: translateY(-2px);
-            box-shadow: 0 8px 25px rgba(59, 130, 246, 0.5);
-            opacity: 0.96;
+            box-shadow: 0 10px 28px rgba(59, 130, 246, 0.55);
         }
 
         .btn-glass {
-            background: rgba(255, 255, 255, 0.06);
-            color: var(--text-primary);
-            border: 1px solid var(--card-border);
-            backdrop-filter: blur(12px);
+            background: rgba(255, 255, 255, 0.05);
+            color: var(--text-main);
+            border: 1px solid var(--border);
+            backdrop-filter: blur(14px);
         }
 
         .btn-glass:hover {
-            background: rgba(255, 255, 255, 0.12);
+            background: rgba(255, 255, 255, 0.1);
             border-color: rgba(255, 255, 255, 0.2);
             transform: translateY(-2px);
         }
@@ -221,138 +222,271 @@
         .btn-donate {
             background: var(--gumroad-gradient);
             color: white;
-            box-shadow: 0 6px 20px var(--gumroad-glow);
+            box-shadow: 0 6px 22px var(--gumroad-glow);
         }
 
         .btn-donate:hover {
             transform: translateY(-2px);
-            box-shadow: 0 8px 26px rgba(236, 72, 153, 0.5);
+            box-shadow: 0 10px 28px rgba(236, 72, 153, 0.55);
         }
 
-        /* Repo Metrics Bar */
-        .metrics-bar {
+        /* Highlights Grid */
+        .highlights-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 15px;
-            margin: 35px 0 45px 0;
+            gap: 14px;
+            margin: 36px 0 48px 0;
         }
 
-        .metric-card {
-            background: var(--card-bg);
-            border: 1px solid var(--card-border);
+        .highlight-item {
+            background: var(--surface);
+            border: 1px solid var(--border);
             border-radius: var(--radius-md);
-            padding: 16px 20px;
+            padding: 16px 18px;
             text-align: center;
             backdrop-filter: blur(16px);
-            transition: border-color 0.2s;
+            transition: border-color 0.25s, transform 0.25s;
         }
 
-        .metric-card:hover {
-            border-color: rgba(255, 255, 255, 0.16);
+        .highlight-item:hover {
+            border-color: var(--border-hover);
+            transform: translateY(-2px);
         }
 
-        .metric-value {
-            font-size: 1.3rem;
+        .highlight-val {
+            font-size: 1.25rem;
             font-weight: 700;
             color: #ffffff;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 6px;
+            margin-bottom: 2px;
         }
 
-        .metric-label {
+        .highlight-lbl {
             font-size: 0.8rem;
-            color: var(--text-secondary);
+            color: var(--text-sub);
             text-transform: uppercase;
-            letter-spacing: 0.05em;
-            margin-top: 4px;
+            letter-spacing: 0.04em;
         }
 
-        /* Section Title */
+        /* Section Headers */
         .section-header {
             display: flex;
             align-items: center;
             justify-content: space-between;
-            margin-bottom: 20px;
+            margin-bottom: 22px;
         }
 
         .section-title {
-            font-size: 1.35rem;
+            font-size: 1.4rem;
             font-weight: 700;
-            color: #ffffff;
             display: flex;
             align-items: center;
             gap: 10px;
         }
 
         .badge-count {
-            background: rgba(59, 130, 246, 0.15);
+            font-size: 0.72rem;
+            font-weight: 700;
+            background: rgba(59, 130, 246, 0.2);
             color: #60a5fa;
             border: 1px solid rgba(59, 130, 246, 0.3);
-            font-size: 0.75rem;
-            padding: 2px 8px;
+            padding: 3px 9px;
             border-radius: 20px;
         }
 
-        /* Tweak Cards Grid */
-        .tweaks-grid {
+        /* Tweaks Cards Grid */
+        .cards-grid {
             display: grid;
             grid-template-columns: 1fr;
-            gap: 24px;
+            gap: 28px;
             margin-bottom: 45px;
         }
 
-        /* Interactive Tweak Card */
         .tweak-card {
-            background: var(--card-bg);
-            border: 1px solid var(--card-border);
-            border-radius: var(--radius-lg);
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-xl);
             overflow: hidden;
             backdrop-filter: blur(20px);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-            position: relative;
+            transition: border-color 0.3s, box-shadow 0.3s, transform 0.3s;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
         }
 
         .tweak-card:hover {
-            border-color: var(--card-hover-border);
-            transform: translateY(-4px);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5), 0 0 30px rgba(59, 130, 246, 0.15);
+            border-color: var(--border-hover);
+            box-shadow: 0 16px 40px rgba(59, 130, 246, 0.2);
         }
 
-        .tweak-cover {
-            width: 100%;
-            height: 220px;
+        /* ================= CAROUSEL / SCROLLVIEW SYSTEM ================= */
+        .carousel-wrapper {
             position: relative;
+            width: 100%;
+            background: #000000;
             overflow: hidden;
-            background: #111420;
-            cursor: pointer;
+            border-bottom: 1px solid var(--border);
         }
 
-        .tweak-cover img {
+        .carousel-viewport {
+            display: flex;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            scroll-behavior: smooth;
+            -webkit-overflow-scrolling: touch;
+            scrollbar-width: none;
+            width: 100%;
+            height: 380px;
+        }
+
+        .carousel-viewport::-webkit-scrollbar {
+            display: none;
+        }
+
+        .carousel-slide {
+            flex: 0 0 100%;
+            width: 100%;
+            height: 100%;
+            scroll-snap-align: start;
+            position: relative;
+            cursor: pointer;
+            overflow: hidden;
+            background: #05070a;
+        }
+
+        .carousel-slide img {
             width: 100%;
             height: 100%;
             object-fit: cover;
-            transition: transform 0.5s ease;
+            object-position: center;
+            display: block;
+            transition: transform 0.4s ease;
         }
 
-        .tweak-card:hover .tweak-cover img {
-            transform: scale(1.04);
+        .carousel-slide:hover img {
+            transform: scale(1.02);
         }
 
-        .tweak-cover-badge {
+        /* Slide Overlay Details */
+        .slide-overlay {
             position: absolute;
-            top: 14px;
-            left: 14px;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 24px 20px 14px 20px;
+            background: linear-gradient(180deg, transparent 0%, rgba(5, 7, 12, 0.88) 85%);
             display: flex;
+            align-items: flex-end;
+            justify-content: space-between;
+            pointer-events: none;
+        }
+
+        .slide-caption {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+
+        .slide-title {
+            font-size: 1.05rem;
+            font-weight: 700;
+            color: #ffffff;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.8);
+            display: flex;
+            align-items: center;
             gap: 8px;
+        }
+
+        .slide-sub {
+            font-size: 0.82rem;
+            color: #d1d5db;
+            text-shadow: 0 2px 8px rgba(0, 0, 0, 0.8);
+        }
+
+        .slide-tag {
+            font-size: 0.72rem;
+            font-weight: 700;
+            background: rgba(59, 130, 246, 0.85);
+            color: #ffffff;
+            padding: 4px 10px;
+            border-radius: 6px;
+            backdrop-filter: blur(8px);
+            align-self: flex-end;
+            margin-bottom: 2px;
+        }
+
+        /* Carousel Navigation Buttons */
+        .carousel-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            background: rgba(15, 23, 42, 0.75);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            backdrop-filter: blur(12px);
+            transition: all 0.2s ease;
+            z-index: 5;
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.5);
+        }
+
+        .carousel-btn:hover {
+            background: rgba(59, 130, 246, 0.85);
+            border-color: rgba(255, 255, 255, 0.3);
+            transform: translateY(-50%) scale(1.08);
+        }
+
+        .carousel-btn-prev { left: 16px; }
+        .carousel-btn-next { right: 16px; }
+
+        /* Carousel Dots */
+        .carousel-dots {
+            position: absolute;
+            top: 16px;
+            right: 16px;
+            display: flex;
+            gap: 6px;
+            z-index: 6;
+            background: rgba(10, 15, 26, 0.65);
+            padding: 6px 10px;
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .carousel-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.35);
+            cursor: pointer;
+            transition: all 0.25s ease;
+        }
+
+        .carousel-dot.active {
+            width: 22px;
+            border-radius: 10px;
+            background: #3b82f6;
+            box-shadow: 0 0 10px rgba(59, 130, 246, 0.8);
+        }
+
+        /* Top Badges */
+        .carousel-badges {
+            position: absolute;
+            top: 16px;
+            left: 16px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+            z-index: 6;
         }
 
         .badge {
             font-size: 0.72rem;
             font-weight: 700;
-            text-transform: uppercase;
             padding: 5px 10px;
             border-radius: 8px;
             backdrop-filter: blur(10px);
@@ -378,62 +512,64 @@
             color: white;
         }
 
+        /* Tweak Card Body */
         .tweak-body {
-            padding: 24px;
+            padding: 26px 28px;
         }
 
         .tweak-header {
             display: flex;
             align-items: center;
             justify-content: space-between;
-            margin-bottom: 12px;
+            margin-bottom: 14px;
         }
 
         .tweak-identity {
             display: flex;
             align-items: center;
-            gap: 14px;
+            gap: 16px;
         }
 
         .tweak-app-icon {
-            width: 48px;
-            height: 48px;
-            border-radius: 12px;
-            border: 1px solid rgba(255, 255, 255, 0.1);
+            width: 52px;
+            height: 52px;
+            border-radius: 14px;
+            border: 1px solid rgba(255, 255, 255, 0.12);
             object-fit: cover;
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
         }
 
         .tweak-title-group h3 {
-            font-size: 1.35rem;
+            font-size: 1.4rem;
             font-weight: 700;
             color: #ffffff;
-            letter-spacing: -0.01em;
+            letter-spacing: -0.015em;
         }
 
         .tweak-title-group span {
             font-size: 0.85rem;
-            color: var(--text-secondary);
+            color: var(--text-sub);
         }
 
         .tweak-desc {
-            font-size: 0.96rem;
+            font-size: 0.98rem;
             color: #d1d5db;
-            margin-bottom: 18px;
-            line-height: 1.55;
+            margin-bottom: 20px;
+            line-height: 1.6;
         }
 
         .tweak-tags {
             display: flex;
             flex-wrap: wrap;
             gap: 8px;
-            margin-bottom: 22px;
+            margin-bottom: 24px;
         }
 
         .tag {
             background: rgba(255, 255, 255, 0.05);
             border: 1px solid rgba(255, 255, 255, 0.08);
-            font-size: 0.75rem;
-            color: var(--text-secondary);
+            font-size: 0.76rem;
+            color: var(--text-sub);
             padding: 4px 10px;
             border-radius: 6px;
         }
@@ -447,160 +583,194 @@
             flex: 1;
         }
 
-        /* Coming Soon Teaser Card */
-        .tweak-card-teaser {
-            border: 1px dashed rgba(255, 255, 255, 0.12);
-            background: rgba(18, 22, 34, 0.35);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 35px 24px;
-            text-align: center;
+        /* Teaser Secondary Cards Grid */
+        .teaser-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            margin-bottom: 45px;
         }
 
-        .teaser-content {
-            max-width: 420px;
+        .teaser-card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-lg);
+            padding: 24px;
+            backdrop-filter: blur(16px);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: all 0.25s ease;
+        }
+
+        .teaser-card:hover {
+            border-color: rgba(255, 255, 255, 0.16);
+            transform: translateY(-2px);
+        }
+
+        .teaser-top {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            margin-bottom: 14px;
         }
 
         .teaser-icon {
-            font-size: 2rem;
-            margin-bottom: 12px;
-            display: inline-block;
+            font-size: 1.8rem;
+            width: 46px;
+            height: 46px;
+            border-radius: 12px;
+            background: rgba(255, 255, 255, 0.05);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid var(--border);
         }
 
-        /* Install Steps Section */
+        .teaser-status {
+            font-size: 0.7rem;
+            font-weight: 700;
+            padding: 3px 8px;
+            border-radius: 6px;
+            background: rgba(234, 179, 8, 0.15);
+            color: #facc15;
+            border: 1px solid rgba(234, 179, 8, 0.3);
+            text-transform: uppercase;
+        }
+
+        .teaser-card h4 {
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: #ffffff;
+            margin-bottom: 6px;
+        }
+
+        .teaser-card p {
+            font-size: 0.88rem;
+            color: var(--text-sub);
+            line-height: 1.5;
+        }
+
+        /* Info Card */
         .info-card {
-            background: var(--card-bg);
-            border: 1px solid var(--card-border);
+            background: var(--surface);
+            border: 1px solid var(--border);
             border-radius: var(--radius-lg);
-            padding: 28px;
-            margin-bottom: 30px;
+            padding: 28px 30px;
             backdrop-filter: blur(16px);
+            margin-bottom: 30px;
         }
 
         .info-card h3 {
             font-size: 1.25rem;
+            font-weight: 700;
+            color: #ffffff;
             margin-bottom: 16px;
             display: flex;
             align-items: center;
-            gap: 8px;
+            gap: 10px;
         }
 
         .steps-list {
-            list-style: none;
-            counter-reset: steps-counter;
+            padding-left: 20px;
+            color: #d1d5db;
+            font-size: 0.95rem;
         }
 
         .steps-list li {
-            position: relative;
-            padding-left: 40px;
-            margin-bottom: 16px;
-            font-size: 0.95rem;
-            color: #d1d5db;
+            margin-bottom: 10px;
+            line-height: 1.55;
         }
 
-        .steps-list li::before {
-            counter-increment: steps-counter;
-            content: counter(steps-counter);
-            position: absolute;
-            left: 0;
-            top: 2px;
-            width: 26px;
-            height: 26px;
-            background: rgba(59, 130, 246, 0.15);
-            border: 1px solid rgba(59, 130, 246, 0.35);
-            color: #60a5fa;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 0.8rem;
-            font-weight: 700;
-        }
-
-        /* Support / Donate Banner */
-        .donate-card {
-            background: linear-gradient(135deg, rgba(236, 72, 153, 0.12), rgba(139, 92, 246, 0.12));
-            border: 1px solid rgba(236, 72, 153, 0.3);
-            border-radius: var(--radius-lg);
-            padding: 28px;
-            margin-bottom: 40px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 20px;
-            flex-wrap: wrap;
-        }
-
-        .donate-text h3 {
-            font-size: 1.25rem;
-            margin-bottom: 6px;
+        .steps-list b {
             color: #ffffff;
         }
 
-        .donate-text p {
-            color: var(--text-secondary);
-            font-size: 0.92rem;
-            max-width: 500px;
+        /* Donation Callout Card */
+        .donate-card {
+            background: linear-gradient(135deg, rgba(236, 72, 153, 0.12) 0%, rgba(139, 92, 246, 0.12) 100%);
+            border: 1px solid rgba(236, 72, 153, 0.35);
+            border-radius: var(--radius-xl);
+            padding: 30px 32px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 24px;
+            margin-bottom: 40px;
+            backdrop-filter: blur(20px);
+            box-shadow: 0 10px 30px rgba(236, 72, 153, 0.12);
         }
 
-        /* Interactive Modal */
+        .donate-card h3 {
+            font-size: 1.35rem;
+            font-weight: 700;
+            color: #ffffff;
+            margin-bottom: 6px;
+        }
+
+        .donate-card p {
+            font-size: 0.94rem;
+            color: #e2e8f0;
+            line-height: 1.55;
+        }
+
+        /* Modal Backdrop */
         .modal-backdrop {
             position: fixed;
             top: 0;
             left: 0;
             width: 100vw;
             height: 100vh;
-            background: rgba(0, 0, 0, 0.75);
+            background: rgba(0, 0, 0, 0.82);
             backdrop-filter: blur(14px);
             z-index: 999;
-            display: none;
+            display: flex;
             align-items: center;
             justify-content: center;
             padding: 20px;
             opacity: 0;
-            transition: opacity 0.3s ease;
+            pointer-events: none;
+            transition: opacity 0.25s ease;
         }
 
         .modal-backdrop.active {
-            display: flex;
             opacity: 1;
+            pointer-events: auto;
         }
 
         .modal-container {
-            background: #111422;
+            background: #0f1422;
             border: 1px solid rgba(255, 255, 255, 0.12);
-            border-radius: 24px;
-            max-width: 720px;
+            border-radius: var(--radius-xl);
             width: 100%;
+            max-width: 720px;
             max-height: 90vh;
             overflow-y: auto;
-            box-shadow: 0 25px 60px rgba(0, 0, 0, 0.7);
-            transform: scale(0.92) translateY(20px);
-            transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
-            position: relative;
+            box-shadow: 0 25px 60px rgba(0, 0, 0, 0.8);
+            transform: scale(0.95);
+            transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
         }
 
         .modal-backdrop.active .modal-container {
-            transform: scale(1) translateY(0);
+            transform: scale(1);
         }
 
         .modal-header {
             padding: 20px 24px;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+            border-bottom: 1px solid var(--border);
             display: flex;
             align-items: center;
             justify-content: space-between;
             position: sticky;
             top: 0;
-            background: #111422;
+            background: #0f1422;
             z-index: 10;
         }
 
         .modal-header h2 {
-            font-size: 1.3rem;
+            font-size: 1.25rem;
             font-weight: 700;
-            color: white;
+            color: #ffffff;
             display: flex;
             align-items: center;
             gap: 10px;
@@ -609,77 +779,75 @@
         .btn-close {
             background: rgba(255, 255, 255, 0.08);
             border: none;
-            color: white;
-            width: 34px;
-            height: 34px;
+            color: var(--text-sub);
+            width: 32px;
+            height: 32px;
             border-radius: 50%;
+            font-size: 1.2rem;
             cursor: pointer;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 1.1rem;
-            transition: background 0.2s;
+            transition: all 0.2s;
         }
 
         .btn-close:hover {
-            background: rgba(255, 255, 255, 0.18);
+            background: rgba(255, 255, 255, 0.2);
+            color: #ffffff;
         }
 
         .modal-body {
             padding: 24px;
         }
 
-        /* Screenshot Interactive Viewer */
-        .screenshot-viewer {
-            margin-bottom: 24px;
-        }
-
-        .screenshot-tabs {
-            display: flex;
+        /* Modal Gallery */
+        .modal-gallery-tabs {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
             gap: 8px;
-            margin-bottom: 12px;
+            margin-bottom: 14px;
         }
 
-        .screenshot-tab {
-            padding: 8px 16px;
-            border-radius: var(--radius-sm);
+        .modal-tab-btn {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid var(--border);
+            color: var(--text-sub);
+            padding: 10px;
+            border-radius: 8px;
             font-size: 0.85rem;
             font-weight: 600;
             cursor: pointer;
-            background: rgba(255, 255, 255, 0.05);
-            border: 1px solid var(--card-border);
-            color: var(--text-secondary);
             transition: all 0.2s;
+            text-align: left;
         }
 
-        .screenshot-tab.active {
+        .modal-tab-btn.active {
             background: var(--accent);
             color: white;
             border-color: var(--accent);
         }
 
-        .screenshot-display {
+        .modal-image-stage {
             width: 100%;
-            height: 260px;
-            border-radius: 14px;
+            height: 280px;
+            background: #000;
+            border-radius: var(--radius-md);
             overflow: hidden;
             border: 1px solid rgba(255, 255, 255, 0.1);
-            background: #000;
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+            margin-bottom: 10px;
         }
 
-        .screenshot-display img {
+        .modal-image-stage img {
             width: 100%;
             height: 100%;
             object-fit: cover;
-            transition: opacity 0.3s ease;
+            transition: opacity 0.25s ease;
         }
 
-        /* Tested specs table inside modal */
         .specs-table {
             width: 100%;
             border-collapse: collapse;
-            margin: 18px 0;
+            margin: 16px 0;
             font-size: 0.9rem;
         }
 
@@ -690,12 +858,12 @@
         }
 
         .specs-table th {
-            color: var(--text-secondary);
+            color: var(--text-sub);
             font-weight: 600;
         }
 
         .specs-table td {
-            color: var(--text-primary);
+            color: var(--text-main);
         }
 
         /* Toast Alert */
@@ -728,20 +896,22 @@
         /* Footer */
         .footer {
             text-align: center;
-            color: var(--text-secondary);
+            color: var(--text-muted);
             font-size: 0.85rem;
-            margin-top: 50px;
+            margin-top: 40px;
             border-top: 1px solid rgba(255, 255, 255, 0.06);
-            padding-top: 30px;
+            padding-top: 28px;
         }
 
-        @media (max-width: 650px) {
+        @media (max-width: 768px) {
             .hero h1 { font-size: 2rem; }
-            .metrics-bar { grid-template-columns: 1fr; }
-            .tweak-footer-actions { flex-direction: column; }
-            .screenshot-display { height: 180px; }
+            .highlights-grid { grid-template-columns: 1fr; }
+            .teaser-grid { grid-template-columns: 1fr; }
+            .carousel-viewport { height: 240px; }
+            .modal-gallery-tabs { grid-template-columns: 1fr; }
             .donate-card { flex-direction: column; align-items: stretch; text-align: center; }
             .donate-card .btn-donate { width: 100%; }
+            .tweak-footer-actions { flex-direction: column; }
         }
     </style>
 </head>
@@ -759,12 +929,12 @@
         
         <!-- Hero Section -->
         <header class="hero">
-            <div class="hero-logo-wrapper">
-                <div class="hero-logo-ring"></div>
+            <div class="hero-logo-box">
+                <div class="hero-logo-halo"></div>
                 <img src="CydiaIcon.png" alt="Doguner Repo Logo" class="hero-logo">
             </div>
             <h1>Doguner Tweak Lab</h1>
-            <p>Independent Apple CarPlay multitasking & next-generation iOS tweaks. Built with precision, kept 100% free.</p>
+            <p>Independent Apple CarPlay multitasking and next-generation rootless tweaks for iOS. Crafted with care, free forever.</p>
             
             <div class="hero-actions">
                 <a href="#" class="btn btn-primary" id="btnSileo">
@@ -782,70 +952,144 @@
             </div>
         </header>
 
-        <!-- Repository Metrics -->
-        <div class="metrics-bar">
-            <div class="metric-card">
-                <div class="metric-value">🚗 CarSplit</div>
-                <div class="metric-label">Flagship Dual-Screen</div>
+        <!-- Highlights Bar -->
+        <div class="highlights-grid">
+            <div class="highlight-item">
+                <div class="highlight-val">🚗 CarSplit</div>
+                <div class="highlight-lbl">CarPlay Dual-Screen</div>
             </div>
-            <div class="metric-card">
-                <div class="metric-value">⚡ iOS 15.8.8</div>
-                <div class="metric-label">Verified in Vehicle</div>
+            <div class="highlight-item">
+                <div class="highlight-val">⚡ iOS 15.8.8</div>
+                <div class="highlight-lbl">In-Car Tested Hardware</div>
             </div>
-            <div class="metric-card">
-                <div class="metric-value">🛡️ 100% Free</div>
-                <div class="metric-label">No Paywalls Ever</div>
+            <div class="highlight-item">
+                <div class="highlight-val">🛡️ 100% Free</div>
+                <div class="highlight-lbl">Open Community Release</div>
             </div>
         </div>
 
-        <!-- Tweaks Showcase Grid -->
+        <!-- Tweaks Section -->
         <div class="section-header">
             <div class="section-title">
                 Available Tweaks
-                <span class="badge-count">1 Active</span>
+                <span class="badge-count">1 Active • 2 In Lab</span>
             </div>
         </div>
 
-        <div class="tweaks-grid">
+        <div class="cards-grid">
             
-            <!-- CarSplit Card -->
+            <!-- Flagship CarSplit Card with Live Interactive Carousel -->
             <div class="tweak-card">
-                <div class="tweak-cover" onclick="openDetailsModal()">
-                    <img src="banner.jpg" alt="CarSplit Banner Preview">
-                    <div class="tweak-cover-badge">
+                
+                <!-- Horizontal ScrollView / Carousel -->
+                <div class="carousel-wrapper">
+                    
+                    <!-- Top Badges -->
+                    <div class="carousel-badges">
                         <span class="badge badge-beta">Beta v1.0.0-beta1</span>
-                        <span class="badge badge-free">100% Free</span>
-                        <span class="badge badge-verified">Tested on iPhone 7</span>
+                        <span class="badge badge-free">Free Community</span>
+                        <span class="badge badge-verified">iPhone 7 Verified</span>
+                    </div>
+
+                    <!-- Slide Indicator Dots -->
+                    <div class="carousel-dots" id="carouselDots">
+                        <div class="carousel-dot active" onclick="goToSlide(0)"></div>
+                        <div class="carousel-dot" onclick="goToSlide(1)"></div>
+                        <div class="carousel-dot" onclick="goToSlide(2)"></div>
+                        <div class="carousel-dot" onclick="goToSlide(3)"></div>
+                    </div>
+
+                    <!-- Nav Buttons -->
+                    <button class="carousel-btn carousel-btn-prev" onclick="prevSlide()" aria-label="Previous Screenshot">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"/></svg>
+                    </button>
+                    <button class="carousel-btn carousel-btn-next" onclick="nextSlide()" aria-label="Next Screenshot">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
+                    </button>
+
+                    <!-- Scrollview Viewport -->
+                    <div class="carousel-viewport" id="carouselViewport" onscroll="handleCarouselScroll()">
+                        
+                        <!-- Slide 1: Maps + YouTube -->
+                        <div class="carousel-slide" onclick="openDetailsModalWithSlide(0)">
+                            <img src="demo1.png" alt="Google Maps and YouTube Split Screen on CarPlay">
+                            <div class="slide-overlay">
+                                <div class="slide-caption">
+                                    <div class="slide-title">📍 Google Maps + 🎬 YouTube Premium</div>
+                                    <div class="slide-sub">True simultaneous 50/50 dual-view navigation & media</div>
+                                </div>
+                                <span class="slide-tag">Mode A (50/50)</span>
+                            </div>
+                        </div>
+
+                        <!-- Slide 2: AI ChatGPT + YouTube -->
+                        <div class="carousel-slide" onclick="openDetailsModalWithSlide(1)">
+                            <img src="demo3.png" alt="ChatGPT AI Assistant and YouTube Split on CarPlay">
+                            <div class="slide-overlay">
+                                <div class="slide-caption">
+                                    <div class="slide-title">💬 AI Chat Assistant + 🎬 YouTube</div>
+                                    <div class="slide-sub">Ask AI assistant questions while listening to streams</div>
+                                </div>
+                                <span class="slide-tag">Multitasking</span>
+                            </div>
+                        </div>
+
+                        <!-- Slide 3: Yandex Maps + Media -->
+                        <div class="carousel-slide" onclick="openDetailsModalWithSlide(2)">
+                            <img src="demo4.png" alt="Yandex Maps Navigation and YouTube Media">
+                            <div class="slide-overlay">
+                                <div class="slide-caption">
+                                    <div class="slide-title">🧭 Yandex Maps Navigation + 🎬 Media</div>
+                                    <div class="slide-sub">Any third-party navigation app works out of the box</div>
+                                </div>
+                                <span class="slide-tag">Universal Support</span>
+                            </div>
+                        </div>
+
+                        <!-- Slide 4: CarPlay SpringBoard Grid + YouTube -->
+                        <div class="carousel-slide" onclick="openDetailsModalWithSlide(3)">
+                            <img src="demo2.png" alt="CarPlay App Grid and Video Split Screen">
+                            <div class="slide-overlay">
+                                <div class="slide-caption">
+                                    <div class="slide-title">📱 CarPlay Home Grid + 🎬 Media Player</div>
+                                    <div class="slide-sub">Browse and launch other apps without stopping playback</div>
+                                </div>
+                                <span class="slide-tag">Home Launcher</span>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
 
+                <!-- Tweak Details Body -->
                 <div class="tweak-body">
                     <div class="tweak-header">
                         <div class="tweak-identity">
                             <img src="icon.png" alt="CarSplit Icon" class="tweak-app-icon">
                             <div class="tweak-title-group">
-                                <h3>CarSplit (CarPlay Dual-Screen)</h3>
-                                <span>by @doguner • Tweaks</span>
+                                <h3>CarSplit (Apple CarPlay Dual-Screen)</h3>
+                                <span>by @doguner • CarPlay Multitasking</span>
                             </div>
                         </div>
                     </div>
 
                     <p class="tweak-desc">
-                        Run two independent applications (e.g. Navigation + YouTube/Music) simultaneously side-by-side in Split-Screen mode on Apple CarPlay. True dual touch input, 1-tap clock switch, and seamless Settings integration.
+                        Run two independent applications simultaneously side-by-side on your CarPlay dashboard. Navigate on Google Maps or Yandex while streaming YouTube or Podcasts. Features dual touch screen input, 1-tap clock layout toggle, native Settings panel with 10 languages, and zero audio pauses.
                     </p>
 
                     <div class="tweak-tags">
                         <span class="tag">#AppleCarPlay</span>
                         <span class="tag">#SplitScreen</span>
+                        <span class="tag">#DualTouch</span>
                         <span class="tag">#DopamineRootless</span>
                         <span class="tag">#iOS15</span>
-                        <span class="tag">#MultiTouch</span>
+                        <span class="tag">#10Languages</span>
                     </div>
 
                     <div class="tweak-footer-actions">
                         <button class="btn btn-primary btn-flex" onclick="openDetailsModal()">
                             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
-                            View Details & Photos
+                            View Details & Vehicle Photos
                         </button>
                         <a href="com.doguner.carsplit_1.0.0-beta1_iphoneos-arm64.deb" class="btn btn-glass" download>
                             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
@@ -855,48 +1099,69 @@
                 </div>
             </div>
 
-            <!-- Future Tweak Teaser -->
-            <div class="tweak-card tweak-card-teaser">
-                <div class="teaser-content">
-                    <span class="teaser-icon">🧪</span>
-                    <h3 style="margin-bottom: 6px; color: #ffffff;">More Tweaks In Development</h3>
-                    <p style="color: var(--text-secondary); font-size: 0.9rem;">
-                        New experiments for iOS CarPlay enhancements and system optimization are actively being prototyped in the lab. Stay tuned!
-                    </p>
+        </div>
+
+        <!-- Teaser Secondary Cards (Lab Pipeline) -->
+        <div class="section-header">
+            <div class="section-title">
+                Lab Prototypes
+                <span class="badge-count">Under Development</span>
+            </div>
+        </div>
+
+        <div class="teaser-grid">
+            <div class="teaser-card">
+                <div>
+                    <div class="teaser-top">
+                        <div class="teaser-icon">⚡</div>
+                        <span class="teaser-status">In R&D</span>
+                    </div>
+                    <h4>CarPlay 60FPS Pro</h4>
+                    <p>Unlocking native 60FPS rendering pipeline on wireless & wired Apple CarPlay displays to eliminate the default 30FPS frame stutter.</p>
                 </div>
             </div>
 
+            <div class="teaser-card">
+                <div>
+                    <div class="teaser-top">
+                        <div class="teaser-icon">🚀</div>
+                        <span class="teaser-status">Prototyping</span>
+                    </div>
+                    <h4>QuickRespring X</h4>
+                    <p>Sub-second lightweight SpringBoard reload daemon for Dopamine 2 rootless environment without freezing background audio or daemons.</p>
+                </div>
+            </div>
         </div>
 
-        <!-- How To Install Card -->
+        <!-- How To Install Guide -->
         <div class="info-card">
-            <h3>📦 How to Install</h3>
+            <h3>📦 Step-by-Step Installation</h3>
             <ol class="steps-list">
-                <li>Tap <b>Add to Sileo</b> or <b>Add to Zebra</b> above (or copy this repository URL into your package manager sources).</li>
-                <li>Wait for sources to refresh and locate <b>CarSplit</b> in the package list.</li>
-                <li>Install the tweak and perform a quick respring.</li>
-                <li>Open <b>Settings → CarSplit</b> on your phone and switch <b>Enable CarSplit</b> to ON (disabled by default for safety).</li>
-                <li>Plug into your car, open your desired apps, and tap the status bar clock to cycle split-screen layouts!</li>
+                <li>Tap <b>Add to Sileo</b> or <b>Add to Zebra</b> above (or paste <code>https://doguner1.github.io/repo/</code> into your package manager sources).</li>
+                <li>Wait for repo sources to refresh and search for <b>CarSplit</b>.</li>
+                <li>Tap <b>Get</b> → <b>Confirm</b> to install. When Sileo completes, tap <b>Restart SpringBoard</b>.</li>
+                <li>Go to iPhone <b>Settings → CarSplit</b> and toggle <b>Enable CarSplit</b> to ON (disabled by default for safety).</li>
+                <li>Connect your iPhone to your car, launch your apps, and simply tap the status bar clock to cycle split layouts!</li>
             </ol>
         </div>
 
-        <!-- Support / Buy Me a Coffee Card -->
+        <!-- Support on Gumroad -->
         <div class="donate-card">
             <div class="donate-text">
                 <h3>☕ Support Independent Development</h3>
                 <p>
-                    All my tweaks are 100% free with no ads or paywalls. If CarSplit improved your car's dashboard, consider buying me a coffee on Gumroad to fund testing hardware and updates!
+                    All tweaks from Doguner Tweak Lab are 100% free and open to the community with zero paywalls. If CarSplit enhanced your driving experience, consider supporting ongoing research and test hardware on Gumroad!
                 </p>
             </div>
-            <a href="https://aliciamaze.gumroad.com/l/doguner-tweak-lab" target="_blank" class="btn btn-donate">
+            <a href="https://aliciamaze.gumroad.com/l/doguner-tweak-lab" target="_blank" class="btn btn-donate" style="white-space: nowrap;">
                 ☕ Buy Me a Coffee on Gumroad
             </a>
         </div>
 
         <!-- Footer -->
         <footer class="footer">
-            <p>© 2026 Doguner. Drive safely and keep your attention focused on the road ahead.</p>
-            <p style="margin-top: 6px; font-size: 0.8rem; opacity: 0.7;">Apple CarPlay is a registered trademark of Apple Inc. CarSplit is an independent community project.</p>
+            <p>© 2026 Doguner Tweak Lab. Drive safely and keep your attention on the road.</p>
+            <p style="margin-top: 6px; font-size: 0.8rem; opacity: 0.75;">Apple CarPlay is a trademark of Apple Inc. CarSplit is an independent community project.</p>
         </footer>
 
     </div>
@@ -907,34 +1172,38 @@
             <div class="modal-header">
                 <h2>
                     <img src="icon.png" style="width: 28px; height: 28px; border-radius: 6px;" alt="">
-                    CarSplit Details & In-Car Verification
+                    CarSplit In-Vehicle Verification
                 </h2>
                 <button class="btn-close" onclick="closeDetailsModal()">&times;</button>
             </div>
 
             <div class="modal-body">
                 
-                <!-- Vehicle Screenshots Interactive Switcher -->
-                <div class="screenshot-viewer">
-                    <div class="screenshot-tabs">
-                        <button class="screenshot-tab active" id="tabA" onclick="switchScreenshot('demo1.png', 'tabA')">
-                            📍 Maps (Left) + 🎬 YouTube (Right)
-                        </button>
-                        <button class="screenshot-tab" id="tabB" onclick="switchScreenshot('demo2.png', 'tabB')">
-                            🎬 YouTube (Left) + 📍 Maps (Right)
-                        </button>
-                    </div>
-
-                    <div class="screenshot-display">
-                        <img id="screenshotImg" src="demo1.png" alt="In-Vehicle CarPlay Split-Screen Verification">
-                    </div>
-                    <div style="font-size: 0.8rem; color: var(--text-secondary); margin-top: 6px; text-align: center;">
-                        📸 Captured directly from verified vehicle CarPlay display.
-                    </div>
+                <!-- Modal Screenshot Switcher Tabs -->
+                <div class="modal-gallery-tabs">
+                    <button class="modal-tab-btn active" id="modalTab0" onclick="switchModalPhoto('demo1.png', 0)">
+                        📍 Maps + 🎬 YouTube
+                    </button>
+                    <button class="modal-tab-btn" id="modalTab1" onclick="switchModalPhoto('demo3.png', 1)">
+                        💬 ChatGPT AI + 🎬 YouTube
+                    </button>
+                    <button class="modal-tab-btn" id="modalTab2" onclick="switchModalPhoto('demo4.png', 2)">
+                        🧭 Yandex Maps + 🎬 Media
+                    </button>
+                    <button class="modal-tab-btn" id="modalTab3" onclick="switchModalPhoto('demo2.png', 3)">
+                        📱 Home Grid + 🎬 Media
+                    </button>
                 </div>
 
-                <!-- Verified Hardware Table -->
-                <h4 style="color: #ffffff; margin-bottom: 8px;">📱 Hardware Compatibility Verification</h4>
+                <div class="modal-image-stage">
+                    <img id="modalImg" src="demo1.png" alt="CarPlay Screenshot">
+                </div>
+                <div style="font-size: 0.82rem; color: var(--text-sub); margin-bottom: 20px; text-align: center;">
+                    📸 Authentic screenshot captured live from physical vehicle display.
+                </div>
+
+                <!-- Verified Hardware Specs -->
+                <h4 style="color: #ffffff; margin-bottom: 8px;">📱 Hardware Compatibility Test</h4>
                 <table class="specs-table">
                     <tr>
                         <th>Device Tested</th>
@@ -945,23 +1214,23 @@
                         <td><b>iOS 15.8.8</b> (Dopamine 2 Rootless)</td>
                     </tr>
                     <tr>
-                        <th>CarPlay Display</th>
-                        <td>Wired & Wireless CarPlay Head Units</td>
+                        <th>Display Protocol</th>
+                        <td>Apple CarPlay Wired & Wireless Protocol</td>
                     </tr>
                     <tr>
                         <th>Other Devices</th>
-                        <td>Community Beta (Submit logs via Settings to report!)</td>
+                        <td>Community Beta (Reports accepted via Settings log sender)</td>
                     </tr>
                 </table>
 
-                <!-- Features list -->
-                <h4 style="color: #ffffff; margin: 16px 0 8px 0;">✨ Core Highlights</h4>
+                <!-- Features Highlights -->
+                <h4 style="color: #ffffff; margin: 18px 0 8px 0;">✨ Architecture & Features</h4>
                 <ul style="color: #d1d5db; padding-left: 20px; font-size: 0.92rem; line-height: 1.6;">
-                    <li><b>True Simultaneous Execution:</b> Both apps stay live and responsive.</li>
+                    <li><b>True Simultaneous Execution:</b> Both apps stay live and active with zero pauses.</li>
                     <li><b>Dual Touch Screen Input:</b> Navigate map while browsing video queue.</li>
                     <li><b>1-Tap Clock Toggle:</b> Cycle Mode A (50/50), Mode B (50/50), and Fullscreen.</li>
                     <li><b>10 Native Languages:</b> Full localization in Settings bundle.</li>
-                    <li><b>Anonymous Diagnostic Reporting:</b> Helps expand compatibility across car brands.</li>
+                    <li><b>Anonymous Diagnostic Reporting:</b> Send crash/device logs directly to developer.</li>
                 </ul>
 
                 <!-- Modal Actions -->
@@ -1011,11 +1280,77 @@
             }, 3000);
         }
 
-        // Modal controller
+        // Carousel Logic
+        let currentSlide = 0;
+        const totalSlides = 4;
+        const viewport = document.getElementById('carouselViewport');
+        const dots = document.querySelectorAll('.carousel-dot');
+        let autoPlayTimer = null;
+
+        function updateDots(idx) {
+            dots.forEach((d, i) => {
+                d.classList.toggle('active', i === idx);
+            });
+        }
+
+        function goToSlide(idx) {
+            currentSlide = idx;
+            viewport.scrollTo({
+                left: idx * viewport.clientWidth,
+                behavior: 'smooth'
+            });
+            updateDots(idx);
+        }
+
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % totalSlides;
+            goToSlide(currentSlide);
+        }
+
+        function prevSlide() {
+            currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+            goToSlide(currentSlide);
+        }
+
+        function handleCarouselScroll() {
+            const slideWidth = viewport.clientWidth;
+            if (!slideWidth) return;
+            const newIndex = Math.round(viewport.scrollLeft / slideWidth);
+            if (newIndex !== currentSlide && newIndex >= 0 && newIndex < totalSlides) {
+                currentSlide = newIndex;
+                updateDots(currentSlide);
+            }
+        }
+
+        // Auto-play carousel
+        function startAutoPlay() {
+            autoPlayTimer = setInterval(() => {
+                nextSlide();
+            }, 4000);
+        }
+
+        function stopAutoPlay() {
+            if (autoPlayTimer) clearInterval(autoPlayTimer);
+        }
+
+        viewport.addEventListener('mouseenter', stopAutoPlay);
+        viewport.addEventListener('mouseleave', startAutoPlay);
+        viewport.addEventListener('touchstart', stopAutoPlay);
+        viewport.addEventListener('touchend', startAutoPlay);
+        startAutoPlay();
+
+        // Modal Controllers
+        const photos = ['demo1.png', 'demo3.png', 'demo4.png', 'demo2.png'];
+
         function openDetailsModal() {
+            openDetailsModalWithSlide(currentSlide);
+        }
+
+        function openDetailsModalWithSlide(slideIdx) {
             const modal = document.getElementById('detailsModal');
             modal.classList.add('active');
             document.body.style.overflow = 'hidden';
+            switchModalPhoto(photos[slideIdx] || 'demo1.png', slideIdx);
         }
 
         function closeDetailsModal() {
@@ -1030,17 +1365,16 @@
             }
         }
 
-        // Keyboard Escape key closes modal
         document.addEventListener('keydown', (e) => {
             if (e.key === 'Escape') closeDetailsModal();
         });
 
-        // Screenshot switcher inside modal
-        function switchScreenshot(imgSrc, tabId) {
-            document.getElementById('screenshotImg').src = imgSrc;
-            document.getElementById('tabA').classList.remove('active');
-            document.getElementById('tabB').classList.remove('active');
-            document.getElementById(tabId).classList.add('active');
+        function switchModalPhoto(src, tabIdx) {
+            document.getElementById('modalImg').src = src;
+            for (let i = 0; i < totalSlides; i++) {
+                const btn = document.getElementById('modalTab' + i);
+                if (btn) btn.classList.toggle('active', i === tabIdx);
+            }
         }
     </script>
 </body>

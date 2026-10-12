@@ -1,6 +1,6 @@
 {
   "minVersion": "0.1",
-  "headerImage": "https://doguner1.github.io/repo/banner.jpg",
+  "headerImage": "https://doguner1.github.io/repo/demo1.png",
   "tintColor": "#3b82f6",
   "tabs": [
     {
@@ -12,11 +12,19 @@
           "screenshots": [
             {
               "url": "https://doguner1.github.io/repo/demo1.png",
-              "accessibilityText": "Google Maps Left & YouTube Right"
+              "accessibilityText": "Google Maps & YouTube Split View"
+            },
+            {
+              "url": "https://doguner1.github.io/repo/demo3.png",
+              "accessibilityText": "ChatGPT AI Assistant & YouTube"
+            },
+            {
+              "url": "https://doguner1.github.io/repo/demo4.png",
+              "accessibilityText": "Yandex Maps Navigation & YouTube"
             },
             {
               "url": "https://doguner1.github.io/repo/demo2.png",
-              "accessibilityText": "YouTube Left & Google Maps Right"
+              "accessibilityText": "CarPlay Home Grid & YouTube"
             }
           ],
           "itemCornerRadius": 10,
@@ -24,7 +32,7 @@
         },
         {
           "class": "DepictionMarkdownView",
-          "markdown": "### 🚗 CarSplit — Apple CarPlay Dual-Screen\n\nRun two apps side-by-side on your Apple CarPlay display simultaneously!\n\n#### 📱 Tested & Verified Hardware\n- **Device:** iPhone 7 (`iPhone9,3`)\n- **Firmware:** iOS 15.8.8 (Dopamine 2 Rootless)\n- **CarPlay Head Unit:** 100% verified in actual vehicle.\n- *Other iOS 15.x / 16.x devices in Community Beta.*\n\n#### ✨ Key Features\n- 🏎️ **True Dual-App Multitasking:** Both apps remain fully active with zero pauses.\n- 👆 **Independent Touch Controls:** Full dual touch-screen input on both halves.\n- ⏱️ **One-Tap Clock Switch:** Tap CarPlay status bar clock to cycle layouts.\n- ⚙️ **Settings App Integration:** Custom toggle (Disabled by default upon install).\n- 🌍 **10 Language Localizations:** Full native translation.\n- 🛡️ **100% Free & Open Community Release:** Strictly not for sale.\n\n> *Tested and confirmed working in real vehicle.*"
+          "markdown": "### 🚗 CarSplit — Apple CarPlay Dual-Screen\n\nRun any two apps side-by-side on your Apple CarPlay display simultaneously!\n\n#### 📱 Tested & Verified Hardware\n- **Device:** iPhone 7 (`iPhone9,3`)\n- **Firmware:** iOS 15.8.8 (Dopamine 2 Rootless)\n- **CarPlay Head Unit:** 100% verified in actual vehicle.\n- *Other iOS 15.x / 16.x devices supported in Community Beta.*\n\n#### ✨ Key Features\n- 🏎️ **True Dual-App Multitasking:** Both apps remain fully active with zero pauses.\n- 🗺️ **Any App Combination:** Maps + YouTube, AI Assistant + Media, Yandex + Navigation, etc.\n- 👆 **Independent Touch Controls:** Full dual touch-screen input on both halves.\n- ⏱️ **One-Tap Clock Switch:** Tap CarPlay status bar clock to cycle layouts.\n- ⚙️ **Settings App Integration:** Custom toggle (Disabled by default upon install).\n- 🌍 **10 Language Localizations:** Full native translation.\n- 🛡️ **100% Free & Open Community Release:** Strictly not for sale.\n\n> *Tested and confirmed working in real vehicle.*"
         },
         {
           "class": "DepictionTableButtonView",
