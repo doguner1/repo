@@ -1,0 +1,8 @@
+Origin: Doguner Repo
+Label: Doguner Repo
+Suite: stable
+Version: 1.0
+Codename: ios
+Architectures: iphoneos-arm64
+Components: main
+Description: Official Repository for CarSplit and iOS Jailbreak Tweaks
