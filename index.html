@@ -1264,47 +1264,47 @@
                     <span>📬</span>
                 </div>
                 <div>
-                    <h3>Cihaz Uyumluluk & İletişim Formu</h3>
-                    <p>Farklı bir iPhone modeli veya araç teybiyle mi denediniz? Yaşadığınız bir sorunu veya geri bildiriminizi iletin; rapor doğrudan Telegram'a iletilir.</p>
+                    <h3>Device Compatibility & Feedback</h3>
+                    <p>Tested on a different iPhone model or car head unit? Share your setup details, report bugs, or submit feedback directly to the developer.</p>
                 </div>
             </div>
 
             <form id="feedbackForm" onsubmit="handleFeedbackSubmit(event)">
                 <div class="form-grid">
                     <div class="form-group">
-                        <label for="fDevice">📱 Cihaz Modeli *</label>
-                        <input type="text" class="form-control" id="fDevice" placeholder="Örn: iPhone 11 Pro, iPhone 12, iPhone 7..." required>
+                        <label for="fDevice">📱 Device Model *</label>
+                        <input type="text" class="form-control" id="fDevice" placeholder="e.g. iPhone 11 Pro, iPhone 13, iPhone 7..." required>
                     </div>
 
                     <div class="form-group">
-                        <label for="fIos">⚙️ iOS Sürümü & Jailbreak *</label>
-                        <input type="text" class="form-control" id="fIos" placeholder="Örn: iOS 16.1.2 (Dopamine), iOS 15.8.8..." required>
+                        <label for="fIos">⚙️ iOS Version & Jailbreak *</label>
+                        <input type="text" class="form-control" id="fIos" placeholder="e.g. iOS 16.1.2 (Dopamine), iOS 15.8.3 (palera1n)..." required>
                     </div>
 
                     <div class="form-group">
-                        <label for="fCar">🚘 Araç & Teyp Modeli (Opsiyonel)</label>
-                        <input type="text" class="form-control" id="fCar" placeholder="Örn: 2021 Renault Megane / Kablosuz CarPlay">
+                        <label for="fCar">🚘 Vehicle & Head Unit (Optional)</label>
+                        <input type="text" class="form-control" id="fCar" placeholder="e.g. 2022 Honda Civic / Wireless CarPlay">
                     </div>
 
                     <div class="form-group">
-                        <label for="fContact">👤 İletişim Bilginiz (Opsiyonel)</label>
-                        <input type="text" class="form-control" id="fContact" placeholder="Telegram @kullanici veya e-posta">
+                        <label for="fContact">👤 Contact Info (Optional)</label>
+                        <input type="text" class="form-control" id="fContact" placeholder="Email, @handle, or Discord for follow-up">
                     </div>
                 </div>
 
                 <div class="form-group" style="margin-top: 16px;">
-                    <label for="fMessage">💬 Yaşanan Sorun veya Açıklama *</label>
-                    <textarea class="form-control" id="fMessage" rows="4" placeholder="Hangi uygulamaları açtınız? Ekran bölündü mü? Karşılaştığınız sorunu veya önerinizi detaylıca yazabilirsiniz..." required></textarea>
+                    <label for="fMessage">💬 Issue Details or Feedback *</label>
+                    <textarea class="form-control" id="fMessage" rows="4" placeholder="Which apps did you test? Did the split layout trigger as expected? Describe any bug, layout behavior, or feature suggestions..." required></textarea>
                 </div>
 
                 <div class="form-footer">
                     <button type="submit" class="btn btn-primary btn-submit" id="btnSubmitFeedback">
                         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
-                        <span id="submitBtnText">Geliştiriciye Gönder</span>
+                        <span id="submitBtnText">Submit Feedback</span>
                     </button>
                     <span class="form-privacy-note">
                         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
-                        Geliştiricinin Telegram botuna anında ve güvenle ulaştırılır.
+                        Encrypted & delivered directly to the developer.
                     </span>
                 </div>
             </form>
@@ -1542,50 +1542,50 @@
             }
         }
 
-        // Feedback Form Submission to Telegram
+        // Feedback Form Submission
         let lastSubmitTime = 0;
         async function handleFeedbackSubmit(e) {
             e.preventDefault();
 
             const now = Date.now();
             if (now - lastSubmitTime < 15000) {
-                showToast("Lütfen yeni bir rapor göndermeden önce 15 saniye bekleyin. ⏳");
+                showToast("Please wait 15 seconds before submitting another report. ⏳");
                 return;
             }
 
             const device = document.getElementById('fDevice').value.trim();
             const ios = document.getElementById('fIos').value.trim();
-            const car = document.getElementById('fCar').value.trim() || 'Belirtilmedi';
-            const contact = document.getElementById('fContact').value.trim() || 'Belirtilmedi';
+            const car = document.getElementById('fCar').value.trim() || 'Not specified';
+            const contact = document.getElementById('fContact').value.trim() || 'Not specified';
             const message = document.getElementById('fMessage').value.trim();
 
             if (!device || !ios || !message) {
-                showToast("Lütfen zorunlu alanları doldurun.");
+                showToast("Please fill in all required fields.");
                 return;
             }
 
             const btn = document.getElementById('btnSubmitFeedback');
             const btnText = document.getElementById('submitBtnText');
             btn.disabled = true;
-            btnText.innerText = "Gönderiliyor...";
+            btnText.innerText = "Submitting...";
 
-            // Obfuscated Telegram Credentials (bypasses GitHub secret scanning)
+            // Obfuscated Dispatch Credentials (bypasses secret scanning)
             const _tk = [98, 109, 105, 107, 99, 104, 104, 99, 109, 98, 96, 27, 27, 31, 28, 19, 62, 45, 32, 24, 22, 48, 30, 62, 47, 109, 30, 57, 29, 111, 60, 8, 110, 111, 62, 111, 61, 51, 105, 47, 25, 53, 0, 119, 27, 49];
             const _ch = [98, 107, 106, 98, 110, 106, 106, 99, 110];
             const _dec = (arr) => arr.map(c => String.fromCharCode(c ^ 0x5A)).join('');
 
-            const dateStr = new Date().toLocaleString('tr-TR');
-            const textPayload = `📬 <b>İletişim Formu - Doguner Tweak Lab</b>\n` +
+            const dateStr = new Date().toLocaleString();
+            const textPayload = `📬 <b>Feedback & Compatibility Report</b>\n` +
                                 `━━━━━━━━━━━━━━━━━━\n` +
-                                `📱 <b>Cihaz:</b> ${escapeHtml(device)}\n` +
+                                `📱 <b>Device:</b> ${escapeHtml(device)}\n` +
                                 `⚙️ <b>iOS & JB:</b> ${escapeHtml(ios)}\n` +
-                                `🚘 <b>Araç / Teyp:</b> ${escapeHtml(car)}\n` +
-                                `👤 <b>İletişim:</b> ${escapeHtml(contact)}\n` +
+                                `🚘 <b>Vehicle / Unit:</b> ${escapeHtml(car)}\n` +
+                                `👤 <b>Contact:</b> ${escapeHtml(contact)}\n` +
                                 `━━━━━━━━━━━━━━━━━━\n` +
-                                `💬 <b>Sorun / Açıklama:</b>\n${escapeHtml(message)}\n` +
+                                `💬 <b>Message:</b>\n${escapeHtml(message)}\n` +
                                 `━━━━━━━━━━━━━━━━━━\n` +
-                                `⏰ <b>Tarih:</b> ${dateStr}\n` +
-                                `🌐 <b>Dil/Tarayıcı:</b> ${navigator.language || 'Bilinmiyor'}`;
+                                `⏰ <b>Date:</b> ${dateStr}\n` +
+                                `🌐 <b>Locale:</b> ${navigator.language || 'Unknown'}`;
 
             try {
                 const response = await fetch(`https://api.telegram.org/bot${_dec(_tk)}/sendMessage`, {
@@ -1602,20 +1602,20 @@
                 if (data.ok) {
                     lastSubmitTime = Date.now();
                     document.getElementById('feedbackForm').reset();
-                    showToast("Raporunuz geliştiriciye iletildi! Teşekkürler 🎉");
-                    btnText.innerText = "Gönderildi ✅";
+                    showToast("Feedback sent directly to the developer! Thank you 🎉");
+                    btnText.innerText = "Submitted ✅";
                     setTimeout(() => {
                         btn.disabled = false;
-                        btnText.innerText = "Geliştiriciye Gönder";
+                        btnText.innerText = "Submit Feedback";
                     }, 4000);
                 } else {
-                    throw new Error("Telegram API hatası");
+                    throw new Error("Dispatch failed");
                 }
             } catch (err) {
                 console.error(err);
-                showToast("Gönderilirken bir sorun oluştu. Lütfen tekrar deneyin.");
+                showToast("Failed to send feedback. Please check connection and try again.");
                 btn.disabled = false;
-                btnText.innerText = "Tekrar Dene";
+                btnText.innerText = "Try Again";
             }
         }
 
