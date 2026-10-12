@@ -8,8 +8,10 @@ Author: doguner
 Section: Tweaks
 Depends: mobilesubstrate (>= 0.9.5000), preferenceloader
 Icon: https://doguner1.github.io/repo/CydiaIcon.png
+SileoDepiction: https://doguner1.github.io/repo/depiction.json
+Depiction: https://doguner1.github.io/repo/index.html
 Filename: com.doguner.carsplit_1.0.0-beta1_iphoneos-arm64.deb
-Size: 60754
-MD5sum: e076dad6af4ead19cdd948dd19a20e13
-SHA256: 3328f21784b7c93a4c097a9f793ddc188266214503348818b1c721279c670511
+Size: 60762
+MD5sum: 3e785bc3d945910b53b8f1acce23d93a
+SHA256: e3e304a4a66ab30c350bd1e80cc83411b7accb57e2cd9a978f5f097a77fe53a7
 

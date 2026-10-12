@@ -1,0 +1,55 @@
+{
+  "minVersion": "0.1",
+  "headerImage": "https://doguner1.github.io/repo/banner.jpg",
+  "tintColor": "#3b82f6",
+  "tabs": [
+    {
+      "tabname": "Details",
+      "class": "DepictionStackView",
+      "views": [
+        {
+          "class": "DepictionScreenshotsView",
+          "screenshots": [
+            {
+              "url": "https://doguner1.github.io/repo/demo1.png",
+              "accessibilityText": "Google Maps Left & YouTube Right"
+            },
+            {
+              "url": "https://doguner1.github.io/repo/demo2.png",
+              "accessibilityText": "YouTube Left & Google Maps Right"
+            }
+          ],
+          "itemCornerRadius": 10,
+          "itemSize": "{280, 105}"
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "### 🚗 CarSplit — Apple CarPlay Dual-Screen\n\nRun two apps side-by-side on your Apple CarPlay display simultaneously!\n\n#### 📱 Tested & Verified Hardware\n- **Device:** iPhone 7 (`iPhone9,3`)\n- **Firmware:** iOS 15.8.8 (Dopamine 2 Rootless)\n- **CarPlay Head Unit:** 100% verified in actual vehicle.\n- *Other iOS 15.x / 16.x devices in Community Beta.*\n\n#### ✨ Key Features\n- 🏎️ **True Dual-App Multitasking:** Both apps remain fully active with zero pauses.\n- 👆 **Independent Touch Controls:** Full dual touch-screen input on both halves.\n- ⏱️ **One-Tap Clock Switch:** Tap CarPlay status bar clock to cycle layouts.\n- ⚙️ **Settings App Integration:** Custom toggle (Disabled by default upon install).\n- 🌍 **10 Language Localizations:** Full native translation.\n- 🛡️ **100% Free & Open Community Release:** Strictly not for sale.\n\n> *Tested and confirmed working in real vehicle.*"
+        },
+        {
+          "class": "DepictionTableButtonView",
+          "title": "☕ Buy Me a Coffee on Gumroad",
+          "action": "https://aliciamaze.gumroad.com/l/doguner-tweak-lab",
+          "openExternal": true
+        },
+        {
+          "class": "DepictionTableButtonView",
+          "title": "🌐 GitHub Repository",
+          "action": "https://github.com/doguner1/repo",
+          "openExternal": true
+        }
+      ]
+    },
+    {
+      "tabname": "Changelog",
+      "class": "DepictionStackView",
+      "views": [
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "#### Version 1.0.0-beta1\n- Initial public release.\n- Confirmed working on iPhone 7 (iOS 15.8.8) with Dopamine 2 Rootless.\n- Native Settings bundle with 10 languages and Gumroad donation button.\n- Embedded anti-theft signature."
+        }
+      ]
+    }
+  ],
+  "class": "DepictionTabView"
+}
