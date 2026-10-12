@@ -5,4 +5,5 @@ Version: 1.0
 Codename: ios
 Architectures: iphoneos-arm64
 Components: main
-Description: Official Repository for CarSplit and iOS Jailbreak Tweaks
+Description: Official Repository for CarSplit and iOS Tweaks
+Icon: https://doguner1.github.io/repo/CydiaIcon.png

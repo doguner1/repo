@@ -2,7 +2,7 @@
 
 <p align="center">
   <img src="https://img.shields.io/badge/Release-v1.0.0--beta1-blue?style=for-the-badge&logo=apple" alt="Release" />
-  <img src="https://img.shields.io/badge/iOS-15.0%20--%2015.8.x-black?style=for-the-badge&logo=ios" alt="iOS Version" />
+  <img src="https://img.shields.io/badge/Tested%20on-iPhone%207%20%7C%20iOS%2015.8.8-success?style=for-the-badge&logo=apple" alt="Tested on iPhone 7 iOS 15.8.8" />
   <img src="https://img.shields.io/badge/Jailbreak-Dopamine%20Rootless-green?style=for-the-badge" alt="Dopamine" />
   <img src="https://img.shields.io/badge/License-100%25%20Free-emerald?style=for-the-badge" alt="Free" />
   <a href="https://aliciamaze.gumroad.com/l/doguner-tweak-lab">
@@ -18,9 +18,13 @@
 
 Both applications remain completely active with independent touch input routing, proper aspect ratio scaling, and instant layout switching.
 
+> **⚠️ Anti-Piracy Notice:** CarSplit is **100% FREE** and will always remain free. If you paid for this tweak anywhere, you were scammed! Please report the seller and download the authentic version directly from this repository.
+
 ---
 
-## 📸 Screenshots (Tested in Real Vehicle)
+## 📸 Real In-Car Vehicle Verification
+
+Verified and tested on actual CarPlay vehicle displays:
 
 <p align="center">
   <img src="demo1.png" alt="CarSplit - Google Maps Left & YouTube Right" width="48%" />
@@ -29,8 +33,20 @@ Both applications remain completely active with independent touch input routing,
 </p>
 
 <p align="center">
-  <i>Left: Navigation on Left (50%) + Video on Right (50%) &nbsp;|&nbsp; Right: Video on Left (50%) + Navigation on Right (50%)</i>
+  <i>Left: Navigation (50%) + Video (50%) &nbsp;|&nbsp; Right: Video (50%) + Navigation (50%)</i>
 </p>
+
+---
+
+## 📱 Hardware & Firmware Compatibility
+
+To be 100% transparent with the community:
+
+| Device / Firmware | Status | Verification Details |
+|---|---|---|
+| **iPhone 7 (`iPhone9,3`) — iOS 15.8.8** | ✅ **VERIFIED & TESTED** | 100% tested and verified in real vehicle CarPlay head unit. Touch events, audio routing, and split layouts confirmed rock-solid. |
+| **Other iPhone Models (iPhone 8, X, 11, 12, etc.)** | 🧪 **Community Beta** | Theoretical support via Dopamine rootless; community testers are invited to submit diagnostic reports via Settings. |
+| **Other iOS 15.x / 16.x Firmware Versions** | 🧪 **Community Beta** | Untested on iOS 16; use the in-app "Send Bug & Diagnostic Report" button in Settings to help expand compatibility. |
 
 ---
 
@@ -42,10 +58,10 @@ Both applications remain completely active with independent touch input routing,
   - **Tap 1:** Split Mode A (App 1 on Left 50%, App 2 on Right 50%)
   - **Tap 2:** Split Mode B (App 1 on Right 50%, App 2 on Left 50%)
   - **Tap 3:** Full Screen Mode (100%)
-- ⚙️ **Settings App Integration:** Built-in PreferenceBundle under **Settings → CarSplit** with an instant Enable/Disable switch.
+- ⚙️ **Settings App Integration:** Built-in PreferenceBundle under **Settings → CarSplit** with an instant Enable/Disable switch (Disabled by default upon installation).
 - 🌍 **10 Language Localizations:** Full native translation in English, Turkish, German, French, Spanish, Italian, Russian, Simplified Chinese, Japanese, and Arabic.
-- 🛠️ **Instant Diagnostic Reporting:** Single-tap telemetry logging from Settings sends hardware and SpringBoard logs directly to the developer to ensure fast bug fixes across diverse car head units.
-- 🛡️ **Safe IPC & Zero System Overhead:** Built with minimal battery and memory impact using direct C/Objective-C low-level window transforms.
+- 🛠️ **Single-Tap Diagnostic Reporting:** Send anonymous hardware and SpringBoard telemetry directly to the developer to resolve edge-case head unit display issues.
+- 🛡️ **Zero System Overhead:** Minimal battery and memory impact using direct C/Objective-C low-level window transforms.
 
 ---
 
@@ -65,15 +81,6 @@ https://doguner1.github.io/repo/
 3. Refresh sources, search for **CarSplit**, and install the package.
 4. Go to **Settings → CarSplit** and toggle **Enable CarSplit** to **ON**.
 5. Connect your phone to your CarPlay vehicle, launch your apps, and tap the status bar clock to enter split-screen!
-
----
-
-## 🚗 Compatibility
-
-- **iOS Support:** iOS 15.0 – 15.8.x (ARM64 & ARM64e)
-- **Jailbreak Environment:** Dopamine 2 (Rootless architecture `/var/jb`)
-- **Package Managers:** Sileo, Zebra, Cydia
-- **Bridging:** Fully compatible with CarBridge for launching arbitrary apps on CarPlay.
 
 ---
 
