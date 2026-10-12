@@ -3,204 +3,1045 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Doguner's Tweak Repo — CarSplit</title>
+    <title>Doguner Tweak Lab — iOS & CarPlay Tweaks</title>
+    <link rel="icon" type="image/png" href="CydiaIcon.png">
     <style>
         :root {
-            --bg: #0a0a0c;
-            --card: #15151a;
+            --bg: #090b10;
+            --card-bg: rgba(18, 22, 34, 0.72);
+            --card-border: rgba(255, 255, 255, 0.08);
+            --card-hover-border: rgba(59, 130, 246, 0.4);
             --accent: #3b82f6;
-            --accent-glow: rgba(59, 130, 246, 0.3);
+            --accent-gradient: linear-gradient(135deg, #3b82f6, #8b5cf6);
+            --accent-glow: rgba(59, 130, 246, 0.35);
             --gumroad: #ec4899;
+            --gumroad-gradient: linear-gradient(135deg, #ec4899, #8b5cf6);
             --gumroad-glow: rgba(236, 72, 153, 0.35);
-            --text: #f3f4f6;
-            --muted: #9ca3af;
+            --text-primary: #f3f4f6;
+            --text-secondary: #9ca3af;
+            --success: #10b981;
+            --radius-lg: 20px;
+            --radius-md: 14px;
+            --radius-sm: 8px;
         }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
         body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            background: var(--bg);
-            color: var(--text);
-            margin: 0;
-            padding: 40px 20px;
-            display: flex;
-            justify-content: center;
+            font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg);
+            color: var(--text-primary);
+            min-height: 100vh;
+            overflow-x: hidden;
+            position: relative;
+            line-height: 1.6;
         }
+
+        /* Ambient Animated Mesh Background */
+        .ambient-mesh {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            z-index: -1;
+            pointer-events: none;
+            overflow: hidden;
+        }
+
+        .orb {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(100px);
+            opacity: 0.28;
+            animation: orbFloat 18s ease-in-out infinite alternate;
+        }
+
+        .orb-1 {
+            width: 500px;
+            height: 500px;
+            background: #2563eb;
+            top: -100px;
+            left: 15%;
+        }
+
+        .orb-2 {
+            width: 450px;
+            height: 450px;
+            background: #7c3aed;
+            top: 35%;
+            right: 10%;
+            animation-duration: 22s;
+            animation-delay: -5s;
+        }
+
+        .orb-3 {
+            width: 400px;
+            height: 400px;
+            background: #ec4899;
+            bottom: -50px;
+            left: 20%;
+            animation-duration: 25s;
+            animation-delay: -10s;
+        }
+
+        @keyframes orbFloat {
+            0% { transform: translate(0, 0) scale(1); }
+            50% { transform: translate(60px, 40px) scale(1.1); }
+            100% { transform: translate(-40px, 70px) scale(0.95); }
+        }
+
+        /* Container */
         .container {
-            max-width: 650px;
-            width: 100%;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 50px 20px 80px 20px;
         }
-        .header {
+
+        /* Hero Header */
+        .hero {
             text-align: center;
-            margin-bottom: 30px;
+            margin-bottom: 45px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
-        .header h1 {
-            font-size: 2.2rem;
-            margin: 0;
-            background: linear-gradient(135deg, #60a5fa, #a78bfa);
+
+        .hero-logo-wrapper {
+            position: relative;
+            width: 96px;
+            height: 96px;
+            margin-bottom: 20px;
+        }
+
+        .hero-logo-ring {
+            position: absolute;
+            top: -4px;
+            left: -4px;
+            right: -4px;
+            bottom: -4px;
+            border-radius: 26px;
+            background: var(--accent-gradient);
+            opacity: 0.6;
+            filter: blur(10px);
+            animation: pulseGlow 4s ease-in-out infinite alternate;
+        }
+
+        @keyframes pulseGlow {
+            0% { opacity: 0.4; transform: scale(0.98); }
+            100% { opacity: 0.8; transform: scale(1.04); }
+        }
+
+        .hero-logo {
+            position: relative;
+            width: 96px;
+            height: 96px;
+            border-radius: 22px;
+            object-fit: cover;
+            border: 2px solid rgba(255, 255, 255, 0.15);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.6);
+            transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+
+        .hero-logo:hover {
+            transform: scale(1.05) rotate(-2deg);
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            letter-spacing: -0.03em;
+            margin-bottom: 8px;
+            background: linear-gradient(135deg, #ffffff 40%, #93c5fd 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
-        .header p {
-            color: var(--muted);
-            margin-top: 8px;
+
+        .hero p {
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            max-width: 580px;
+            margin-bottom: 25px;
         }
-        .card {
-            background: var(--card);
-            border-radius: 18px;
-            padding: 24px;
-            margin-bottom: 20px;
-            border: 1px solid rgba(255, 255, 255, 0.08);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+
+        /* Hero Quick Action Buttons */
+        .hero-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            justify-content: center;
+            width: 100%;
+            max-width: 550px;
         }
-        .badge {
-            background: #2563eb;
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            padding: 12px 22px;
+            border-radius: var(--radius-md);
+            font-size: 0.95rem;
+            font-weight: 600;
+            text-decoration: none;
+            cursor: pointer;
+            transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+            border: none;
+        }
+
+        .btn-primary {
+            background: var(--accent-gradient);
+            color: #ffffff;
+            box-shadow: 0 6px 20px var(--accent-glow);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(59, 130, 246, 0.5);
+            opacity: 0.96;
+        }
+
+        .btn-glass {
+            background: rgba(255, 255, 255, 0.06);
+            color: var(--text-primary);
+            border: 1px solid var(--card-border);
+            backdrop-filter: blur(12px);
+        }
+
+        .btn-glass:hover {
+            background: rgba(255, 255, 255, 0.12);
+            border-color: rgba(255, 255, 255, 0.2);
+            transform: translateY(-2px);
+        }
+
+        .btn-donate {
+            background: var(--gumroad-gradient);
             color: white;
-            font-size: 0.75rem;
-            padding: 4px 10px;
-            border-radius: 12px;
-            font-weight: bold;
-            display: inline-block;
-            margin-bottom: 12px;
+            box-shadow: 0 6px 20px var(--gumroad-glow);
         }
-        .badge-free {
-            background: #059669;
-            color: white;
-            font-size: 0.75rem;
-            padding: 4px 10px;
-            border-radius: 12px;
-            font-weight: bold;
-            display: inline-block;
-            margin-bottom: 12px;
-            margin-left: 6px;
+
+        .btn-donate:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 26px rgba(236, 72, 153, 0.5);
         }
-        .features {
-            list-style: none;
-            padding: 0;
-            margin: 15px 0;
+
+        /* Repo Metrics Bar */
+        .metrics-bar {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+            margin: 35px 0 45px 0;
         }
-        .features li {
-            padding: 8px 0;
+
+        .metric-card {
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-radius: var(--radius-md);
+            padding: 16px 20px;
+            text-align: center;
+            backdrop-filter: blur(16px);
+            transition: border-color 0.2s;
+        }
+
+        .metric-card:hover {
+            border-color: rgba(255, 255, 255, 0.16);
+        }
+
+        .metric-value {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: #ffffff;
             display: flex;
             align-items: center;
-            font-size: 0.95rem;
+            justify-content: center;
+            gap: 6px;
         }
-        .features li::before {
-            content: "✓";
-            color: #10b981;
-            font-weight: bold;
-            margin-right: 12px;
-            font-size: 1.1rem;
+
+        .metric-label {
+            font-size: 0.8rem;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-top: 4px;
         }
-        .btn-group {
+
+        /* Section Title */
+        .section-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+
+        .section-title {
+            font-size: 1.35rem;
+            font-weight: 700;
+            color: #ffffff;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .badge-count {
+            background: rgba(59, 130, 246, 0.15);
+            color: #60a5fa;
+            border: 1px solid rgba(59, 130, 246, 0.3);
+            font-size: 0.75rem;
+            padding: 2px 8px;
+            border-radius: 20px;
+        }
+
+        /* Tweak Cards Grid */
+        .tweaks-grid {
             display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 12px;
-            margin-top: 20px;
+            grid-template-columns: 1fr;
+            gap: 24px;
+            margin-bottom: 45px;
         }
-        .btn {
+
+        /* Interactive Tweak Card */
+        .tweak-card {
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            backdrop-filter: blur(20px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+        }
+
+        .tweak-card:hover {
+            border-color: var(--card-hover-border);
+            transform: translateY(-4px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5), 0 0 30px rgba(59, 130, 246, 0.15);
+        }
+
+        .tweak-cover {
+            width: 100%;
+            height: 220px;
+            position: relative;
+            overflow: hidden;
+            background: #111420;
+            cursor: pointer;
+        }
+
+        .tweak-cover img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .tweak-card:hover .tweak-cover img {
+            transform: scale(1.04);
+        }
+
+        .tweak-cover-badge {
+            position: absolute;
+            top: 14px;
+            left: 14px;
+            display: flex;
+            gap: 8px;
+        }
+
+        .badge {
+            font-size: 0.72rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            padding: 5px 10px;
+            border-radius: 8px;
+            backdrop-filter: blur(10px);
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .badge-beta {
+            background: rgba(37, 99, 235, 0.85);
+            color: white;
+            box-shadow: 0 4px 10px rgba(37, 99, 235, 0.3);
+        }
+
+        .badge-free {
+            background: rgba(16, 185, 129, 0.85);
+            color: white;
+            box-shadow: 0 4px 10px rgba(16, 185, 129, 0.3);
+        }
+
+        .badge-verified {
+            background: rgba(139, 92, 246, 0.85);
+            color: white;
+        }
+
+        .tweak-body {
+            padding: 24px;
+        }
+
+        .tweak-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 12px;
+        }
+
+        .tweak-identity {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+        }
+
+        .tweak-app-icon {
+            width: 48px;
+            height: 48px;
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            object-fit: cover;
+        }
+
+        .tweak-title-group h3 {
+            font-size: 1.35rem;
+            font-weight: 700;
+            color: #ffffff;
+            letter-spacing: -0.01em;
+        }
+
+        .tweak-title-group span {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+        }
+
+        .tweak-desc {
+            font-size: 0.96rem;
+            color: #d1d5db;
+            margin-bottom: 18px;
+            line-height: 1.55;
+        }
+
+        .tweak-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 22px;
+        }
+
+        .tag {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            font-size: 0.75rem;
+            color: var(--text-secondary);
+            padding: 4px 10px;
+            border-radius: 6px;
+        }
+
+        .tweak-footer-actions {
+            display: flex;
+            gap: 12px;
+        }
+
+        .btn-flex {
+            flex: 1;
+        }
+
+        /* Coming Soon Teaser Card */
+        .tweak-card-teaser {
+            border: 1px dashed rgba(255, 255, 255, 0.12);
+            background: rgba(18, 22, 34, 0.35);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 35px 24px;
+            text-align: center;
+        }
+
+        .teaser-content {
+            max-width: 420px;
+        }
+
+        .teaser-icon {
+            font-size: 2rem;
+            margin-bottom: 12px;
+            display: inline-block;
+        }
+
+        /* Install Steps Section */
+        .info-card {
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-radius: var(--radius-lg);
+            padding: 28px;
+            margin-bottom: 30px;
+            backdrop-filter: blur(16px);
+        }
+
+        .info-card h3 {
+            font-size: 1.25rem;
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .steps-list {
+            list-style: none;
+            counter-reset: steps-counter;
+        }
+
+        .steps-list li {
+            position: relative;
+            padding-left: 40px;
+            margin-bottom: 16px;
+            font-size: 0.95rem;
+            color: #d1d5db;
+        }
+
+        .steps-list li::before {
+            counter-increment: steps-counter;
+            content: counter(steps-counter);
+            position: absolute;
+            left: 0;
+            top: 2px;
+            width: 26px;
+            height: 26px;
+            background: rgba(59, 130, 246, 0.15);
+            border: 1px solid rgba(59, 130, 246, 0.35);
+            color: #60a5fa;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.8rem;
+            font-weight: 700;
+        }
+
+        /* Support / Donate Banner */
+        .donate-card {
+            background: linear-gradient(135deg, rgba(236, 72, 153, 0.12), rgba(139, 92, 246, 0.12));
+            border: 1px solid rgba(236, 72, 153, 0.3);
+            border-radius: var(--radius-lg);
+            padding: 28px;
+            margin-bottom: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .donate-text h3 {
+            font-size: 1.25rem;
+            margin-bottom: 6px;
+            color: #ffffff;
+        }
+
+        .donate-text p {
+            color: var(--text-secondary);
+            font-size: 0.92rem;
+            max-width: 500px;
+        }
+
+        /* Interactive Modal */
+        .modal-backdrop {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background: rgba(0, 0, 0, 0.75);
+            backdrop-filter: blur(14px);
+            z-index: 999;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .modal-backdrop.active {
+            display: flex;
+            opacity: 1;
+        }
+
+        .modal-container {
+            background: #111422;
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            border-radius: 24px;
+            max-width: 720px;
+            width: 100%;
+            max-height: 90vh;
+            overflow-y: auto;
+            box-shadow: 0 25px 60px rgba(0, 0, 0, 0.7);
+            transform: scale(0.92) translateY(20px);
+            transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+            position: relative;
+        }
+
+        .modal-backdrop.active .modal-container {
+            transform: scale(1) translateY(0);
+        }
+
+        .modal-header {
+            padding: 20px 24px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: sticky;
+            top: 0;
+            background: #111422;
+            z-index: 10;
+        }
+
+        .modal-header h2 {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: white;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .btn-close {
+            background: rgba(255, 255, 255, 0.08);
+            border: none;
+            color: white;
+            width: 34px;
+            height: 34px;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.1rem;
+            transition: background 0.2s;
+        }
+
+        .btn-close:hover {
+            background: rgba(255, 255, 255, 0.18);
+        }
+
+        .modal-body {
+            padding: 24px;
+        }
+
+        /* Screenshot Interactive Viewer */
+        .screenshot-viewer {
+            margin-bottom: 24px;
+        }
+
+        .screenshot-tabs {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 12px;
+        }
+
+        .screenshot-tab {
+            padding: 8px 16px;
+            border-radius: var(--radius-sm);
+            font-size: 0.85rem;
+            font-weight: 600;
+            cursor: pointer;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid var(--card-border);
+            color: var(--text-secondary);
+            transition: all 0.2s;
+        }
+
+        .screenshot-tab.active {
             background: var(--accent);
             color: white;
-            text-decoration: none;
-            text-align: center;
-            padding: 12px 16px;
-            border-radius: 12px;
-            font-weight: 600;
-            transition: all 0.2s;
-            box-shadow: 0 4px 14px var(--accent-glow);
+            border-color: var(--accent);
         }
-        .btn:hover {
-            opacity: 0.9;
-            transform: translateY(-2px);
-        }
-        .btn-secondary {
-            background: rgba(255, 255, 255, 0.1);
-            box-shadow: none;
-        }
-        .btn-donate {
-            display: block;
+
+        .screenshot-display {
             width: 100%;
-            box-sizing: border-box;
-            background: linear-gradient(135deg, #ec4899, #8b5cf6);
-            color: white;
-            text-decoration: none;
-            text-align: center;
-            padding: 14px 16px;
+            height: 260px;
             border-radius: 14px;
-            font-weight: 700;
-            margin-top: 14px;
-            transition: all 0.2s;
-            box-shadow: 0 6px 20px rgba(236, 72, 153, 0.35);
+            overflow: hidden;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            background: #000;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
         }
-        .btn-donate:hover {
-            opacity: 0.95;
-            transform: translateY(-2px);
+
+        .screenshot-display img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: opacity 0.3s ease;
         }
+
+        /* Tested specs table inside modal */
+        .specs-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 18px 0;
+            font-size: 0.9rem;
+        }
+
+        .specs-table th, .specs-table td {
+            padding: 10px 14px;
+            text-align: left;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+        }
+
+        .specs-table th {
+            color: var(--text-secondary);
+            font-weight: 600;
+        }
+
+        .specs-table td {
+            color: var(--text-primary);
+        }
+
+        /* Toast Alert */
+        .toast {
+            position: fixed;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%) translateY(100px);
+            background: #1e293b;
+            color: white;
+            padding: 12px 24px;
+            border-radius: 30px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            font-size: 0.9rem;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            z-index: 9999;
+            opacity: 0;
+            transition: all 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+
+        .toast.show {
+            transform: translateX(-50%) translateY(0);
+            opacity: 1;
+        }
+
+        /* Footer */
         .footer {
             text-align: center;
-            color: var(--muted);
+            color: var(--text-secondary);
             font-size: 0.85rem;
-            margin-top: 40px;
+            margin-top: 50px;
+            border-top: 1px solid rgba(255, 255, 255, 0.06);
+            padding-top: 30px;
+        }
+
+        @media (max-width: 650px) {
+            .hero h1 { font-size: 2rem; }
+            .metrics-bar { grid-template-columns: 1fr; }
+            .tweak-footer-actions { flex-direction: column; }
+            .screenshot-display { height: 180px; }
+            .donate-card { flex-direction: column; align-items: stretch; text-align: center; }
+            .donate-card .btn-donate { width: 100%; }
         }
     </style>
 </head>
 <body>
+
+    <!-- Ambient Mesh Background -->
+    <div class="ambient-mesh">
+        <div class="orb orb-1"></div>
+        <div class="orb orb-2"></div>
+        <div class="orb orb-3"></div>
+    </div>
+
+    <!-- Main Content Container -->
     <div class="container">
-        <div class="header">
-            <h1>🚗 Doguner Repo</h1>
-            <p>CarPlay Dual-App & iOS 15 Rootless Tweaks</p>
-        </div>
+        
+        <!-- Hero Section -->
+        <header class="hero">
+            <div class="hero-logo-wrapper">
+                <div class="hero-logo-ring"></div>
+                <img src="CydiaIcon.png" alt="Doguner Repo Logo" class="hero-logo">
+            </div>
+            <h1>Doguner Tweak Lab</h1>
+            <p>Independent Apple CarPlay multitasking & next-generation iOS tweaks. Built with precision, kept 100% free.</p>
+            
+            <div class="hero-actions">
+                <a href="#" class="btn btn-primary" id="btnSileo">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/></svg>
+                    Add to Sileo
+                </a>
+                <a href="#" class="btn btn-glass" id="btnZebra">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+                    Add to Zebra
+                </a>
+                <button class="btn btn-glass" onclick="copyRepoUrl()">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+                    Copy Repo URL
+                </button>
+            </div>
+        </header>
 
-        <div class="card">
-            <span class="badge">BETA v1.0.0-beta1</span>
-            <span class="badge-free">100% FREE</span>
-            <h2 style="margin: 0 0 10px 0;">CarSplit (CarPlay Dual-Screen)</h2>
-            <p style="color: var(--muted); margin: 0;">
-                Run two independent applications (Navigation + YouTube/Music, etc.) simultaneously side-by-side in Split-Screen mode on Apple CarPlay.
-            </p>
-
-            <ul class="features">
-                <li>Fully compatible with Dopamine 2 Rootless (iOS 15.0 – 15.8.x)</li>
-                <li>One-tap Split-Screen toggle directly from the CarPlay Status Bar Clock</li>
-                <li>Settings app integration with dynamic Enable/Disable control (Disabled by default)</li>
-                <li>Integrated one-tap diagnostic reporting for cross-vehicle compatibility</li>
-                <li>Full localization support in 10 languages</li>
-                <li>Dual independent touch input and window management</li>
-            </ul>
-
-            <div class="btn-group">
-                <a href="sileo://source/https://" class="btn" id="sileoBtn">Add to Sileo</a>
-                <a href="zbra://sources/add/https://" class="btn btn-secondary" id="zebraBtn">Add to Zebra</a>
+        <!-- Repository Metrics -->
+        <div class="metrics-bar">
+            <div class="metric-card">
+                <div class="metric-value">🚗 CarSplit</div>
+                <div class="metric-label">Flagship Dual-Screen</div>
+            </div>
+            <div class="metric-card">
+                <div class="metric-value">⚡ iOS 15.8.8</div>
+                <div class="metric-label">Verified in Vehicle</div>
+            </div>
+            <div class="metric-card">
+                <div class="metric-value">🛡️ 100% Free</div>
+                <div class="metric-label">No Paywalls Ever</div>
             </div>
         </div>
 
-        <div class="card">
-            <h3 style="margin: 0 0 10px 0;">How to Install</h3>
-            <ol style="color: var(--muted); padding-left: 20px; margin: 0; line-height: 1.6;">
-                <li>Tap <b>Add to Sileo</b> above (or copy this repo URL into your package manager sources).</li>
-                <li>Refresh sources and install the <b>CarSplit</b> package.</li>
-                <li>Open <b>Settings → CarSplit</b> and toggle <b>Enable CarSplit</b> ON.</li>
-                <li>Connect to your car's CarPlay screen and tap the status bar clock icon to enter split-screen mode.</li>
+        <!-- Tweaks Showcase Grid -->
+        <div class="section-header">
+            <div class="section-title">
+                Available Tweaks
+                <span class="badge-count">1 Active</span>
+            </div>
+        </div>
+
+        <div class="tweaks-grid">
+            
+            <!-- CarSplit Card -->
+            <div class="tweak-card">
+                <div class="tweak-cover" onclick="openDetailsModal()">
+                    <img src="banner.jpg" alt="CarSplit Banner Preview">
+                    <div class="tweak-cover-badge">
+                        <span class="badge badge-beta">Beta v1.0.0-beta1</span>
+                        <span class="badge badge-free">100% Free</span>
+                        <span class="badge badge-verified">Tested on iPhone 7</span>
+                    </div>
+                </div>
+
+                <div class="tweak-body">
+                    <div class="tweak-header">
+                        <div class="tweak-identity">
+                            <img src="icon.png" alt="CarSplit Icon" class="tweak-app-icon">
+                            <div class="tweak-title-group">
+                                <h3>CarSplit (CarPlay Dual-Screen)</h3>
+                                <span>by @doguner • Tweaks</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <p class="tweak-desc">
+                        Run two independent applications (e.g. Navigation + YouTube/Music) simultaneously side-by-side in Split-Screen mode on Apple CarPlay. True dual touch input, 1-tap clock switch, and seamless Settings integration.
+                    </p>
+
+                    <div class="tweak-tags">
+                        <span class="tag">#AppleCarPlay</span>
+                        <span class="tag">#SplitScreen</span>
+                        <span class="tag">#DopamineRootless</span>
+                        <span class="tag">#iOS15</span>
+                        <span class="tag">#MultiTouch</span>
+                    </div>
+
+                    <div class="tweak-footer-actions">
+                        <button class="btn btn-primary btn-flex" onclick="openDetailsModal()">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+                            View Details & Photos
+                        </button>
+                        <a href="com.doguner.carsplit_1.0.0-beta1_iphoneos-arm64.deb" class="btn btn-glass" download>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                            Download .deb
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Future Tweak Teaser -->
+            <div class="tweak-card tweak-card-teaser">
+                <div class="teaser-content">
+                    <span class="teaser-icon">🧪</span>
+                    <h3 style="margin-bottom: 6px; color: #ffffff;">More Tweaks In Development</h3>
+                    <p style="color: var(--text-secondary); font-size: 0.9rem;">
+                        New experiments for iOS CarPlay enhancements and system optimization are actively being prototyped in the lab. Stay tuned!
+                    </p>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- How To Install Card -->
+        <div class="info-card">
+            <h3>📦 How to Install</h3>
+            <ol class="steps-list">
+                <li>Tap <b>Add to Sileo</b> or <b>Add to Zebra</b> above (or copy this repository URL into your package manager sources).</li>
+                <li>Wait for sources to refresh and locate <b>CarSplit</b> in the package list.</li>
+                <li>Install the tweak and perform a quick respring.</li>
+                <li>Open <b>Settings → CarSplit</b> on your phone and switch <b>Enable CarSplit</b> to ON (disabled by default for safety).</li>
+                <li>Plug into your car, open your desired apps, and tap the status bar clock to cycle split-screen layouts!</li>
             </ol>
         </div>
 
-        <div class="card" style="border: 1px solid rgba(236, 72, 153, 0.3);">
-            <h3 style="margin: 0 0 8px 0;">☕ Support Independent Development</h3>
-            <p style="color: var(--muted); margin: 0; font-size: 0.95rem; line-height: 1.5;">
-                All my tweaks are 100% free and open for the community. If CarSplit brought new life to your car's dashboard, consider buying me a coffee on Gumroad to support ongoing development and hardware testing!
-            </p>
-            <a href="https://aliciamaze.gumroad.com/l/doguner-tweak-lab" target="_blank" class="btn-donate">
+        <!-- Support / Buy Me a Coffee Card -->
+        <div class="donate-card">
+            <div class="donate-text">
+                <h3>☕ Support Independent Development</h3>
+                <p>
+                    All my tweaks are 100% free with no ads or paywalls. If CarSplit improved your car's dashboard, consider buying me a coffee on Gumroad to fund testing hardware and updates!
+                </p>
+            </div>
+            <a href="https://aliciamaze.gumroad.com/l/doguner-tweak-lab" target="_blank" class="btn btn-donate">
                 ☕ Buy Me a Coffee on Gumroad
             </a>
         </div>
 
-        <div class="footer">
-            <p>© 2026 Doguner. Drive safely and keep your attention on the road. Not affiliated with Apple Inc.</p>
+        <!-- Footer -->
+        <footer class="footer">
+            <p>© 2026 Doguner. Drive safely and keep your attention focused on the road ahead.</p>
+            <p style="margin-top: 6px; font-size: 0.8rem; opacity: 0.7;">Apple CarPlay is a registered trademark of Apple Inc. CarSplit is an independent community project.</p>
+        </footer>
+
+    </div>
+
+    <!-- Interactive Tweak Modal -->
+    <div class="modal-backdrop" id="detailsModal" onclick="closeModalOnBackdrop(event)">
+        <div class="modal-container">
+            <div class="modal-header">
+                <h2>
+                    <img src="icon.png" style="width: 28px; height: 28px; border-radius: 6px;" alt="">
+                    CarSplit Details & In-Car Verification
+                </h2>
+                <button class="btn-close" onclick="closeDetailsModal()">&times;</button>
+            </div>
+
+            <div class="modal-body">
+                
+                <!-- Vehicle Screenshots Interactive Switcher -->
+                <div class="screenshot-viewer">
+                    <div class="screenshot-tabs">
+                        <button class="screenshot-tab active" id="tabA" onclick="switchScreenshot('demo1.png', 'tabA')">
+                            📍 Maps (Left) + 🎬 YouTube (Right)
+                        </button>
+                        <button class="screenshot-tab" id="tabB" onclick="switchScreenshot('demo2.png', 'tabB')">
+                            🎬 YouTube (Left) + 📍 Maps (Right)
+                        </button>
+                    </div>
+
+                    <div class="screenshot-display">
+                        <img id="screenshotImg" src="demo1.png" alt="In-Vehicle CarPlay Split-Screen Verification">
+                    </div>
+                    <div style="font-size: 0.8rem; color: var(--text-secondary); margin-top: 6px; text-align: center;">
+                        📸 Captured directly from verified vehicle CarPlay display.
+                    </div>
+                </div>
+
+                <!-- Verified Hardware Table -->
+                <h4 style="color: #ffffff; margin-bottom: 8px;">📱 Hardware Compatibility Verification</h4>
+                <table class="specs-table">
+                    <tr>
+                        <th>Device Tested</th>
+                        <td><b>iPhone 7 (iPhone9,3)</b></td>
+                    </tr>
+                    <tr>
+                        <th>Firmware</th>
+                        <td><b>iOS 15.8.8</b> (Dopamine 2 Rootless)</td>
+                    </tr>
+                    <tr>
+                        <th>CarPlay Display</th>
+                        <td>Wired & Wireless CarPlay Head Units</td>
+                    </tr>
+                    <tr>
+                        <th>Other Devices</th>
+                        <td>Community Beta (Submit logs via Settings to report!)</td>
+                    </tr>
+                </table>
+
+                <!-- Features list -->
+                <h4 style="color: #ffffff; margin: 16px 0 8px 0;">✨ Core Highlights</h4>
+                <ul style="color: #d1d5db; padding-left: 20px; font-size: 0.92rem; line-height: 1.6;">
+                    <li><b>True Simultaneous Execution:</b> Both apps stay live and responsive.</li>
+                    <li><b>Dual Touch Screen Input:</b> Navigate map while browsing video queue.</li>
+                    <li><b>1-Tap Clock Toggle:</b> Cycle Mode A (50/50), Mode B (50/50), and Fullscreen.</li>
+                    <li><b>10 Native Languages:</b> Full localization in Settings bundle.</li>
+                    <li><b>Anonymous Diagnostic Reporting:</b> Helps expand compatibility across car brands.</li>
+                </ul>
+
+                <!-- Modal Actions -->
+                <div style="margin-top: 25px; display: flex; gap: 12px; flex-wrap: wrap;">
+                    <a href="#" class="btn btn-primary btn-flex" id="modalSileoBtn">
+                        Add to Sileo
+                    </a>
+                    <a href="https://aliciamaze.gumroad.com/l/doguner-tweak-lab" target="_blank" class="btn btn-donate btn-flex">
+                        ☕ Support on Gumroad
+                    </a>
+                </div>
+
+            </div>
         </div>
     </div>
 
+    <!-- Toast Notification -->
+    <div class="toast" id="toastBox">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+        <span id="toastMsg">Repo URL copied to clipboard!</span>
+    </div>
+
+    <!-- Interactive Script -->
     <script>
+        // Setup direct deep links
         const curUrl = window.location.href.split('#')[0].split('?')[0];
-        document.getElementById('sileoBtn').href = 'sileo://source/' + curUrl;
-        document.getElementById('zebraBtn').href = 'zbra://sources/add/' + curUrl;
+        document.getElementById('btnSileo').href = 'sileo://source/' + curUrl;
+        document.getElementById('btnZebra').href = 'zbra://sources/add/' + curUrl;
+        document.getElementById('modalSileoBtn').href = 'sileo://source/' + curUrl;
+
+        // Copy repo URL with toast
+        function copyRepoUrl() {
+            navigator.clipboard.writeText(curUrl).then(() => {
+                showToast("Repository URL copied to clipboard! 📋");
+            }).catch(() => {
+                showToast("Failed to copy URL automatically.");
+            });
+        }
+
+        // Toast controller
+        function showToast(msg) {
+            const toast = document.getElementById('toastBox');
+            document.getElementById('toastMsg').innerText = msg;
+            toast.classList.add('show');
+            setTimeout(() => {
+                toast.classList.remove('show');
+            }, 3000);
+        }
+
+        // Modal controller
+        function openDetailsModal() {
+            const modal = document.getElementById('detailsModal');
+            modal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeDetailsModal() {
+            const modal = document.getElementById('detailsModal');
+            modal.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        function closeModalOnBackdrop(e) {
+            if (e.target.id === 'detailsModal') {
+                closeDetailsModal();
+            }
+        }
+
+        // Keyboard Escape key closes modal
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') closeDetailsModal();
+        });
+
+        // Screenshot switcher inside modal
+        function switchScreenshot(imgSrc, tabId) {
+            document.getElementById('screenshotImg').src = imgSrc;
+            document.getElementById('tabA').classList.remove('active');
+            document.getElementById('tabB').classList.remove('active');
+            document.getElementById(tabId).classList.add('active');
+        }
     </script>
 </body>
 </html>
