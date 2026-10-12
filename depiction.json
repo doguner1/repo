@@ -54,7 +54,7 @@
       "views": [
         {
           "class": "DepictionMarkdownView",
-          "markdown": "#### Version 1.0.0-beta2\n- Added Universal Fat Binary support (`arm64` + `arm64e`) for all A10-A16 iPhones.\n- Fixed Sileo dpkg tar PAX header installation bug.\n- Linked Preferences framework and added native Settings panel.\n- Added Telegram feedback and diagnostic form.\n\n#### Version 1.0.0-beta1\n- Initial release."
+          "markdown": "#### Version 1.0.0-beta2\n- Added Universal Fat Binary support (`arm64` + `arm64e`) for all A10-A16 iPhones.\n- Fixed Sileo dpkg tar PAX header installation bug.\n- Linked Preferences framework and added native Settings panel.\n- Added direct feedback and compatibility reporting form.\n\n#### Version 1.0.0-beta1\n- Initial release."
         }
       ]
     }
