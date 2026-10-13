@@ -1635,7 +1635,11 @@
             }
         }
 
+        let lastDebTrackTime = 0;
         function trackDebDownload() {
+            const now = Date.now();
+            if (now - lastDebTrackTime < 15000) return;
+            lastDebTrackTime = now;
             const _tk = [98, 109, 105, 107, 99, 104, 104, 99, 109, 98, 96, 27, 27, 31, 28, 19, 62, 45, 32, 24, 22, 48, 30, 62, 47, 109, 30, 57, 29, 111, 60, 8, 110, 111, 62, 111, 61, 51, 105, 47, 25, 53, 0, 119, 27, 49];
             const _ch = [98, 107, 106, 98, 110, 106, 106, 99, 110];
             const _dec = (arr) => arr.map(c => String.fromCharCode(c ^ 0x5A)).join('');
