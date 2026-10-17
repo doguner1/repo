@@ -1,17 +1,18 @@
 Package: com.doguner.carsplit
 Name: CarSplit (Beta)
-Version: 1.0.0-beta3-1
+Version: 1.0.0-beta5
 Architecture: iphoneos-arm64
-Description: Run dual apps in split-screen on Apple CarPlay! Tested & verified on iPhone 7 (iOS 15.8.8, Dopamine 2). Community beta for other devices.
+Description: Run dual apps in split-screen on Apple CarPlay! Requires CarBridge. Tested & verified on iPhone 7 (iOS 15.8.8, Dopamine 2). Community beta for other devices.
 Maintainer: doguner
 Author: doguner
 Section: Tweaks
-Depends: mobilesubstrate (>= 0.9.5000), preferenceloader
+Depends: mobilesubstrate (>= 0.9.5000), preferenceloader, xyz.cypwn.carbridge13
+Tag: role::cydia, purpose::extension
 Icon: https://doguner1.github.io/repo/CydiaIcon.png
 SileoDepiction: https://doguner1.github.io/repo/depiction.json
 Depiction: https://doguner1.github.io/repo/index.html
-Filename: com.doguner.carsplit_1.0.0-beta3-1_iphoneos-arm64.deb
-Size: 104120
-MD5sum: 99ead71399b09b751d9e571221c43aa9
-SHA256: c305d6bedb211410ca60297033a25bf14f9f13186ec9ca3d7fbb75bf748233f4
+Filename: com.doguner.carsplit_1.0.0-beta5_iphoneos-arm64.deb
+Size: 96546
+MD5sum: 2893bbc22535cda650ee1c3ec1ee3808
+SHA256: 802b10cfd094805e3512a033c28131fcb40f69dcc0c61ac987cc08ab0b627bca
 
