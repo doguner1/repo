@@ -3,13 +3,14 @@ Label: Doguner Repo
 Suite: stable
 Version: 1.0
 Codename: ios
+Date: Sun, 18 Oct 2026 22:32:14 +0000
 Architectures: iphoneos-arm64
 Components: main
 Description: Official Repository for CarSplit, LongShot and iOS Tweaks
 Icon: https://doguner1.github.io/repo/CydiaIcon.png
 MD5Sum:
- 5a02678c6f224668abb49d944f6d9f40 1645 Packages
- 4629e8a6ed06863573274f3607c47be7 920 Packages.bz2
+ 539788e08b8f2096ff1ccd0b0b5d0260 1645 Packages
+ 39819d51e5142b5d05a622f8b0af040f 912 Packages.bz2
 SHA256:
- 92bfb763f700597d9d12e8893e9ebc3dba65dc713cbeeb3d7fe1a907b6998bc6 1645 Packages
- 125e275ef12bcbe305a7534c66f08b2b36e5600e9368b31eb933c8ea2960a4a3 920 Packages.bz2
+ cd039260f32e9176993447d1bbbb50a2e7b51cc6ce71b4ae925fa1d7b407247d 1645 Packages
+ 53f3e4b38dbc82aa48e629caf406ce459495a36c54019ab56a2ba5c851b04bb9 912 Packages.bz2
