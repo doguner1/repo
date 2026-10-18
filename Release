@@ -8,8 +8,8 @@ Components: main
 Description: Official Repository for CarSplit, LongShot and iOS Tweaks
 Icon: https://doguner1.github.io/repo/CydiaIcon.png
 MD5Sum:
- bd838da0e17a938688c0c29eb427db5b 1598 Packages
- db67a8cc29a40ccbd96c17af0f5cec72 878 Packages.bz2
+ 52301de9c6ca09c57c4b89df6e8df15f 1598 Packages
+ 15b979bf237d24eb37a8671bde25cfbd 880 Packages.bz2
 SHA256:
- 1c6074a60638c5da46b330ea9cd11b1764b791792f4326fccbd2808187f88955 1598 Packages
- d056c6f88ffe64a94c1f800f88ba54293180b853275c76f174ec9d0e3947e0ae 878 Packages.bz2
+ 47f116c40152976400004729e9e1767925075aa7156148c57e98e7bc991815e9 1598 Packages
+ a552facd541d0e69a5aaeaa3cc6a4b65fac981661f9d8129cd28b2a1d0707e6a 880 Packages.bz2
