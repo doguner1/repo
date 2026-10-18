@@ -18,7 +18,7 @@ SHA256: 5f5cc1e5e37359f3af2d11ebf4d28f5a47a71968f5335dec51011047e203e66d
 
 Package: com.doguner.longshot
 Name: LongShot
-Version: 1.0.1
+Version: 1.1.0
 Architecture: iphoneos-arm64
 Description: Seamless vertical long screenshot stitcher for iOS apps! Tap LongShot or Manual after taking a screenshot to stitch scrolling content. Full English & Turkish localization. (Dopamine rootless, iOS 14 - 15+)
 Maintainer: doguner
@@ -29,8 +29,8 @@ Tag: role::cydia, purpose::extension
 Icon: https://doguner1.github.io/repo/assets/longshot/icon.png
 SileoDepiction: https://doguner1.github.io/repo/depiction_longshot.json
 Depiction: https://doguner1.github.io/repo/index.html
-Filename: com.doguner.longshot_1.0.1_iphoneos-arm64.deb
-Size: 850934
-MD5sum: 5df8f78d8eab0a6d4e5ba894d3ea7efa
-SHA256: 4323ae27ef36690eb7ac5297134e5257446b19a8be06b3f2974efeb43cf73368
+Filename: com.doguner.longshot_1.1.0_iphoneos-arm64.deb
+Size: 856020
+MD5sum: 7d84d780d1d2163c361c9e21034b6afa
+SHA256: 12e9e8ce06f8fc46e1184d6edada2b1f38b8ab01a0766bebff49a99ce9905a37
 
