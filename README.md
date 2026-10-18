@@ -1,118 +1,62 @@
-# 🚗 CarSplit — Apple CarPlay Dual-Screen (Split-Screen)
+# 🛠️ Doguner Tweak Lab — Official iOS & CarPlay Tweaks
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Release-v1.0.0--beta1-blue?style=for-the-badge&logo=apple" alt="Release" />
-  <img src="https://img.shields.io/badge/Tested%20on-iPhone%207%20%7C%20iOS%2015.8.8-success?style=for-the-badge&logo=apple" alt="Tested on iPhone 7 iOS 15.8.8" />
-  <img src="https://img.shields.io/badge/Jailbreak-Dopamine%20Rootless-green?style=for-the-badge" alt="Dopamine" />
+  <img src="https://img.shields.io/badge/Platform-iOS%2014--15.8.x--16.x-blue?style=for-the-badge&logo=apple" alt="Platform" />
+  <img src="https://img.shields.io/badge/Jailbreak-Dopamine%202%20Rootless-green?style=for-the-badge" alt="Dopamine" />
   <img src="https://img.shields.io/badge/License-100%25%20Free-emerald?style=for-the-badge" alt="Free" />
   <a href="https://aliciamaze.gumroad.com/l/doguner-tweak-lab">
     <img src="https://img.shields.io/badge/Support-Buy%20Me%20a%20Coffee-ff69b4?style=for-the-badge&logo=gumroad" alt="Gumroad" />
   </a>
 </p>
 
----
+Official APT package repository for **CarSplit** and **LongShot** tweaks for rootless iOS (`/var/jb`).
 
-## 🌟 Overview
-
-**CarSplit** brings true side-by-side multitasking to **Apple CarPlay**. Run two independent applications simultaneously on your vehicle's head unit display—such as **Google Maps / Apple Maps** on one side and **YouTube / Music** on the other.
-
-Both applications remain completely active with independent touch input routing, proper aspect ratio scaling, and instant layout switching.
-
-> **⚠️ Anti-Piracy Notice:** CarSplit is **100% FREE** and will always remain free. If you paid for this tweak anywhere, you were scammed! Please report the seller and download the authentic version directly from this repository.
+🌐 **Web Showcase & Sileo Depictions:** [https://doguner1.github.io/repo/](https://doguner1.github.io/repo/)  
+📦 **Add to Sileo / Zebra:** `https://doguner1.github.io/repo/`
 
 ---
 
-## 📸 Real In-Car Vehicle Verification
+## 🌟 Available Tweaks
 
-Verified and tested on actual CarPlay vehicle displays:
+### 1. 📸 LongShot (v1.0.0 — NEW)
+Take seamless, high-resolution long / scrolling screenshots in any iOS application turn-by-turn with a single tap.
 
-<p align="center">
-  <img src="IMG_1188.PNG" alt="CarSplit - YouTube Music & Google Maps" width="48%" />
-  &nbsp;
-  <img src="IMG_1190.PNG" alt="CarSplit - Google Maps & YouTube Music" width="48%" />
-</p>
-<p align="center">
-  <img src="IMG_1192.PNG" alt="CarSplit - DeepSeek AI & YouTube" width="48%" />
-  &nbsp;
-  <img src="demo1.png" alt="CarSplit - Google Maps & YouTube Premium" width="48%" />
-</p>
-<p align="center">
-  <img src="demo2.png" alt="CarSplit - YouTube & Google Maps Reversed" width="48%" />
-</p>
-
-<p align="center">
-  <i>Real CarPlay Screenshots: YouTube Music + Google Maps, Dual-Orientation Layouts, DeepSeek AI Assistant + Media Streaming.</i>
-</p>
+* **🚀 Auto Long Shot:** Automatically scrolls scrollable views (Safari, Twitter/X, WhatsApp, Settings, Reddit, etc.) and stitches slices into one continuous canvas.
+* **🖐️ Manual ('Elle') Mode:** Floating capsule HUD allows step-by-step selective scrolling and capture.
+* **🛑 Live Stop Button:** Hit *Durdur (Stop)* anytime to finalize and crop at that exact slice with zero blank trailing space.
+* **🖼️ Suppress iOS Thumbnail:** Settings toggle to hide the stock iOS bottom-left corner screenshot preview.
+* **💾 Native Save & Share:** Saves directly to Camera Roll and presents the native iOS Share Sheet.
 
 ---
 
-## 📱 Hardware & Firmware Compatibility
+### 2. 🚗 CarSplit (v1.0.0-beta6)
+True side-by-side multitasking on **Apple CarPlay**. Run any two bridged applications simultaneously on your vehicle's head unit display—such as **Google Maps** on one side and **YouTube / Music** on the other.
 
-To be 100% transparent with the community:
-
-| Device / Firmware | Status | Verification Details |
-|---|---|---|
-| **iPhone 7 (`iPhone9,3`) — iOS 15.8.8** | ✅ **VERIFIED & TESTED** | 100% tested and verified in real vehicle CarPlay head unit. Touch events, audio routing, and split layouts confirmed rock-solid. |
-| **Other iPhone Models (iPhone 8, X, 11, 12, etc.)** | 🧪 **Community Beta** | Theoretical support via Dopamine rootless; community testers are invited to submit diagnostic reports via Settings. |
-| **Other iOS 15.x / 16.x Firmware Versions** | 🧪 **Community Beta** | Untested on iOS 16; use the in-app "Send Bug & Diagnostic Report" button in Settings to help expand compatibility. |
+* **🏎️ True Multitasking:** Both apps remain fully active with independent dual-touch controls.
+* **⏱️ One-Tap Clock Switch:** Tap the CarPlay status bar clock to cycle split layouts instantly.
+* **⚠️ Requirement:** Requires **CarBridge** ([Havoc Repo](https://havoc.app/package/carbridge) / [carbridge.app](https://carbridge.app)).
+* **📱 Verified Hardware:** 100% tested and verified on iPhone 7 (`iPhone9,3` on iOS 15.8.8) in an actual vehicle.
 
 ---
 
-## ✨ Features
+## 📦 How to Add to Sileo / Zebra
 
-- 🏎️ **True Dual-App Multitasking:** Run Navigation and Video/Music at the exact same time without background pauses or suspensions.
-- 👆 **Independent Touch Controls:** Full dual touch-screen input. Interact with your map and playlist without interfering with the other app.
-- ⏱️ **One-Tap Clock Switch:** Seamlessly cycle between layout modes simply by tapping the CarPlay status bar clock:
-  - **Tap 1:** Split Mode A (App 1 on Left 50%, App 2 on Right 50%)
-  - **Tap 2:** Split Mode B (App 1 on Right 50%, App 2 on Left 50%)
-  - **Tap 3:** Full Screen Mode (100%)
-- ⚙️ **Settings App Integration:** Built-in PreferenceBundle under **Settings → CarSplit** with an instant Enable/Disable switch (Disabled by default upon installation).
-- 🌍 **10 Language Localizations:** Full native translation in English, Turkish, German, French, Spanish, Italian, Russian, Simplified Chinese, Japanese, and Arabic.
-- 🛠️ **Single-Tap Diagnostic Reporting:** Send anonymous hardware and SpringBoard telemetry directly to the developer to resolve edge-case head unit display issues.
-- 🛡️ **Zero System Overhead:** Minimal battery and memory impact using direct C/Objective-C low-level window transforms.
-
----
-
-## 📦 How to Install (Add Repository)
-
-### Repository URL:
-```text
-https://doguner1.github.io/repo/
-```
-
-### Installation Steps:
-1. Open **Sileo** or **Zebra** on your jailbroken iPhone.
-2. Go to **Sources → Add** and enter:
-   ```text
-   https://doguner1.github.io/repo/
-   ```
-3. Refresh sources, search for **CarSplit**, and install the package.
-4. Go to **Settings → CarSplit** and toggle **Enable CarSplit** to **ON**.
-5. Connect your phone to your CarPlay vehicle, launch your apps, and tap the status bar clock to enter split-screen!
+1. Open **Sileo** or **Zebra**.
+2. Go to **Sources** → **Add** (`+`).
+3. Enter: `https://doguner1.github.io/repo/`
+4. Search for `LongShot` or `CarSplit` and install!
 
 ---
 
 ## ☕ Support the Developer
 
-All of my tweaks are, and will always remain, **100% free and open to everyone**. 
+All tweaks from Doguner Tweak Lab are **100% free** with zero paywalls, ads, or tracking. If you enjoy these tweaks and want to support ongoing research and test hardware:
 
-Reverse-engineering iOS, supporting dozens of different car head unit display ratios, and maintaining stability requires extensive testing hardware and endless late-night coding sessions. If CarSplit enhanced your driving experience or brought new life to your car's dashboard, consider supporting ongoing development:
-
-<p align="center">
-  <a href="https://aliciamaze.gumroad.com/l/doguner-tweak-lab">
-    <img src="https://img.shields.io/badge/☕%20Buy%20Me%20a%20Coffee-Gumroad-ff90e8?style=for-the-badge&logo=gumroad&logoColor=black" alt="Support on Gumroad" height="45" />
-  </a>
-</p>
+👉 [**Buy Me a Coffee on Gumroad**](https://aliciamaze.gumroad.com/l/doguner-tweak-lab)
 
 ---
 
-## ⚠️ Disclaimer
+## 📄 License & Community Notice
 
-- Please drive responsibly. Always keep your attention focused on the road ahead.
-- Apple, iPhone, and Apple CarPlay are trademarks of Apple Inc., registered in the U.S. and other countries. CarSplit is an independent community tweak and is not affiliated with, sponsored, or endorsed by Apple Inc.
-
----
-
-<p align="center">
-  Made with ❤️ by <b>Doguner</b>
-</p>
+Strictly **FREE Community Edition**. If you purchased this anywhere, you were scammed!
+Report pirated distributions and download official `.deb` releases only from this repo.
