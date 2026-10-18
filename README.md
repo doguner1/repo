@@ -19,24 +19,40 @@ Official APT package repository for **LongShot** (intelligent long screenshot st
 ## 📸 1. LongShot (v1.0.0 — NEW)
 Take seamless, high-resolution long / scrolling screenshots in any iOS application turn-by-turn with a single tap.
 
-### 🖼️ Real Device Visual Comparison (Inputs & Stitched Output)
+### 🖼️ Nasıl Çalışır? (2 Adımda Yakalama)
 
 <p align="center">
-  <img src="assets/longshot/longshot_prompt.png" alt="1. Trigger HUD" width="28%" />
-  &nbsp;&nbsp;
-  <img src="assets/longshot/longshot_stitched_output.png" alt="Stitched Long Output" width="28%" />
-  &nbsp;&nbsp;
-  <img src="assets/longshot/longshot_manual_hud.png" alt="2. Live Progress HUD" width="28%" />
+  <img src="assets/longshot/longshot_prompt.png" alt="1. Tetikleme Kapsülü" width="34%" />
+  &nbsp;&nbsp;&nbsp;&nbsp;
+  <img src="assets/longshot/longshot_manual_hud.png" alt="2. Canlı İlerleme HUD" width="34%" />
 </p>
 <p align="center">
-  <i>(Left: Trigger Prompt HUD • Center: Seamless Stitched Vertical Output • Right: Live Progress & Stop HUD)</i>
+  <i>(1. Adım: Ekran Görüntüsü Alındığında Açılan Kapsül • 2. Adım: Canlı Dilim Sayacı ve Durdurma HUD'ı)</i>
 </p>
 
-* **🚀 Auto Long Shot:** Automatically scrolls scrollable views (Safari, Twitter/X, WhatsApp, Settings, Reddit, etc.) and stitches slices into one continuous canvas.
-* **🖐️ Manual ('Elle') Mode:** Floating capsule HUD allows step-by-step selective scrolling and capture.
-* **🛑 Live Stop Button:** Hit *Durdur (Stop)* anytime to finalize and crop at that exact slice with zero blank trailing space.
-* **🖼️ Suppress iOS Thumbnail:** Settings toggle to hide the stock iOS bottom-left corner screenshot preview.
-* **💾 Native Save & Share:** Saves directly to Camera Roll and presents the native iOS Share Sheet.
+### 📱 Çıktı & Özellikler
+
+<table>
+<tr>
+<td width="38%" align="center" valign="top">
+  <img src="assets/longshot/longshot_stitched_output.png" alt="LongShot Kesintisiz Dikey Çıktı" width="100%" />
+  <br><b>✨ Birleştirilmiş Kesintisiz Çıktı (Long Shot)</b>
+</td>
+<td width="62%" valign="top">
+
+### ✨ LongShot Özellikleri & Mimarisi
+iOS uygulamalarında (Safari, Twitter/X, WhatsApp, Ayarlar, Reddit vb.) dikey olarak uzayan sayfaları tek dokunuşla kaydırarak tek bir kesintisiz uzun ekran görüntüsü halinde birleştiren akıllı dikişleme tweak'i.
+
+* **🚀 Otomatik & Elle Modu:** 'Long Shot' ile tam otomatik veya 'Elle' ile adım adım kontrol.
+* **🛑 Canlı Durdurma Kontrolü:** Sayfanın sonunu beklemek zorunda değilsiniz; 'Durdur' butonu ile istenilen yerde sonlandırıp tam o noktaya kadar sıfır beyaz boşlukla dikişler.
+* **🖼️ iOS Küçük Ekranını Kapatma:** Sol alt köşedeki varsayılan ekran görüntüsü önizleme penceresini otomatik gizler.
+* **💾 Galeriye Kaydet & Paylaş:** Doğrudan Fotoğraflar'a kaydeder ve yerel iOS Paylaşım sayfasını (`UIActivityViewController`) açar.
+* **⚙️ Ayarlar & Teşhis Paneli:** Ayarlar uygulamasından tek tıkla Telegram üzerinden geliştiriciye log iletir.
+* **🛡️ Sıfır Kilitlenme:** SpringBoard pencere yöneticilerine dokunmaz; respring takılma riski yoktur.
+
+</td>
+</tr>
+</table>
 
 ---
 

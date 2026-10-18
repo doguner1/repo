@@ -536,109 +536,140 @@
             line-height: 1.6;
         }
 
-        /* LongShot Trio Showcase Grid */
-        .longshot-showcase {
-            background: #05070d;
-            border-bottom: 1px solid var(--border);
-            padding: 24px 20px;
-            width: 100%;
-        }
-
-        .longshot-showcase-title {
-            text-align: center;
-            margin-bottom: 18px;
-        }
-
-        .longshot-showcase-title h4 {
-            font-size: 1.15rem;
-            color: #ffffff;
-            font-weight: 700;
-            margin-bottom: 4px;
-        }
-
-        .longshot-showcase-title p {
-            font-size: 0.84rem;
-            color: var(--text-sub);
-        }
-
-        .trio-container {
-            display: grid;
-            grid-template-columns: 1fr 1.15fr 1fr;
-            gap: 16px;
-            align-items: stretch;
-            width: 100%;
-            max-width: 860px;
-            margin: 0 auto;
-        }
-
-        .trio-column {
-            display: flex;
-            flex-direction: column;
-            background: rgba(15, 23, 42, 0.5);
-            border: 1px solid var(--border);
-            border-radius: var(--radius-lg);
-            overflow: hidden;
-            transition: all 0.25s ease;
-        }
-
-        .trio-column:hover {
-            border-color: rgba(59, 130, 246, 0.4);
-            transform: translateY(-2px);
-        }
-
-        .trio-column.featured {
-            border: 1.5px solid rgba(16, 185, 129, 0.5);
-            background: rgba(16, 185, 129, 0.05);
-            box-shadow: 0 8px 24px rgba(16, 185, 129, 0.15);
-        }
-
-        .trio-badge {
-            padding: 8px 12px;
-            font-size: 0.75rem;
-            font-weight: 700;
-            text-align: center;
-            text-transform: uppercase;
-            letter-spacing: 0.03em;
-            background: rgba(0, 0, 0, 0.4);
-            color: var(--text-sub);
-            border-bottom: 1px solid var(--border);
-        }
-
-        .trio-column.featured .trio-badge {
-            background: rgba(16, 185, 129, 0.2);
-            color: #34d399;
-            border-bottom-color: rgba(16, 185, 129, 0.3);
-        }
-
-        .trio-img-frame {
-            padding: 12px;
+        /* LongShot Top Steps Banner */
+        .longshot-steps-banner {
             display: flex;
             align-items: center;
             justify-content: center;
-            flex: 1;
-            background: #000000;
-            min-height: 280px;
+            gap: 20px;
+            padding: 22px 20px;
+            background: #04070f;
+            border-bottom: 1px solid var(--border);
+            flex-wrap: wrap;
         }
 
-        .trio-img-frame img {
+        .longshot-step-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            max-width: 260px;
+            flex: 1 1 200px;
+        }
+
+        .step-tag {
+            font-size: 0.74rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: #60a5fa;
+            background: rgba(59, 130, 246, 0.15);
+            border: 1px solid rgba(59, 130, 246, 0.35);
+            padding: 3px 12px;
+            border-radius: 20px;
+            margin-bottom: 8px;
+            letter-spacing: 0.03em;
+        }
+
+        .step-img-box {
+            background: #000000;
+            border-radius: 12px;
+            border: 1px solid var(--border);
+            overflow: hidden;
+            padding: 8px;
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.55);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 200px;
+            width: 100%;
+        }
+
+        .step-img-box img {
+            max-height: 100%;
+            width: auto;
+            object-fit: contain;
+            border-radius: 6px;
+        }
+
+        .step-caption {
+            font-size: 0.78rem;
+            color: var(--text-sub);
+            margin-top: 8px;
+            line-height: 1.4;
+        }
+
+        .step-arrow {
+            font-size: 1.6rem;
+            color: #60a5fa;
+            opacity: 0.65;
+        }
+
+        /* LongShot Main Split: Left Tall Image, Right Details */
+        .longshot-split-body {
+            display: grid;
+            grid-template-columns: 290px 1fr;
+            gap: 28px;
+            padding: 28px;
+            align-items: start;
+        }
+
+        .longshot-stitched-col {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background: rgba(16, 185, 129, 0.04);
+            border: 1.5px solid rgba(16, 185, 129, 0.35);
+            border-radius: var(--radius-lg);
+            padding: 16px;
+            box-shadow: 0 8px 24px rgba(16, 185, 129, 0.12);
+        }
+
+        .stitched-tag {
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: #34d399;
+            background: rgba(16, 185, 129, 0.2);
+            border: 1px solid rgba(16, 185, 129, 0.4);
+            padding: 4px 12px;
+            border-radius: 20px;
+            margin-bottom: 12px;
+            text-align: center;
+        }
+
+        .stitched-frame {
+            background: #000000;
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            overflow: hidden;
+            padding: 8px;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.7);
+            display: flex;
+            justify-content: center;
+            width: 100%;
+        }
+
+        .stitched-frame img {
             max-width: 100%;
-            max-height: 380px;
+            max-height: 480px;
             width: auto;
             height: auto;
-            border-radius: 8px;
-            box-shadow: 0 4px 16px rgba(0,0,0,0.6);
-            display: block;
             object-fit: contain;
+            border-radius: 6px;
         }
 
-        .trio-desc {
-            padding: 10px 12px;
-            font-size: 0.8rem;
-            color: #d1d5db;
+        .stitched-sub {
+            font-size: 0.78rem;
+            color: #a7f3d0;
             text-align: center;
-            background: rgba(10, 15, 26, 0.8);
-            border-top: 1px solid var(--border);
+            margin-top: 10px;
             line-height: 1.4;
+        }
+
+        .longshot-details-col {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
         }
 
         /* Features Bullet Grid */
@@ -1006,15 +1037,25 @@
             .tweak-footer-actions .btn { width: 100%; }
             
             /* LongShot mobile layout */
-            .trio-container {
+            .longshot-split-body {
                 grid-template-columns: 1fr;
-                gap: 14px;
+                gap: 22px;
+                padding: 20px 16px;
             }
-            .trio-column.featured {
-                order: -1; /* Display stitched long screenshot first on mobile */
+            .longshot-stitched-col {
+                max-width: 300px;
+                margin: 0 auto;
             }
-            .trio-img-frame { min-height: 220px; }
-            .trio-img-frame img { max-height: 320px; }
+            .step-arrow {
+                display: none;
+            }
+            .longshot-steps-banner {
+                padding: 16px 12px;
+                gap: 12px;
+            }
+            .step-img-box {
+                height: 160px;
+            }
         }
 
         @media (max-width: 480px) {
@@ -1093,86 +1134,71 @@
             
             <!-- TWEAK 1: LONGSHOT SHOWCASE CARD -->
             <div class="tweak-card" id="longshotSection">
-                <div class="longshot-showcase">
-                    <div class="carousel-badges" style="position: static; margin-bottom: 14px;">
-                        <span class="pill-badge longshot-badge active-dot">v1.0.0 Public Release</span>
-                        <span class="pill-badge">iOS 14.0 - 15.8.x - 16.x</span>
-                        <span class="pill-badge">Universal arm64</span>
+                <!-- En Üst: İki Kısa Resim (Nasıl Çalışır / Girdiler) -->
+                <div class="longshot-steps-banner">
+                    <div class="longshot-step-item">
+                        <span class="step-tag">1. Adım</span>
+                        <div class="step-img-box">
+                            <img src="assets/longshot/longshot_prompt.png" alt="1. Tetikleme Kapsülü">
+                        </div>
+                        <div class="step-caption">Ekran görüntüsü alındığında anında açılan akıllı kapsül (<b>Long Shot</b> / <b>Elle</b> / <b>✕</b>)</div>
                     </div>
 
-                    <div class="longshot-showcase-title">
-                        <h4>📸 Nasıl Çalışır? (2 Dilimin Otomatik Birleşimi)</h4>
-                        <p>Ekran görüntüsü aldığınızda anında tetiklenir, sayfayı kaydırıp tek bir uzun resim çıktısı oluşturur.</p>
-                    </div>
+                    <div class="step-arrow">➔</div>
 
-                    <!-- 3-Column Visual Comparison: Step 1 -> Stitched Result -> Step 2 -->
-                    <div class="trio-container">
-                        <!-- Column 1: Step 1 Prompt HUD -->
-                        <div class="trio-column">
-                            <div class="trio-badge">1. Tetikleme Arayüzü</div>
-                            <div class="trio-img-frame">
-                                <img src="assets/longshot/longshot_prompt.png" alt="LongShot Tetikleme Kapsülü">
-                            </div>
-                            <div class="trio-desc">
-                                Ekran görüntüsü alındığında açılan akıllı kapsül (<b>Long Shot</b> / <b>Elle</b> / <b>✕</b>).
-                            </div>
+                    <div class="longshot-step-item">
+                        <span class="step-tag">2. Adım</span>
+                        <div class="step-img-box">
+                            <img src="assets/longshot/longshot_manual_hud.png" alt="2. Canlı İlerleme ve Durdurma">
                         </div>
-
-                        <!-- Column 2 (Center): Stitched Output (TALL) -->
-                        <div class="trio-column featured">
-                            <div class="trio-badge">✨ Birleştirilmiş Çıktı (Long Shot)</div>
-                            <div class="trio-img-frame">
-                                <img src="assets/longshot/longshot_stitched_output.png" alt="LongShot Kesintisiz Dikişli Çıktı">
-                            </div>
-                            <div class="trio-desc">
-                                <b>İki parçanın birleşimi:</b> Kesintisiz, beyaz boşluksuz yüksek çözünürlüklü dikey çıktı.
-                            </div>
-                        </div>
-
-                        <!-- Column 3: Step 2 Live HUD -->
-                        <div class="trio-column">
-                            <div class="trio-badge">2. Canlı Yakalama & Durdurma</div>
-                            <div class="trio-img-frame">
-                                <img src="assets/longshot/longshot_manual_hud.png" alt="LongShot Canlı İlerleme ve Durdurma">
-                            </div>
-                            <div class="trio-desc">
-                                Canlı dilim sayacı ve dilediğiniz an işlemi tamamlamak için <b>Durdur</b> butonu.
-                            </div>
-                        </div>
+                        <div class="step-caption">Canlı dilim sayacı ve dilediğiniz an işlemi tamamlamak için <b>Durdur</b> butonu</div>
                     </div>
                 </div>
 
-                <div class="tweak-body">
-                    <div class="tweak-header-row">
-                        <div class="tweak-title-group">
-                            <img src="assets/longshot/icon.png" alt="LongShot Icon" class="tweak-icon-img">
-                            <div class="tweak-title-text">
-                                <h3>LongShot <span style="font-size: 0.8rem; color: #10b981; font-weight: 600;">NEW</span></h3>
-                                <div class="tweak-meta">com.doguner.longshot • v1.0.0 • Doguner</div>
-                            </div>
+                <!-- Alt: Solda Uzun Resim, Sağında Yazılar ve Butonlar -->
+                <div class="longshot-split-body">
+                    <!-- Sol Kolon: O Uzun Resim (Kesintisiz Dikişli Çıktı) -->
+                    <div class="longshot-stitched-col">
+                        <div class="stitched-tag">✨ Birleştirilmiş Çıktı (Long Shot)</div>
+                        <div class="stitched-frame">
+                            <img src="assets/longshot/longshot_stitched_output.png" alt="LongShot Kesintisiz Dikey Çıktı">
                         </div>
+                        <div class="stitched-sub">İki dilimin piksel piksel dikişlenmiş, kesintisiz yüksek çözünürlüklü dikey çıktısı</div>
                     </div>
 
-                    <p class="tweak-desc">
-                        iOS uygulamalarında (Safari, Twitter, WhatsApp, Ayarlar, Reddit vb.) dikey olarak uzayan sayfaları tek dokunuşla kaydırarak tek bir kesintisiz uzun ekran görüntüsü halinde birleştiren akıllı dikişleme tweak'i.
-                    </p>
+                    <!-- Sağ Kolon: Başlık, Açıklamalar, Özellikler ve Butonlar -->
+                    <div class="longshot-details-col">
+                        <div class="tweak-header-row">
+                            <div class="tweak-title-group">
+                                <img src="assets/longshot/icon.png" alt="LongShot Icon" class="tweak-icon-img">
+                                <div class="tweak-title-text">
+                                    <h3>LongShot <span style="font-size: 0.8rem; color: #10b981; font-weight: 600;">NEW</span></h3>
+                                    <div class="tweak-meta">com.doguner.longshot • v1.0.0 • Doguner</div>
+                                </div>
+                            </div>
+                        </div>
 
-                    <ul class="features-list">
-                        <li><span class="bullet">✦</span> <b>Otomatik & Elle Modu:</b> 'Long Shot' ile tam otomatik veya 'Elle' ile adım adım çekim.</li>
-                        <li><span class="bullet">✦</span> <b>Canlı Durdurma Kontrolü:</b> 'Durdur' butonu ile istenilen yerde sonlandırıp tam o noktaya kadar dikişleme.</li>
-                        <li><span class="bullet">✦</span> <b>iOS Küçük Ekranını Kapatma:</b> Sol alt köşedeki varsayılan ekran görüntüsü önizlemesini gizleme seçeneği.</li>
-                        <li><span class="bullet">✦</span> <b>Ayarlar & Teşhis Paneli:</b> Ayarlar uygulamasından tek tıkla Telegram üzerinden geliştiriciye log iletme.</li>
-                    </ul>
+                        <p class="tweak-desc">
+                            iOS uygulamalarında (Safari, Twitter/X, WhatsApp, Ayarlar, Reddit vb.) dikey olarak uzayan sayfaları tek dokunuşla kaydırarak tek bir kesintisiz uzun ekran görüntüsü halinde birleştiren akıllı dikişleme tweak'i.
+                        </p>
 
-                    <div class="tweak-footer-actions">
-                        <a href="debs/com.doguner.longshot_1.0.0_iphoneos-arm64.deb" class="btn btn-primary" onclick="trackLongShotDownload()">
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-                            Download .deb (v1.0.0)
-                        </a>
-                        <a href="depiction_longshot.json" target="_blank" class="btn btn-glass">
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
-                            Sileo Depiction
-                        </a>
+                        <ul class="features-list">
+                            <li><span class="bullet">✦</span> <b>Otomatik & Elle Modu:</b> 'Long Shot' ile tam otomatik veya 'Elle' ile adım adım çekim.</li>
+                            <li><span class="bullet">✦</span> <b>Canlı Durdurma Kontrolü:</b> 'Durdur' butonu ile istenilen yerde sonlandırıp tam o noktaya kadar dikişleme.</li>
+                            <li><span class="bullet">✦</span> <b>iOS Küçük Ekranını Kapatma:</b> Sol alt köşedeki varsayılan ekran görüntüsü önizlemesini gizleme seçeneği.</li>
+                            <li><span class="bullet">✦</span> <b>Ayarlar & Teşhis Paneli:</b> Ayarlar uygulamasından tek tıkla Telegram üzerinden geliştiriciye log iletme.</li>
+                        </ul>
+
+                        <div class="tweak-footer-actions">
+                            <a href="debs/com.doguner.longshot_1.0.0_iphoneos-arm64.deb" class="btn btn-primary" onclick="trackLongShotDownload()">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                                Download .deb (v1.0.0)
+                            </a>
+                            <a href="depiction_longshot.json" target="_blank" class="btn btn-glass">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+                                Sileo Depiction
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
