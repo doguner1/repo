@@ -5,11 +5,11 @@ Version: 1.0
 Codename: ios
 Architectures: iphoneos-arm64
 Components: main
-Description: Official Repository for CarSplit and iOS Tweaks
+Description: Official Repository for CarSplit, LongShot and iOS Tweaks
 Icon: https://doguner1.github.io/repo/CydiaIcon.png
 MD5Sum:
- 905b9e4497fe9e675fcd20131fc847c7 810 Packages
- d208c024c617ea859c1df3bd76908c58 597 Packages.bz2
+ cf7b712c6fd4cc481f99059fa5257a6a 1598 Packages
+ 7ac1f28b53bd2d853a52f6967b53ff13 878 Packages.bz2
 SHA256:
- 3043ee9bc20f41f83fe0c9e16e36658eb95251b8232855002c2262e0ecae7927 810 Packages
- c51cff1ee97eb8aeb255a8aa9a5327f931dbc19a809c359752caab3973b1151b 597 Packages.bz2
+ 9a5ea7a11e6371a2c3a43c0f074297723e4f43394b639ff3a25355e4caa99958 1598 Packages
+ 492732f3a44f1ef677f0222a9357b0eb0e92cfa0bd798f9cc08b6b0421e3c38b 878 Packages.bz2

@@ -1,0 +1,63 @@
+{
+  "minVersion": "0.1",
+  "headerImage": "https://doguner1.github.io/repo/assets/longshot/longshot_prompt.png",
+  "tintColor": "#007aff",
+  "tabs": [
+    {
+      "tabname": "Details",
+      "class": "DepictionStackView",
+      "views": [
+        {
+          "class": "DepictionScreenshotsView",
+          "screenshots": [
+            {
+              "url": "https://doguner1.github.io/repo/assets/longshot/longshot_prompt.png",
+              "accessibilityText": "Screenshot Prompt (Long Shot & Elle)"
+            },
+            {
+              "url": "https://doguner1.github.io/repo/assets/longshot/longshot_manual_hud.png",
+              "accessibilityText": "Manual Capture Floating HUD"
+            },
+            {
+              "url": "https://doguner1.github.io/repo/assets/longshot/longshot_stitched_output.png",
+              "accessibilityText": "Seamless Stitched Vertical Screenshot"
+            },
+            {
+              "url": "https://doguner1.github.io/repo/assets/longshot/longshot_success_alert.png",
+              "accessibilityText": "Success Save & Share Dialog"
+            }
+          ],
+          "itemCornerRadius": 10,
+          "itemSize": "{160, 280}"
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "### 📸 LongShot — Seamless Long Screenshots for iOS\n\nTake scrolling, vertically stitched long screenshots in any iOS app with a single tap!\n\n#### ✨ Key Features\n- 🚀 **One-Tap Long Shot:** Automatically scrolls scrollable views (Safari, Twitter, WhatsApp, Settings, Reddit, etc.) and stitches them seamlessly.\n- 🖐️ **Manual ('Elle') Mode:** Floating capsule HUD allows step-by-step custom scrolling and capture.\n- 🛑 **Live Stop Control:** Press 'Durdur' anytime to finalize and stitch slices up to that exact point without blank trailing space.\n- 🖼️ **Hide iOS Thumbnail Preview:** Optional Settings toggle to hide the stock iOS bottom-left screenshot preview popup.\n- 💾 **Instant Save & Share:** Directly saves high-resolution stitched images to your Photos Library and opens native UIActivityViewController.\n- ⚙️ **Native iOS Settings Integration:** Full control panel with diagnostics, Telegram log reporting, and customization.\n- 🛡️ **100% Free & Open Community Release:** Strictly not for sale.\n\n#### 📱 Compatibility\n- **Jailbreak:** Dopamine 2 (Rootless, `/var/jb`)\n- **Firmware:** iOS 14.0 – 15.8.x – 16.x\n- **Architecture:** `iphoneos-arm64` (A10–A16 devices)"
+        },
+        {
+          "class": "DepictionTableButtonView",
+          "title": "☕ Buy Me a Coffee on Gumroad",
+          "action": "https://aliciamaze.gumroad.com/l/doguner-tweak-lab",
+          "openExternal": true
+        },
+        {
+          "class": "DepictionTableButtonView",
+          "title": "🌐 GitHub Repository",
+          "action": "https://github.com/doguner1/repo",
+          "openExternal": true
+        }
+      ]
+    },
+    {
+      "tabname": "Changelog",
+      "class": "DepictionStackView",
+      "views": [
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "#### Version 1.0.0\n- Initial public release on Doguner Repo!\n- Chained main-runloop scroll-and-capture state machine.\n- Floating interactive prompt capsule with instant dismiss (✕), 'Long Shot' (Auto), and 'Elle' (Manual).\n- Floating capture HUD with live slice counter and responsive 'Durdur' (Stop) button.\n- Native Settings app integration with toggle, log reporting to Telegram, and stock preview suppression."
+        }
+      ]
+    }
+  ],
+  "class": "DepictionTabView"
+}

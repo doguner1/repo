@@ -16,3 +16,21 @@ Size: 107514
 MD5sum: eb09eac2ef61ecde8cc796a8bac2d817
 SHA256: 5f5cc1e5e37359f3af2d11ebf4d28f5a47a71968f5335dec51011047e203e66d
 
+Package: com.doguner.longshot
+Name: LongShot
+Version: 1.0.0
+Architecture: iphoneos-arm64
+Description: Seamless vertical long screenshot stitcher for iOS apps! Tap LongShot or Elle after taking a screenshot to stitch scrolling content. (Dopamine rootless, iOS 14 - 15+)
+Maintainer: doguner
+Author: doguner
+Section: Tweaks
+Depends: mobilesubstrate (>= 0.9.5000), preferenceloader
+Tag: role::cydia, purpose::extension
+Icon: https://doguner1.github.io/repo/assets/longshot/icon.png
+SileoDepiction: https://doguner1.github.io/repo/depiction_longshot.json
+Depiction: https://doguner1.github.io/repo/index.html
+Filename: com.doguner.longshot_1.0.0_iphoneos-arm64.deb
+Size: 106438
+MD5sum: 3610d8ab31dcf869de0683c9e7597d6a
+SHA256: 67d836cbf1539684f5be8eefd2f481c26d957cd7ba83fe5f39bea11715ab1c89
+
