@@ -1,18 +1,18 @@
 Package: com.doguner.carsplit
 Name: CarSplit (Beta)
-Version: 1.0.0-beta5
+Version: 1.0.0-beta6
 Architecture: iphoneos-arm64
 Description: Run dual apps in split-screen on Apple CarPlay! Requires CarBridge (https://carbridge.app / Havoc). Tested & verified on iPhone 7 (iOS 15.8.8, Dopamine 2). Community beta for other devices.
 Maintainer: doguner
 Author: doguner
 Section: Tweaks
-Depends: mobilesubstrate (>= 0.9.5000), preferenceloader, com.leftyfl1p.carbridge13 | com.leftyfl1p.carbridge
+Depends: mobilesubstrate (>= 0.9.5000), preferenceloader
 Tag: role::cydia, purpose::extension
 Icon: https://doguner1.github.io/repo/CydiaIcon.png
 SileoDepiction: https://doguner1.github.io/repo/depiction.json
 Depiction: https://doguner1.github.io/repo/index.html
-Filename: com.doguner.carsplit_1.0.0-beta5_iphoneos-arm64.deb
-Size: 109370
-MD5sum: a6254da0c6eb36263d8c9e5eb604c09e
-SHA256: ce968f6729da18ce49813c5e1d34309123a5092eb503f13e49536893f3ace6e7
+Filename: com.doguner.carsplit_1.0.0-beta6_iphoneos-arm64.deb
+Size: 109358
+MD5sum: e558121556c4a2b94f989f5a8f9b6acf
+SHA256: c5f3e348a1486cb7a44adc2c945508f58838d004c3cde94038614153789c5289
 

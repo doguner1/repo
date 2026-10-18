@@ -8,8 +8,8 @@ Components: main
 Description: Official Repository for CarSplit and iOS Tweaks
 Icon: https://doguner1.github.io/repo/CydiaIcon.png
 MD5Sum:
- c478f068e343d03ef4158b9258b0344e 863 Packages
- 231c445de96deda3d1048cb84169b9f8 613 Packages.bz2
+ 56331462bf7e7ab477f376dd32ccea2c 810 Packages
+ e58bb3301483213d9d81d71bd8ab0dc3 596 Packages.bz2
 SHA256:
- 413204d1fb893a000ef2380496dc75788a77eaeed78018952accd4f342f591fc 863 Packages
- e57e82fd980383e75f8f656bfeb1bbc6e9b394ada62af62290b3ce231885be17 613 Packages.bz2
+ dd5307a7ada4f5f64efe920093e68efc6ce188e1f88a08862f3c87a000b6c86c 810 Packages
+ 876055d7eb153a51b4ba078bb459b8d0a278e499f8dbcc65b232a559f117d0de 596 Packages.bz2
