@@ -16,7 +16,7 @@ Official APT package repository for **LongShot** (intelligent long screenshot st
 
 ---
 
-## 📸 1. LongShot (v1.0.0 — NEW)
+## 📸 1. LongShot (v1.1.0)
 Take seamless, high-resolution long / scrolling screenshots in any iOS application turn-by-turn with a single tap.
 
 ### 🖼️ Nasıl Çalışır? (2 Adımda Yakalama)
@@ -45,10 +45,11 @@ iOS uygulamalarında (Safari, Twitter/X, WhatsApp, Ayarlar, Reddit vb.) dikey ol
 
 * **🚀 Otomatik & Elle Modu:** 'Long Shot' ile tam otomatik veya 'Elle' ile adım adım kontrol.
 * **🛑 Canlı Durdurma Kontrolü:** Sayfanın sonunu beklemek zorunda değilsiniz; 'Durdur' butonu ile istenilen yerde sonlandırıp tam o noktaya kadar sıfır beyaz boşlukla dikişler.
-* **🖼️ iOS Küçük Ekranını Kapatma:** Sol alt köşedeki varsayılan ekran görüntüsü önizleme penceresini otomatik gizler.
+* **🖼️ iOS Küçük Ekranını Kapatma:** Sol alt köşedeki varsayılan ekran görüntüsü önizleme penceresini otomatik gizler, kapatıldığında anında eski haline döner.
+* **⚡ Respring Butonu:** Ayarlar menüsünden ve gezinti çubuğundan tek dokunuşla hızlı SpringBoard yeniden başlatma.
 * **💾 Galeriye Kaydet & Paylaş:** Doğrudan Fotoğraflar'a kaydeder ve yerel iOS Paylaşım sayfasını (`UIActivityViewController`) açar.
 * **⚙️ Ayarlar & Teşhis Paneli:** Ayarlar uygulamasından tek tıkla Telegram üzerinden geliştiriciye log iletir.
-* **🛡️ Sıfır Kilitlenme:** SpringBoard pencere yöneticilerine dokunmaz; respring takılma riski yoktur.
+* **🛡️ Sıfır Kilitlenme:** Güvenli çalışma zamanı kancalarıyla kilitlenme riski yoktur.
 
 </td>
 </tr>

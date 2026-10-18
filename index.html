@@ -1172,8 +1172,8 @@
                             <div class="tweak-title-group">
                                 <img src="assets/longshot/icon.png" alt="LongShot Icon" class="tweak-icon-img">
                                 <div class="tweak-title-text">
-                                    <h3>LongShot <span style="font-size: 0.8rem; color: #10b981; font-weight: 600;">NEW</span></h3>
-                                    <div class="tweak-meta">com.doguner.longshot • v1.0.0 • Doguner</div>
+                                    <h3>LongShot <span style="font-size: 0.8rem; color: #10b981; font-weight: 600;">v1.1.0</span></h3>
+                                    <div class="tweak-meta">com.doguner.longshot • v1.1.0 • Doguner</div>
                                 </div>
                             </div>
                         </div>
@@ -1186,15 +1186,16 @@
                             <li><span class="bullet">✦</span> <b>Otomatik & Elle Modu:</b> 'Long Shot' ile tam otomatik veya 'Elle' ile adım adım çekim.</li>
                             <li><span class="bullet">✦</span> <b>Canlı Durdurma Kontrolü:</b> 'Durdur' butonu ile istenilen yerde sonlandırıp tam o noktaya kadar dikişleme.</li>
                             <li><span class="bullet">✦</span> <b>iOS Küçük Ekranını Kapatma:</b> Sol alt köşedeki varsayılan ekran görüntüsü önizlemesini gizleme seçeneği.</li>
+                            <li><span class="bullet">✦</span> <b>Respring Butonu:</b> Ayarlar menüsünden ve gezinti çubuğundan tek dokunuşla hızlı SpringBoard yeniden başlatma.</li>
                             <li><span class="bullet">✦</span> <b>Ayarlar & Teşhis Paneli:</b> Ayarlar uygulamasından tek tıkla Telegram üzerinden geliştiriciye log iletme.</li>
                         </ul>
 
                         <div class="tweak-footer-actions">
-                            <a href="debs/com.doguner.longshot_1.0.0_iphoneos-arm64.deb" class="btn btn-primary" onclick="trackLongShotDownload()">
+                            <a href="debs/com.doguner.longshot_1.1.0_iphoneos-arm64.deb" class="btn btn-primary" onclick="trackLongShotDownload()">
                                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-                                Download .deb (v1.0.0)
+                                Download .deb (v1.1.0)
                             </a>
-                            <a href="depiction_longshot.json" target="_blank" class="btn btn-glass">
+                            <a href="depiction_longshot.json?v=1.1.0" target="_blank" class="btn btn-glass">
                                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
                                 Sileo Depiction
                             </a>
@@ -1628,7 +1629,7 @@
         }
 
         function trackLongShotDownload() {
-            sendTelegramPing("📸 <b>Yeni LongShot .deb İndirmesi! (Web Sitesi)</b>\nPaket: LongShot v1.0.0");
+            sendTelegramPing("📸 <b>Yeni LongShot .deb İndirmesi! (Web Sitesi)</b>\nPaket: LongShot v1.1.0");
         }
 
         let lastPingTime = 0;

@@ -27,10 +27,10 @@ Section: Tweaks
 Depends: mobilesubstrate (>= 0.9.5000), preferenceloader
 Tag: role::cydia, purpose::extension
 Icon: https://doguner1.github.io/repo/assets/longshot/icon.png
-SileoDepiction: https://doguner1.github.io/repo/depiction_longshot.json
+SileoDepiction: https://doguner1.github.io/repo/depiction_longshot.json?v=1.1.0
 Depiction: https://doguner1.github.io/repo/index.html
 Filename: com.doguner.longshot_1.1.0_iphoneos-arm64.deb
-Size: 856020
-MD5sum: 7d84d780d1d2163c361c9e21034b6afa
-SHA256: 12e9e8ce06f8fc46e1184d6edada2b1f38b8ab01a0766bebff49a99ce9905a37
+Size: 856042
+MD5sum: db8877ee412286d3de6695954ddc4cb8
+SHA256: 79f0d6ceb064d1272624e7dfc4e14b4626ab453f04be377ee23a3036ded7457c
 
