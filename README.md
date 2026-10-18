@@ -9,17 +9,28 @@
   </a>
 </p>
 
-Official APT package repository for **CarSplit** and **LongShot** tweaks for rootless iOS (`/var/jb`).
+Official APT package repository for **LongShot** (intelligent long screenshot stitcher) and **CarSplit** (CarPlay dual-app multitasking) tweaks for rootless iOS (`/var/jb`).
 
-🌐 **Web Showcase & Sileo Depictions:** [https://doguner1.github.io/repo/](https://doguner1.github.io/repo/)  
+🌐 **Web Showcase:** [https://doguner1.github.io/repo/](https://doguner1.github.io/repo/)  
 📦 **Add to Sileo / Zebra:** `https://doguner1.github.io/repo/`
 
 ---
 
-## 🌟 Available Tweaks
-
-### 1. 📸 LongShot (v1.0.0 — NEW)
+## 📸 1. LongShot (v1.0.0 — NEW)
 Take seamless, high-resolution long / scrolling screenshots in any iOS application turn-by-turn with a single tap.
+
+### 🖼️ Real Device Visual Comparison (Inputs & Stitched Output)
+
+<p align="center">
+  <img src="assets/longshot/longshot_prompt.png" alt="1. Trigger HUD" width="28%" />
+  &nbsp;&nbsp;
+  <img src="assets/longshot/longshot_stitched_output.png" alt="Stitched Long Output" width="28%" />
+  &nbsp;&nbsp;
+  <img src="assets/longshot/longshot_manual_hud.png" alt="2. Live Progress HUD" width="28%" />
+</p>
+<p align="center">
+  <i>(Left: Trigger Prompt HUD • Center: Seamless Stitched Vertical Output • Right: Live Progress & Stop HUD)</i>
+</p>
 
 * **🚀 Auto Long Shot:** Automatically scrolls scrollable views (Safari, Twitter/X, WhatsApp, Settings, Reddit, etc.) and stitches slices into one continuous canvas.
 * **🖐️ Manual ('Elle') Mode:** Floating capsule HUD allows step-by-step selective scrolling and capture.
@@ -29,13 +40,44 @@ Take seamless, high-resolution long / scrolling screenshots in any iOS applicati
 
 ---
 
-### 2. 🚗 CarSplit (v1.0.0-beta6)
+## 🚗 2. CarSplit (v1.0.0-beta6)
 True side-by-side multitasking on **Apple CarPlay**. Run any two bridged applications simultaneously on your vehicle's head unit display—such as **Google Maps** on one side and **YouTube / Music** on the other.
+
+### 📸 Real In-Car Vehicle Verification
+
+Verified and tested on actual CarPlay vehicle displays:
+
+<p align="center">
+  <img src="IMG_1188.PNG" alt="CarSplit - YouTube Music & Google Maps" width="48%" />
+  &nbsp;
+  <img src="IMG_1190.PNG" alt="CarSplit - Google Maps & YouTube Music" width="48%" />
+</p>
+<p align="center">
+  <img src="IMG_1192.PNG" alt="CarSplit - DeepSeek AI & YouTube" width="48%" />
+  &nbsp;
+  <img src="demo1.png" alt="CarSplit - Google Maps & YouTube Premium" width="48%" />
+</p>
+<p align="center">
+  <img src="demo2.png" alt="CarSplit - CarPlay Home Grid & Media" width="48%" />
+</p>
+<p align="center">
+  <i>Authentic CarPlay Screenshots: YouTube Music + Google Maps, Swapped Layouts, DeepSeek AI Assistant + Media, and Home Grid Multitasking.</i>
+</p>
 
 * **🏎️ True Multitasking:** Both apps remain fully active with independent dual-touch controls.
 * **⏱️ One-Tap Clock Switch:** Tap the CarPlay status bar clock to cycle split layouts instantly.
 * **⚠️ Requirement:** Requires **CarBridge** ([Havoc Repo](https://havoc.app/package/carbridge) / [carbridge.app](https://carbridge.app)).
 * **📱 Verified Hardware:** 100% tested and verified on iPhone 7 (`iPhone9,3` on iOS 15.8.8) in an actual vehicle.
+
+---
+
+## 📱 Hardware & Firmware Compatibility
+
+| Device / Firmware | Status | Verification Details |
+|---|---|---|
+| **iPhone 7 (`iPhone9,3`) — iOS 15.8.8** | ✅ **VERIFIED & TESTED** | Tested and verified in real vehicle CarPlay head unit and on-device screenshot capture. |
+| **Other iPhone Models (A10 - A16)** | 🧪 **Community Beta** | Universal fat binaries (`arm64` + `arm64e`) for Dopamine 2 rootless. |
+| **iOS 14.0 – 15.8.x – 16.x** | 🧪 **Community Beta** | Full rootless `/var/jb` compatibility across modern iOS versions. |
 
 ---
 
