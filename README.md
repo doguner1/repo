@@ -16,7 +16,7 @@ Official APT package repository for **LongShot** (intelligent long screenshot st
 
 ---
 
-## 📸 1. LongShot (v1.1.0)
+## 📸 1. LongShot (v1.1.1)
 Take seamless, high-resolution long / scrolling screenshots in any iOS application turn-by-turn with a single tap.
 
 ### 🖼️ Nasıl Çalışır? (2 Adımda Yakalama)
@@ -85,6 +85,36 @@ Verified and tested on actual CarPlay vehicle displays:
 * **⏱️ One-Tap Clock Switch:** Tap the CarPlay status bar clock to cycle split layouts instantly.
 * **⚠️ Requirement:** Requires **CarBridge** ([Havoc Repo](https://havoc.app/package/carbridge) / [carbridge.app](https://carbridge.app)).
 * **📱 Verified Hardware:** 100% tested and verified on iPhone 7 (`iPhone9,3` on iOS 15.8.8) in an actual vehicle.
+
+---
+
+## 🔔 3. NotificationVault (v1.0.1)
+Offline encrypted notification history vault and logger for iOS. Never miss a recalled or deleted message again. Captures all push and local alerts from WhatsApp, Instagram, Telegram, Messages, Mail, and more into a local SQLite database.
+
+### 📸 Live Device Screenshots & Demo Video
+
+<p align="center">
+  <img src="assets/notificationvault/nv_app_viewer.png" alt="NotificationVault App Görüntüleyici & Silinen Bildirimler" width="31%" />
+  &nbsp;&nbsp;
+  <img src="assets/notificationvault/nv_settings_top.png" alt="NotificationVault Ayarlar & Uygulama Başlatıcı" width="31%" />
+  &nbsp;&nbsp;
+  <img src="assets/notificationvault/nv_settings_bottom.png" alt="NotificationVault Ayarlar & Veri Tabanı İstatistikleri" width="31%" />
+</p>
+<p align="center">
+  <i>(1. Görsel: Bağımsız Görüntüleyici Uygulaması ve "Silindi" Etiketleri • 2. Görsel: Ayarlar Paneli & Tek Tıkla Uygulama Açıcı • 3. Görsel: SQLite Veri Tabanı Sayacı & Kontroller)</i>
+</p>
+
+<p align="center">
+  <a href="assets/notificationvault/demo.mp4"><b>▶️ Tanıtım / Canlı Önizleme Videosunu İzle (1.2 MB MP4)</b></a>
+</p>
+
+### ✨ NotificationVault Özellikleri & Mimarisi
+* 🔒 **%100 Çevrimdışı ve Gizli:** Hiçbir bildirim verisi cihaz dışına çıkmaz. Bulut veya harici sunucu iletişimi yoktur.
+* 🗑️ **Silinen Mesajları Saklama:** Gönderen kişi WhatsApp veya Instagram üzerinden mesajı "Herkesten Sil" yapsa dahi, NotificationVault yerel kopyasını saklar ve "Silindi" etiketiyle işaretler.
+* 📱 **Bağımsız Görüntüleyici Uygulaması (`NotificationVault.app`):** Ana ekranda ve Ayarlar panelinde tek tıkla açılabilen modern, aranabilir ve filtrelenebilir bildirim arşivi.
+* 🌍 **11 Dil Desteği:** Türkçe, İngilizce, Almanca, Fransızca, İspanyolca, İtalyanca, Rusça, Japonca, Basitleştirilmiş Çince, Arapça ve Vietnamca.
+* ⚙️ **Retina 29pt Settings Entegrasyonu:** Ayarlar uygulamasından anında veritabanı boyutu görme, tek tıkla arşivi temizleme ve hızlı Respring.
+* 🛡️ **%100 Ücretsiz Topluluk Sürümü:** Açık kaynak değil; kapalı kaynak freeware lisansıyla tamamen ücretsizdir.
 
 ---
 

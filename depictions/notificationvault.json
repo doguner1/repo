@@ -8,8 +8,27 @@
       "class": "DepictionStackView",
       "views": [
         {
+          "class": "DepictionScreenshotsView",
+          "screenshots": [
+            {
+              "url": "https://doguner1.github.io/repo/assets/notificationvault/nv_app_viewer.png",
+              "accessibilityText": "NotificationVault App Viewer with Deleted Messages"
+            },
+            {
+              "url": "https://doguner1.github.io/repo/assets/notificationvault/nv_settings_top.png",
+              "accessibilityText": "NotificationVault Settings & App Launcher"
+            },
+            {
+              "url": "https://doguner1.github.io/repo/assets/notificationvault/nv_settings_bottom.png",
+              "accessibilityText": "NotificationVault Database Stats & Controls"
+            }
+          ],
+          "itemCornerRadius": 10,
+          "itemSize": "{160, 285}"
+        },
+        {
           "class": "DepictionMarkdownView",
-          "markdown": "### 🔔 NotificationVault — Offline Notification History & Logger\n\nNever lose a deleted or recalled message again! NotificationVault captures incoming notifications in real-time and stores them securely in a local, encrypted SQLite database on your device.\n\n#### ✨ Key Features\n- 🔒 **100% Offline & Private:** Zero cloud storage, zero telemetry leakage. Notifications never leave your local device.\n- 📱 **Standalone Viewer App (`NotificationVault.app`):** Filter by application bundle (WhatsApp, Telegram, Instagram, Messages, Mail) or search message content.\n- 🧪 **Live Push Simulation Suite:** Test WhatsApp, Instagram, Facebook, and Time-Sensitive alerts on demand right from Settings.\n- 🌍 **Global 11-Language Localization:** English, Turkish, German, French, Spanish, Italian, Russian, Japanese, Simplified Chinese, Arabic, and Vietnamese.\n- ⚙️ **Retina 29pt Settings Integration:** Full native settings management with instant database clear and log reporting.\n- 🛡️ **100% Free Community Release:** Freeware, strictly non-commercial."
+          "markdown": "### 🔔 NotificationVault — Offline Notification History & Logger\n\nNever lose a deleted or recalled message again! NotificationVault captures incoming notifications in real-time and stores them securely in a local, encrypted SQLite database on your device.\n\n[▶️ Watch Live Demo Video](https://raw.githubusercontent.com/doguner1/repo/main/assets/notificationvault/demo.mp4)\n\n#### ✨ Key Features\n- 🔒 **100% Offline & Private:** Zero cloud storage, zero telemetry leakage. Notifications never leave your local device.\n- 📱 **Standalone Viewer App (`NotificationVault.app`):** Filter by application bundle (WhatsApp, Telegram, Instagram, Messages, Mail) or search message content.\n- 🗑️ **Deleted Notification Retention:** Even if the sender un-sends or deletes a message, NotificationVault keeps the record with a distinct Deleted badge.\n- 🌍 **Global 11-Language Localization:** English, Turkish, German, French, Spanish, Italian, Russian, Japanese, Simplified Chinese, Arabic, and Vietnamese.\n- ⚙️ **Retina 29pt Settings Integration:** Full native settings management with instant database clear and log reporting.\n- 🛡️ **100% Free Community Release:** Freeware, strictly non-commercial."
         },
         {
           "class": "DepictionTableButtonView",
@@ -31,7 +50,7 @@
       "views": [
         {
           "class": "DepictionMarkdownView",
-          "markdown": "#### Version 1.0.0\n- Initial release with offline SQLite notification logging.\n- Dedicated standalone viewer app.\n- Push simulation triggers in Settings.\n- Full 11-language support.\n- Fixed Settings icon and Sileo package list display."
+          "markdown": "#### Version 1.0.1\n- Fixed 'Open NotificationVault App' button in Settings to reliably launch standalone viewer.\n- Streamlined Settings panel by removing experimental test triggers.\n- Added official screenshots and preview demo video.\n\n#### Version 1.0.0\n- Initial release with offline SQLite notification logging.\n- Dedicated standalone viewer app.\n- Full 11-language support.\n- Fixed Settings icon and Sileo package list display."
         }
       ]
     }
