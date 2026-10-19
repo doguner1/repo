@@ -65,17 +65,17 @@ True side-by-side multitasking on **Apple CarPlay**. Run any two bridged applica
 Verified and tested on actual CarPlay vehicle displays:
 
 <p align="center">
-  <img src="IMG_1188.PNG" alt="CarSplit - YouTube Music & Google Maps" width="48%" />
+  <img src="assets/carsplit/IMG_1188.PNG" alt="CarSplit - YouTube Music & Google Maps" width="48%" />
   &nbsp;
-  <img src="IMG_1190.PNG" alt="CarSplit - Google Maps & YouTube Music" width="48%" />
+  <img src="assets/carsplit/IMG_1190.PNG" alt="CarSplit - Google Maps & YouTube Music" width="48%" />
 </p>
 <p align="center">
-  <img src="IMG_1192.PNG" alt="CarSplit - DeepSeek AI & YouTube" width="48%" />
+  <img src="assets/carsplit/IMG_1192.PNG" alt="CarSplit - DeepSeek AI & YouTube" width="48%" />
   &nbsp;
-  <img src="demo1.png" alt="CarSplit - Google Maps & YouTube Premium" width="48%" />
+  <img src="assets/carsplit/demo1.png" alt="CarSplit - Google Maps & YouTube Premium" width="48%" />
 </p>
 <p align="center">
-  <img src="demo2.png" alt="CarSplit - CarPlay Home Grid & Media" width="48%" />
+  <img src="assets/carsplit/demo2.png" alt="CarSplit - CarPlay Home Grid & Media" width="48%" />
 </p>
 <p align="center">
   <i>Authentic CarPlay Screenshots: YouTube Music + Google Maps, Swapped Layouts, DeepSeek AI Assistant + Media, and Home Grid Multitasking.</i>
