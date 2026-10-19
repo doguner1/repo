@@ -3,13 +3,13 @@ Label: Doguner Repo
 Suite: stable
 Version: 1.0
 Codename: ios
-Date: Mon, 19 Oct 2026 07:14:13 +0000
+Date: Mon, 19 Oct 2026 07:16:45 +0000
 Architectures: iphoneos-arm64
 Components: main
 Description: Official repository for CarSplit, LongShot and NotificationVault tweaks
 MD5Sum:
- efd76ffecd50e77a5660c4b9966b2a9e 2539 Packages
- 5c7430f034020ba380256a6518cecba0 1160 Packages.bz2
+ dafeb4a45b10fa936deb36a394ebff25 2539 Packages
+ ba5983747baaee3bdbcd2b1d634ac7ee 1164 Packages.bz2
 SHA256:
- 91230ef9dc70ac1cd9c4a7058036aeaab05d1ffeea26b3de4836681b97428ea8 2539 Packages
- f002e331e33f2a3dc9d61977e1b4eaef91d2ac47a328d36932641dcc73ca1691 1160 Packages.bz2
+ 8bd1d04d4beed534aa51605be41a512296224caa2d4aab607b809b52406806c9 2539 Packages
+ 1d17a6cb37c29e93c96f49e255e50ce91dcd697ddb64c7f01532f920c5150fd9 1164 Packages.bz2
