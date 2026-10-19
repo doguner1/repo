@@ -36,19 +36,3 @@ Size: 883716
 MD5sum: 137470dec3de8b572544799afb653a9b
 SHA256: 31bde76c099d32c503a0aed8c7691097a9cb418ea67b532b0680e9333151e140
 
-Package: com.doguner.notificationvault
-Name: NotificationVault
-Version: 1.0.0
-Architecture: iphoneos-arm64
-Description: Local, private notification history manager for iOS! Records every incoming notification to SQLite with search, statistics, and simulation testing. Includes standalone Home Screen app! (Dopamine rootless, iOS 14 - 15+)
-Maintainer: doguner
-Author: doguner
-Section: Tweaks
-Depends: mobilesubstrate (>= 0.9.5000), preferenceloader
-Tag: role::cydia, purpose::extension
-SileoDepiction: https://doguner1.github.io/repo/depiction_notificationvault.json
-Filename: com.doguner.notificationvault_1.0.0_iphoneos-arm64.deb
-Size: 252042
-MD5sum: ba18e0ea8bdd85beeb2a18fb40b2f67a
-SHA256: d8749df002a8884d6ab39c1883f8db71b2b28465df26742db8da46f100b11d15
-

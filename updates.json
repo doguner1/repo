@@ -12,11 +12,6 @@
       "latest_version": "1.1.0",
       "name": "LongShot",
       "min_ios": "14.0"
-    },
-    "com.doguner.notificationvault": {
-      "latest_version": "1.0.0",
-      "name": "NotificationVault",
-      "min_ios": "14.0"
     }
   }
 }
