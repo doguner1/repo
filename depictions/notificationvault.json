@@ -1,0 +1,39 @@
+{
+  "minVersion": "0.1",
+  "headerImage": "https://doguner1.github.io/repo/assets/notificationvault/icon_1024.png",
+  "tintColor": "#f97316",
+  "tabs": [
+    {
+      "tabname": "Details",
+      "class": "DepictionStackView",
+      "views": [
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "### 🔔 NotificationVault — Offline Notification History & Logger\n\nNever lose a deleted or recalled message again! NotificationVault captures incoming notifications in real-time and stores them securely in a local, encrypted SQLite database on your device.\n\n#### ✨ Key Features\n- 🔒 **100% Offline & Private:** Zero cloud storage, zero telemetry leakage. Notifications never leave your local device.\n- 📱 **Standalone Viewer App (`NotificationVault.app`):** Filter by application bundle (WhatsApp, Telegram, Instagram, Messages, Mail) or search message content.\n- 🧪 **Live Push Simulation Suite:** Test WhatsApp, Instagram, Facebook, and Time-Sensitive alerts on demand right from Settings.\n- 🌍 **Global 11-Language Localization:** English, Turkish, German, French, Spanish, Italian, Russian, Japanese, Simplified Chinese, Arabic, and Vietnamese.\n- ⚙️ **Retina 29pt Settings Integration:** Full native settings management with instant database clear and log reporting.\n- 🛡️ **100% Free Community Release:** Freeware, strictly non-commercial."
+        },
+        {
+          "class": "DepictionTableButtonView",
+          "title": "☕ Buy Me a Coffee on Gumroad",
+          "action": "https://aliciamaze.gumroad.com/l/doguner-tweak-lab",
+          "openExternal": true
+        },
+        {
+          "class": "DepictionTableButtonView",
+          "title": "🌐 GitHub Repository",
+          "action": "https://github.com/doguner1/repo",
+          "openExternal": true
+        }
+      ]
+    },
+    {
+      "tabname": "Changelog",
+      "class": "DepictionStackView",
+      "views": [
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "#### Version 1.0.0\n- Initial release with offline SQLite notification logging.\n- Dedicated standalone viewer app.\n- Push simulation triggers in Settings.\n- Full 11-language support.\n- Fixed Settings icon and Sileo package list display."
+        }
+      ]
+    }
+  ]
+}

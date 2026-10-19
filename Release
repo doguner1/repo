@@ -3,13 +3,13 @@ Label: Doguner Repo
 Suite: stable
 Version: 1.0
 Codename: ios
-Date: Mon, 19 Oct 2026 07:28:10 +0000
+Date: Mon, 19 Oct 2026 07:58:42 +0000
 Architectures: iphoneos-arm64
 Components: main
-Description: Official repository for CarSplit and LongShot tweaks
+Description: Official repository for Doguner Tweak Lab releases
 MD5Sum:
- 9e19d24a2df39513c8608fa19cd5f17f 1780 Packages
- 1222a41c02a4ab1079a2b370be6d3cae 918 Packages.bz2
+ 3d8610503804970e43fdb17496ccee2c 1819 Packages
+ f417954cf68fe5c6f82035547fab4608 934 Packages.bz2
 SHA256:
- c7dd1b25beaf386f98bd55c076b5fc5ed1b5ad228cade63c979d3c732d8da241 1780 Packages
- 78fef7d75d65cfe68c08735e898554b95857c26ff64de659d1a0360b35a8f7c8 918 Packages.bz2
+ e5cea98004c46aa5132e9550e801ee5604ce149fa487f87e56d175789b8dd834 1819 Packages
+ 3f9f422b3777f2e86907473c4643092cee5cfc6dffd37ed41614a9f2f49226b3 934 Packages.bz2

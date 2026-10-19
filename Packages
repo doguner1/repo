@@ -11,8 +11,8 @@ Tag: role::cydia, purpose::extension
 Icon: https://doguner1.github.io/repo/CydiaIcon.png
 SileoDepiction: https://doguner1.github.io/repo/depiction.json
 Depiction: https://doguner1.github.io/repo/index.html
-SileoDepiction: https://doguner1.github.io/repo/depiction.json
-Filename: com.doguner.carsplit_1.0.0-beta6_iphoneos-arm64.deb
+SileoDepiction: https://doguner1.github.io/repo/depictions/carsplit.json
+Filename: debs/carsplit/com.doguner.carsplit_1.0.0-beta6_iphoneos-arm64.deb
 Size: 107514
 MD5sum: eb09eac2ef61ecde8cc796a8bac2d817
 SHA256: 5f5cc1e5e37359f3af2d11ebf4d28f5a47a71968f5335dec51011047e203e66d
@@ -30,8 +30,8 @@ Tag: role::cydia, purpose::extension
 Icon: https://doguner1.github.io/repo/assets/longshot/icon.png
 SileoDepiction: https://doguner1.github.io/repo/depiction_longshot.json?v=1.1.0
 Depiction: https://doguner1.github.io/repo/index.html
-SileoDepiction: https://doguner1.github.io/repo/depiction_longshot.json
-Filename: com.doguner.longshot_1.1.0_iphoneos-arm64.deb
+SileoDepiction: https://doguner1.github.io/repo/depictions/longshot.json
+Filename: debs/longshot/com.doguner.longshot_1.1.0_iphoneos-arm64.deb
 Size: 883716
 MD5sum: 137470dec3de8b572544799afb653a9b
 SHA256: 31bde76c099d32c503a0aed8c7691097a9cb418ea67b532b0680e9333151e140

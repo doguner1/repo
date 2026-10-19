@@ -1,11 +1,11 @@
 {
   "version": 1,
-  "timestamp": 1729321200,
+  "timestamp": 1792396722,
   "repo": "https://doguner1.github.io/repo",
   "packages": {
     "com.doguner.carsplit": {
       "latest_version": "1.0.0-beta6",
-      "name": "CarSplit",
+      "name": "CarSplit (Beta)",
       "min_ios": "14.0"
     },
     "com.doguner.longshot": {
