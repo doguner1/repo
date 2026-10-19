@@ -9,7 +9,7 @@
   </a>
 </p>
 
-Official APT package repository for **LongShot** (intelligent long screenshot stitcher) and **CarSplit** (CarPlay dual-app multitasking) tweaks for rootless iOS (`/var/jb`).
+Official APT package repository for **LongShot** (intelligent long screenshot stitcher), **CarSplit** (CarPlay dual-app multitasking), and **NotificationVault** (offline anti-deletion notification archiver) for rootless iOS (`/var/jb`).
 
 🌐 **Web Showcase:** [https://doguner1.github.io/repo/](https://doguner1.github.io/repo/)  
 📦 **Add to Sileo / Zebra:** `https://doguner1.github.io/repo/`
@@ -19,37 +19,37 @@ Official APT package repository for **LongShot** (intelligent long screenshot st
 ## 📸 1. LongShot (v1.1.1)
 Take seamless, high-resolution long / scrolling screenshots in any iOS application turn-by-turn with a single tap.
 
-### 🖼️ Nasıl Çalışır? (2 Adımda Yakalama)
+### 🖼️ How It Works (2-Step Capture)
 
 <p align="center">
-  <img src="assets/longshot/longshot_prompt.png" alt="1. Tetikleme Kapsülü" width="34%" />
+  <img src="assets/longshot/longshot_prompt.png" alt="Step 1: Capture Prompt Capsule" width="34%" />
   &nbsp;&nbsp;&nbsp;&nbsp;
-  <img src="assets/longshot/longshot_manual_hud.png" alt="2. Canlı İlerleme HUD" width="34%" />
+  <img src="assets/longshot/longshot_manual_hud.png" alt="Step 2: Live Progress HUD" width="34%" />
 </p>
 <p align="center">
-  <i>(1. Adım: Ekran Görüntüsü Alındığında Açılan Kapsül • 2. Adım: Canlı Dilim Sayacı ve Durdurma HUD'ı)</i>
+  <i>(Step 1: Floating prompt capsule appears upon taking a screenshot • Step 2: Live slice counter and Stop HUD)</i>
 </p>
 
-### 📱 Çıktı & Özellikler
+### 📱 Output & Highlights
 
 <table>
 <tr>
 <td width="38%" align="center" valign="top">
-  <img src="assets/longshot/longshot_stitched_output.png" alt="LongShot Kesintisiz Dikey Çıktı" width="100%" />
-  <br><b>✨ Birleştirilmiş Kesintisiz Çıktı (Long Shot)</b>
+  <img src="assets/longshot/longshot_stitched_output.png" alt="LongShot Seamless Vertical Output" width="100%" />
+  <br><b>✨ Seamless Stitched Output (Long Shot)</b>
 </td>
 <td width="62%" valign="top">
 
-### ✨ LongShot Özellikleri & Mimarisi
-iOS uygulamalarında (Safari, Twitter/X, WhatsApp, Ayarlar, Reddit vb.) dikey olarak uzayan sayfaları tek dokunuşla kaydırarak tek bir kesintisiz uzun ekran görüntüsü halinde birleştiren akıllı dikişleme tweak'i.
+### ✨ LongShot Architecture & Features
+An intelligent stitching tweak that scrolls vertically elongated pages in iOS apps (Safari, Twitter/X, WhatsApp, Settings, Reddit, etc.) with a single tap to merge them into a single high-resolution vertical screenshot.
 
-* **🚀 Otomatik & Elle Modu:** 'Long Shot' ile tam otomatik veya 'Elle' ile adım adım kontrol.
-* **🛑 Canlı Durdurma Kontrolü:** Sayfanın sonunu beklemek zorunda değilsiniz; 'Durdur' butonu ile istenilen yerde sonlandırıp tam o noktaya kadar sıfır beyaz boşlukla dikişler.
-* **🖼️ iOS Küçük Ekranını Kapatma:** Sol alt köşedeki varsayılan ekran görüntüsü önizleme penceresini otomatik gizler, kapatıldığında anında eski haline döner.
-* **⚡ Respring Butonu:** Ayarlar menüsünden ve gezinti çubuğundan tek dokunuşla hızlı SpringBoard yeniden başlatma.
-* **💾 Galeriye Kaydet & Paylaş:** Doğrudan Fotoğraflar'a kaydeder ve yerel iOS Paylaşım sayfasını (`UIActivityViewController`) açar.
-* **⚙️ Ayarlar & Teşhis Paneli:** Ayarlar uygulamasından tek tıkla Telegram üzerinden geliştiriciye log iletir.
-* **🛡️ Sıfır Kilitlenme:** Güvenli çalışma zamanı kancalarıyla kilitlenme riski yoktur.
+* **🚀 Auto & Manual Modes:** 'Long Shot' for fully automated scrolling, or 'Manual' for granular step-by-step control.
+* **🛑 Live Stop Control:** No need to wait for the page bottom; tap 'Stop' anytime to immediately finalize and stitch slices up to that exact position without trailing blank space.
+* **🖼️ Stock Thumbnail Suppression:** Automatically hides the stock iOS bottom-left screenshot thumbnail preview, restoring it instantly when disabled.
+* **⚡ Fast Respring:** One-tap SpringBoard restart directly from the Settings menu and navigation bar.
+* **💾 Photos Library & Native Sharing:** Saves directly to Photos and presents the native iOS Share Sheet (`UIActivityViewController`).
+* **⚙️ Diagnostics & Support:** Send crash-free diagnostic reports directly to the developer via Telegram.
+* **🛡️ Zero Crashes:** Safe runtime method hooks with complete isolation from headless system services.
 
 </td>
 </tr>
@@ -94,27 +94,27 @@ Offline encrypted notification history vault and logger for iOS. Never miss a re
 ### 📸 Live Device Screenshots & Demo Video
 
 <p align="center">
-  <img src="assets/notificationvault/nv_app_viewer.png" alt="NotificationVault App Görüntüleyici & Silinen Bildirimler" width="31%" />
+  <img src="assets/notificationvault/nv_app_viewer.png" alt="NotificationVault App Viewer & Deleted Notifications" width="31%" />
   &nbsp;&nbsp;
-  <img src="assets/notificationvault/nv_settings_top.png" alt="NotificationVault Ayarlar & Uygulama Başlatıcı" width="31%" />
+  <img src="assets/notificationvault/nv_settings_top.png" alt="NotificationVault Settings & App Launcher" width="31%" />
   &nbsp;&nbsp;
-  <img src="assets/notificationvault/nv_settings_bottom.png" alt="NotificationVault Ayarlar & Veri Tabanı İstatistikleri" width="31%" />
+  <img src="assets/notificationvault/nv_settings_bottom.png" alt="NotificationVault Settings Database Stats" width="31%" />
 </p>
 <p align="center">
-  <i>(1. Görsel: Bağımsız Görüntüleyici Uygulaması ve "Silindi" Etiketleri • 2. Görsel: Ayarlar Paneli & Tek Tıkla Uygulama Açıcı • 3. Görsel: SQLite Veri Tabanı Sayacı & Kontroller)</i>
+  <i>(1. App Viewer with [Deleted] badges • 2. Settings Panel & Instant App Launcher • 3. SQLite Database Stats & Controls)</i>
 </p>
 
 <p align="center">
-  <a href="assets/notificationvault/demo.mp4"><b>▶️ Tanıtım / Canlı Önizleme Videosunu İzle (1.2 MB MP4)</b></a>
+  <a href="assets/notificationvault/demo.mp4"><b>▶️ Watch Live Video Demo (1.2 MB MP4)</b></a>
 </p>
 
-### ✨ NotificationVault Özellikleri & Mimarisi
-* 🔒 **%100 Çevrimdışı ve Gizli:** Hiçbir bildirim verisi cihaz dışına çıkmaz. Bulut veya harici sunucu iletişimi yoktur.
-* 🗑️ **Silinen Mesajları Saklama:** Gönderen kişi WhatsApp veya Instagram üzerinden mesajı "Herkesten Sil" yapsa dahi, NotificationVault yerel kopyasını saklar ve "Silindi" etiketiyle işaretler.
-* 📱 **Bağımsız Görüntüleyici Uygulaması (`NotificationVault.app`):** Ana ekranda ve Ayarlar panelinde tek tıkla açılabilen modern, aranabilir ve filtrelenebilir bildirim arşivi.
-* 🌍 **11 Dil Desteği:** Türkçe, İngilizce, Almanca, Fransızca, İspanyolca, İtalyanca, Rusça, Japonca, Basitleştirilmiş Çince, Arapça ve Vietnamca.
-* ⚙️ **Retina 29pt Settings Entegrasyonu:** Ayarlar uygulamasından anında veritabanı boyutu görme, tek tıkla arşivi temizleme ve hızlı Respring.
-* 🛡️ **%100 Ücretsiz Topluluk Sürümü:** Açık kaynak değil; kapalı kaynak freeware lisansıyla tamamen ücretsizdir.
+### ✨ NotificationVault Architecture & Features
+* 🔒 **100% Offline & Private:** Zero cloud storage, zero telemetry leakage. Notifications never leave your local device storage.
+* 🗑️ **Permanent Anti-Deletion Vault:** Even if the sender uses WhatsApp 'Delete for Everyone' or Instagram 'Unsend', NotificationVault permanently preserves the original message text and marks it with a distinct **[Deleted]** badge.
+* 📱 **Dedicated Standalone Viewer App (`NotificationVault.app`):** Accessible directly from your Home Screen and Settings. Clean, searchable, and filterable notification history archive.
+* 🌍 **Global 11-Language Localization:** English, Turkish, German, French, Spanish, Italian, Russian, Japanese, Simplified Chinese, Arabic, and Vietnamese.
+* ⚙️ **Retina 29pt Settings Integration:** Full native settings management with instant database clear, telemetry toggle, and fast Respring.
+* 🛡️ **100% Free Community Release:** Closed-source freeware, strictly non-commercial.
 
 ---
 
@@ -133,7 +133,7 @@ Offline encrypted notification history vault and logger for iOS. Never miss a re
 1. Open **Sileo** or **Zebra**.
 2. Go to **Sources** → **Add** (`+`).
 3. Enter: `https://doguner1.github.io/repo/`
-4. Search for `LongShot` or `CarSplit` and install!
+4. Search for **NotificationVault**, **LongShot**, or **CarSplit** and install!
 
 ---
 
