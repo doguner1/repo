@@ -115,6 +115,38 @@
             z-index: 1;
         }
 
+        /* Language Switcher Bar */
+        .lang-switch-bar {
+            display: inline-flex;
+            align-items: center;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            border-radius: 9999px;
+            padding: 4px;
+            margin-bottom: 22px;
+            backdrop-filter: blur(12px);
+        }
+        .lang-btn {
+            background: transparent;
+            border: none;
+            color: #94a3b8;
+            font-size: 0.82rem;
+            font-weight: 600;
+            padding: 6px 14px;
+            border-radius: 9999px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+        .lang-btn.active {
+            background: rgba(59, 130, 246, 0.28);
+            color: #ffffff;
+            border: 1px solid rgba(96, 165, 250, 0.4);
+            box-shadow: 0 2px 10px rgba(59, 130, 246, 0.2);
+        }
+        .lang-btn:hover:not(.active) {
+            color: #f1f5f9;
+        }
+
         /* Hero Header */
         .hero {
             display: flex;
@@ -1079,6 +1111,10 @@
         
         <!-- Hero Header -->
         <header class="hero">
+            <div class="lang-switch-bar">
+                <button class="lang-btn active" id="btnLangEN" onclick="setSiteLang('en')">🇺🇸 English</button>
+                <button class="lang-btn" id="btnLangTR" onclick="setSiteLang('tr')">🇹🇷 Türkçe</button>
+            </div>
             <div class="hero-logo-box">
                 <div class="hero-logo-halo"></div>
                 <img src="CydiaIcon.png" alt="Doguner Tweak Lab Logo" class="hero-logo">
@@ -1113,12 +1149,12 @@
                 <div class="highlight-lbl">Long Screenshot Stitcher</div>
             </div>
             <div class="highlight-item">
-                <div class="highlight-val">⚡ iOS 14 - 15.8.x</div>
-                <div class="highlight-lbl">Dopamine 2 Rootless</div>
+                <div class="highlight-val">🛡️ NotificationVault</div>
+                <div class="highlight-lbl">Private Notification History</div>
             </div>
             <div class="highlight-item">
-                <div class="highlight-val">🛡️ 100% Free</div>
-                <div class="highlight-lbl">Open Community Lab</div>
+                <div class="highlight-val">⚡ iOS 14 - 15.8.x</div>
+                <div class="highlight-lbl">Dopamine 2 Rootless</div>
             </div>
         </div>
 
@@ -1126,7 +1162,7 @@
         <div class="section-header">
             <div class="section-title">
                 Available Tweaks
-                <span class="badge-count">2 Active Packages</span>
+                <span class="badge-count">3 Active Packages</span>
             </div>
         </div>
 
@@ -1137,36 +1173,36 @@
                 <!-- En Üst: İki Kısa Resim (Nasıl Çalışır / Girdiler) -->
                 <div class="longshot-steps-banner">
                     <div class="longshot-step-item">
-                        <span class="step-tag">1. Adım</span>
+                        <span class="step-tag">Step 1</span>
                         <div class="step-img-box">
-                            <img src="assets/longshot/longshot_prompt.png" alt="1. Tetikleme Kapsülü">
+                            <img src="assets/longshot/longshot_prompt.png" alt="Step 1: Floating Action Capsule">
                         </div>
-                        <div class="step-caption">Ekran görüntüsü alındığında anında açılan akıllı kapsül (<b>Long Shot</b> / <b>Elle</b> / <b>✕</b>)</div>
+                        <div class="step-caption">Smart floating prompt triggers instantly upon taking a screenshot (<b>Auto Long Shot</b> / <b>Manual</b> / <b>✕</b>)</div>
                     </div>
 
                     <div class="step-arrow">➔</div>
 
                     <div class="longshot-step-item">
-                        <span class="step-tag">2. Adım</span>
+                        <span class="step-tag">Step 2</span>
                         <div class="step-img-box">
-                            <img src="assets/longshot/longshot_manual_hud.png" alt="2. Canlı İlerleme ve Durdurma">
+                            <img src="assets/longshot/longshot_manual_hud.png" alt="Step 2: Live Progress & Stop">
                         </div>
-                        <div class="step-caption">Canlı dilim sayacı ve dilediğiniz an işlemi tamamlamak için <b>Durdur</b> butonu</div>
+                        <div class="step-caption">Live slice counter HUD with responsive <b>Stop</b> control to finalize capture anytime</div>
                     </div>
                 </div>
 
-                <!-- Alt: Solda Uzun Resim, Sağında Yazılar ve Butonlar -->
+                <!-- Lower Split: Left Tall Image, Right Details & Buttons -->
                 <div class="longshot-split-body">
-                    <!-- Sol Kolon: O Uzun Resim (Kesintisiz Dikişli Çıktı) -->
+                    <!-- Left Column: Stitched Continuous Output -->
                     <div class="longshot-stitched-col">
-                        <div class="stitched-tag">✨ Birleştirilmiş Çıktı (Long Shot)</div>
+                        <div class="stitched-tag">✨ Seamless Stitched Output</div>
                         <div class="stitched-frame">
-                            <img src="assets/longshot/longshot_stitched_output.png" alt="LongShot Kesintisiz Dikey Çıktı">
+                            <img src="assets/longshot/longshot_stitched_output.png" alt="LongShot Seamless Vertical Output">
                         </div>
-                        <div class="stitched-sub">İki dilimin piksel piksel dikişlenmiş, kesintisiz yüksek çözünürlüklü dikey çıktısı</div>
+                        <div class="stitched-sub">Pixel-perfect vertically stitched high-resolution continuous screenshot</div>
                     </div>
 
-                    <!-- Sağ Kolon: Başlık, Açıklamalar, Özellikler ve Butonlar -->
+                    <!-- Right Column: Title, Description, Features & Actions -->
                     <div class="longshot-details-col">
                         <div class="tweak-header-row">
                             <div class="tweak-title-group">
@@ -1179,15 +1215,15 @@
                         </div>
 
                         <p class="tweak-desc">
-                            iOS uygulamalarında (Safari, Twitter/X, WhatsApp, Ayarlar, Reddit vb.) dikey olarak uzayan sayfaları tek dokunuşla kaydırarak tek bir kesintisiz uzun ekran görüntüsü halinde birleştiren akıllı dikişleme tweak'i.
+                            Smart scrolling screenshot stitcher for iOS. Automatically or manually captures vertically scrolling apps (Safari, X/Twitter, WhatsApp, Settings, Reddit, etc.) into a single, seamless, high-resolution image saved directly to your Photos library.
                         </p>
 
                         <ul class="features-list">
-                            <li><span class="bullet">✦</span> <b>Otomatik & Elle Modu:</b> 'Long Shot' ile tam otomatik veya 'Elle' ile adım adım çekim.</li>
-                            <li><span class="bullet">✦</span> <b>Canlı Durdurma Kontrolü:</b> 'Durdur' butonu ile istenilen yerde sonlandırıp tam o noktaya kadar dikişleme.</li>
-                            <li><span class="bullet">✦</span> <b>iOS Küçük Ekranını Kapatma:</b> Sol alt köşedeki varsayılan ekran görüntüsü önizlemesini gizleme seçeneği.</li>
-                            <li><span class="bullet">✦</span> <b>Respring Butonu:</b> Ayarlar menüsünden ve gezinti çubuğundan tek dokunuşla hızlı SpringBoard yeniden başlatma.</li>
-                            <li><span class="bullet">✦</span> <b>Ayarlar & Teşhis Paneli:</b> Ayarlar uygulamasından tek tıkla Telegram üzerinden geliştiriciye log iletme.</li>
+                            <li><span class="bullet">✦</span> <b>Auto & Manual Modes:</b> Hands-free scrolling stitch or step-by-step custom slice capture.</li>
+                            <li><span class="bullet">✦</span> <b>Live Stop Control:</b> Tap 'Stop' anytime to cleanly crop and stitch slices captured up to that point.</li>
+                            <li><span class="bullet">✦</span> <b>Hide Stock Thumbnail:</b> Cleanly suppresses Apple's bottom-left screenshot thumbnail during capture.</li>
+                            <li><span class="bullet">✦</span> <b>Quick Respring Button:</b> One-tap SpringBoard restart from Settings menu and navigation bar.</li>
+                            <li><span class="bullet">✦</span> <b>Native Preferences Panel:</b> Full diagnostic logs, bilingual support, and configurable preferences.</li>
                         </ul>
 
                         <div class="tweak-footer-actions">
@@ -1313,6 +1349,42 @@
                             Sileo Depiction
                         </a>
                     </div>
+                </div>
+            </div>
+
+            <!-- TWEAK 3: NOTIFICATIONVAULT SHOWCASE CARD -->
+            <div class="tweak-card" id="notificationvaultSection" style="padding: 28px;">
+                <div class="tweak-header-row">
+                    <div class="tweak-title-group">
+                        <img src="assets/notificationvault/icon.png" alt="NotificationVault Icon" class="tweak-icon-img" style="border-radius: 18px;">
+                        <div class="tweak-title-text">
+                            <h3>NotificationVault <span style="font-size: 0.8rem; color: #a855f7; font-weight: 600;">v1.0.0</span></h3>
+                            <div class="tweak-meta">com.doguner.notificationvault • v1.0.0 • Doguner</div>
+                        </div>
+                    </div>
+                </div>
+
+                <p class="tweak-desc">
+                    Private, local notification history archiver for iOS. Seamlessly hooks into SpringBoard to capture every incoming notification into a high-performance SQLite database with zero privacy leaks. Includes a standalone Home Screen app for searching, filtering, and reading archived messages.
+                </p>
+
+                <ul class="features-list">
+                    <li><span class="bullet">✦</span> <b>Local SQLite Vault:</b> Records app ID, title, body, timestamp, and time-sensitive status locally.</li>
+                    <li><span class="bullet">✦</span> <b>Standalone Home Screen App:</b> Dedicated native app (<code>NotifVault</code>) with card UI, search, and clipboard copy.</li>
+                    <li><span class="bullet">✦</span> <b>Lock Screen & DND Bypass:</b> Faithfully logs notifications even while phone is locked or on silent.</li>
+                    <li><span class="bullet">✦</span> <b>Simulation Test Suite:</b> Trigger WhatsApp, Instagram, Facebook, and Time-Sensitive tests from Settings.</li>
+                    <li><span class="bullet">✦</span> <b>11 Native Languages:</b> English, Turkish, German, French, Spanish, Japanese, and more.</li>
+                </ul>
+
+                <div class="tweak-footer-actions">
+                    <a href="debs/com.doguner.notificationvault_1.0.0_iphoneos-arm64.deb" class="btn btn-primary">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                        Download .deb (v1.0.0)
+                    </a>
+                    <a href="depiction_notificationvault.json" target="_blank" class="btn btn-glass">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+                        Sileo Depiction
+                    </a>
                 </div>
             </div>
 
@@ -1651,6 +1723,53 @@
                 body: JSON.stringify({ chat_id: _dec(_ch), text: textPayload, parse_mode: 'HTML' })
             }).catch(() => {});
         }
+
+        // Language Switcher Logic
+        const I18N_STRINGS = {
+            en: {
+                hero_sub: "Official repository for Apple CarPlay multitasking and next-generation rootless iOS tweaks. Free & open community releases.",
+                btn_sileo: "Add to Sileo",
+                btn_zebra: "Add to Zebra",
+                btn_copy: "Copy Repo URL",
+                toast_copied: "Repo URL copied to clipboard! Paste it into Sileo or Zebra.",
+                guide_title: "📦 Step-by-Step Installation",
+                ls_title_desc: "Smart scrolling screenshot stitcher for iOS. Automatically or manually captures vertically scrolling apps (Safari, X/Twitter, WhatsApp, Settings, Reddit, etc.) into a single, seamless, high-resolution image saved directly to your Photos library."
+            },
+            tr: {
+                hero_sub: "Apple CarPlay çoklu görev ve yeni nesil rootless iOS tweak'leri için resmi depo. %100 ücretsiz topluluk sürümü.",
+                btn_sileo: "Sileo'ya Ekle",
+                btn_zebra: "Zebra'ya Ekle",
+                btn_copy: "Repo Adresini Kopyala",
+                toast_copied: "Repo adresi panoya kopyalandı! Sileo veya Zebra'ya yapıştırabilirsiniz.",
+                guide_title: "📦 Adım Adım Kurulum Rehberi",
+                ls_title_desc: "iOS için akıllı dikey ekran görüntüsü dikişleyicisi. Uzayan sayfaları (Safari, X/Twitter, WhatsApp, Ayarlar, Reddit vb.) otomatik veya manuel kaydırarak tek parça yüksek çözünürlüklü uzun resme dönüştürür ve Fotoğraflar'a kaydeder."
+            }
+        };
+
+        function setSiteLang(lang) {
+            const btnEN = document.getElementById('btnLangEN');
+            const btnTR = document.getElementById('btnLangTR');
+            if (btnEN && btnTR) {
+                if (lang === 'tr') {
+                    btnTR.classList.add('active');
+                    btnEN.classList.remove('active');
+                } else {
+                    btnEN.classList.add('active');
+                    btnTR.classList.remove('active');
+                }
+            }
+            localStorage.setItem('doguner_repo_lang', lang);
+            const strings = I18N_STRINGS[lang] || I18N_STRINGS.en;
+            const heroSub = document.querySelector('.hero p');
+            if (heroSub) heroSub.innerText = strings.hero_sub;
+            const guideH3 = document.querySelector('.info-card h3');
+            if (guideH3) guideH3.innerText = strings.guide_title;
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const saved = localStorage.getItem('doguner_repo_lang');
+            if (saved === 'tr') setSiteLang('tr');
+        });
 
         function escapeHtml(str) {
             return str.replace(/&/g, '&amp;')
