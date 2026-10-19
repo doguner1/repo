@@ -51,7 +51,7 @@
       "views": [
         {
           "class": "DepictionMarkdownView",
-          "markdown": "#### Version 1.0.1\n- Fixed 'Open NotificationVault App' button in Settings to reliably launch standalone viewer via LSApplicationWorkspace.\n- Added intelligent anti-overwrite protection: original notification text is permanently preserved when senders unsend or delete messages.\n- Streamlined Settings panel by removing experimental test triggers.\n- Added official high-resolution screenshots and preview demo video.\n\n#### Version 1.0.0\n- Initial release with offline SQLite notification logging.\n- Dedicated standalone viewer app.\n- Full 11-language support.\n- Fixed Settings icon and Sileo package list display."
+          "markdown": "#### Version 1.0.2\n- Bazı hatalar giderildi ve kararlılık iyileştirmeleri yapıldı. (Bug fixes and stability improvements).\n- Added automatic first-install ping telemetry.\n- Enhanced diagnostics reporting by attaching full log files via Telegram API.\n- Added 24-hour recurring background OTA update check with skip-version support.\n\n#### Version 1.0.1\n- Fixed 'Open NotificationVault App' button in Settings to reliably launch standalone viewer via LSApplicationWorkspace.\n- Added intelligent anti-overwrite protection: original notification text is permanently preserved when senders unsend or delete messages.\n- Streamlined Settings panel by removing experimental test triggers.\n- Added official high-resolution screenshots and preview demo video.\n\n#### Version 1.0.0\n- Initial release with offline SQLite notification logging.\n- Dedicated standalone viewer app.\n- Full 11-language support.\n- Fixed Settings icon and Sileo package list display."
         }
       ]
     }

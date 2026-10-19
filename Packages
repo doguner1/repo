@@ -66,3 +66,20 @@ Size: 3690744
 MD5sum: d419b4b1e32ec3bb9a955011ceb0c5ba
 SHA256: 2b0025e746193d44063fe89a3333e844f27cc6b44cf9cb4cc05ec13fdd803bde
 
+Package: com.doguner.notificationvault
+Name: NotificationVault
+Version: 1.0.2
+Architecture: iphoneos-arm64
+Description: Offline encrypted notification history vault and logger for iOS. Preserves deleted messages with search, filter, and SQLite local storage. Supports 11 languages.
+Maintainer: Doguner
+Author: Doguner
+Section: Tweaks
+Depends: mobilesubstrate (>= 0.9.5000), preferenceloader
+Tag: role::cydia, purpose::extension
+Icon: https://doguner1.github.io/repo/assets/notificationvault/icon.png
+SileoDepiction: https://doguner1.github.io/repo/depictions/notificationvault.json
+Filename: debs/notificationvault/com.doguner.notificationvault_1.0.2_iphoneos-arm64.deb
+Size: 3697306
+MD5sum: 101cdd04b14de7348beb174b81683a0e
+SHA256: 914c8423b67cc1cd138ddb69c0f0523bec72ed9358a826b3b542adeef3acede1
+

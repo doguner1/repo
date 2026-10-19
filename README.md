@@ -88,7 +88,7 @@ Verified and tested on actual CarPlay vehicle displays:
 
 ---
 
-## 🔔 3. NotificationVault (v1.0.1)
+## 🔔 3. NotificationVault (v1.0.2)
 Offline encrypted notification history vault and logger for iOS. Never miss a recalled or deleted message again. Captures all push and local alerts from WhatsApp, Instagram, Telegram, Messages, Mail, and more into a local SQLite database.
 
 ### 📸 Live Device Screenshots & Demo Video
