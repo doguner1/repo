@@ -1,5 +1,6 @@
 {
-  "minVersion": "0.1",
+  "minVersion": "0.4",
+  "class": "DepictionTabView",
   "headerImage": "https://doguner1.github.io/repo/assets/longshot/longshot_prompt.png",
   "tintColor": "#007aff",
   "tabs": [

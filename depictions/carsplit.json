@@ -1,5 +1,6 @@
 {
-  "minVersion": "0.1",
+  "minVersion": "0.4",
+  "class": "DepictionTabView",
   "headerImage": "https://doguner1.github.io/repo/assets/carsplit/IMG_1188.PNG",
   "tintColor": "#3b82f6",
   "tabs": [
@@ -58,7 +59,7 @@
       "views": [
         {
           "class": "DepictionMarkdownView",
-          "markdown": "### Version 1.0.0-beta6\n- Decoupled CarBridge dependency to avoid Sileo queue conflicts.\n- Added full 11-language internationalization.\n- Split coordinates precision improvement on ultra-wide screens.\n\n### Version 1.0.0-beta5\n- Added manual split reset trigger in Settings to restore full screen.\n- Diagnostic report collector directly to developer Telegram.\n\n### Version 1.0.0-beta3-1\n- Multi-display coordinate fix for CarPlay dashboards.\n- Touch event pass-through stabilization."
+          "markdown": "#### Version 1.0.0-beta6\n- Decoupled CarBridge hard dependency to avoid package manager installation conflicts.\n- Added full 11-language internationalization.\n- Split coordinates precision improvements on widescreen head units.\n\n#### Version 1.0.0-beta5\n- Added manual split reset trigger in Settings to restore full screen.\n- Built-in diagnostic report collector directly to developer Telegram.\n\n#### Version 1.0.0-beta3-1\n- Multi-display coordinate fix for CarPlay dashboards.\n- Touch event pass-through stabilization."
         }
       ]
     }

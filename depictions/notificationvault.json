@@ -1,5 +1,6 @@
 {
-  "minVersion": "0.1",
+  "minVersion": "0.4",
+  "class": "DepictionTabView",
   "headerImage": "https://doguner1.github.io/repo/assets/notificationvault/icon_1024.png",
   "tintColor": "#f97316",
   "tabs": [
@@ -28,7 +29,7 @@
         },
         {
           "class": "DepictionMarkdownView",
-          "markdown": "### 🔔 NotificationVault — Offline Notification History & Logger\n\nNever lose a deleted or recalled message again! NotificationVault captures incoming notifications in real-time and stores them securely in a local, encrypted SQLite database on your device.\n\n[▶️ Watch Live Demo Video](https://raw.githubusercontent.com/doguner1/repo/main/assets/notificationvault/demo.mp4)\n\n#### ✨ Key Features\n- 🔒 **100% Offline & Private:** Zero cloud storage, zero telemetry leakage. Notifications never leave your local device.\n- 📱 **Standalone Viewer App (`NotificationVault.app`):** Filter by application bundle (WhatsApp, Telegram, Instagram, Messages, Mail) or search message content.\n- 🗑️ **Deleted Notification Retention:** Even if the sender un-sends or deletes a message, NotificationVault keeps the record with a distinct Deleted badge.\n- 🌍 **Global 11-Language Localization:** English, Turkish, German, French, Spanish, Italian, Russian, Japanese, Simplified Chinese, Arabic, and Vietnamese.\n- ⚙️ **Retina 29pt Settings Integration:** Full native settings management with instant database clear and log reporting.\n- 🛡️ **100% Free Community Release:** Freeware, strictly non-commercial."
+          "markdown": "### 🔔 NotificationVault — Offline Notification History & Logger\n\nNever lose a deleted or recalled message again! NotificationVault captures incoming notifications in real-time and stores them securely in a local, encrypted SQLite database on your device.\n\n[▶️ Watch Live Demo Video](https://raw.githubusercontent.com/doguner1/repo/main/assets/notificationvault/demo.mp4)\n\n#### ✨ Key Features\n- 🔒 **100% Offline & Private:** Zero cloud storage, zero telemetry leakage. Notifications never leave your local device.\n- 📱 **Standalone Viewer App (`NotificationVault.app`):** Filter by application bundle (WhatsApp, Telegram, Instagram, Messages, Mail) or search message content.\n- 🗑️ **Permanent Anti-Deletion Vault:** Even when the sender deletes or unsends a message, NotificationVault keeps the original text intact and flags it with a clear [Deleted] badge.\n- 🌍 **Global 11-Language Localization:** English, Turkish, German, French, Spanish, Italian, Russian, Japanese, Simplified Chinese, Arabic, and Vietnamese.\n- ⚙️ **Retina 29pt Settings Integration:** Full native settings management with instant database clear and log reporting.\n- 🛡️ **100% Free Community Release:** Freeware, strictly non-commercial."
         },
         {
           "class": "DepictionTableButtonView",
@@ -50,7 +51,7 @@
       "views": [
         {
           "class": "DepictionMarkdownView",
-          "markdown": "#### Version 1.0.1\n- Fixed 'Open NotificationVault App' button in Settings to reliably launch standalone viewer.\n- Streamlined Settings panel by removing experimental test triggers.\n- Added official screenshots and preview demo video.\n\n#### Version 1.0.0\n- Initial release with offline SQLite notification logging.\n- Dedicated standalone viewer app.\n- Full 11-language support.\n- Fixed Settings icon and Sileo package list display."
+          "markdown": "#### Version 1.0.1\n- Fixed 'Open NotificationVault App' button in Settings to reliably launch standalone viewer via LSApplicationWorkspace.\n- Added intelligent anti-overwrite protection: original notification text is permanently preserved when senders unsend or delete messages.\n- Streamlined Settings panel by removing experimental test triggers.\n- Added official high-resolution screenshots and preview demo video.\n\n#### Version 1.0.0\n- Initial release with offline SQLite notification logging.\n- Dedicated standalone viewer app.\n- Full 11-language support.\n- Fixed Settings icon and Sileo package list display."
         }
       ]
     }

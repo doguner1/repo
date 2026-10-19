@@ -9,8 +9,6 @@ Section: Tweaks
 Depends: mobilesubstrate (>= 0.9.5000), preferenceloader
 Tag: role::cydia, purpose::extension
 Icon: https://doguner1.github.io/repo/CydiaIcon.png
-SileoDepiction: https://doguner1.github.io/repo/depiction.json
-Depiction: https://doguner1.github.io/repo/index.html
 SileoDepiction: https://doguner1.github.io/repo/depictions/carsplit.json
 Filename: debs/carsplit/com.doguner.carsplit_1.0.0-beta6_iphoneos-arm64.deb
 Size: 107514
@@ -33,4 +31,38 @@ Filename: debs/longshot/com.doguner.longshot_1.1.1_iphoneos-arm64.deb
 Size: 892800
 MD5sum: 45122e5258032f9f978a2f3a71bd26f5
 SHA256: e65f9103d8b61b616c5951b93ef1b572cb8d068dfdc1fd8ae7646e7f7f3a647e
+
+Package: com.doguner.notificationvault
+Name: NotificationVault
+Version: 1.0.0
+Architecture: iphoneos-arm64
+Description: Offline encrypted notification history vault and logger for iOS. Preserves deleted messages with search, filter, and SQLite local storage. Supports 11 languages.
+Maintainer: Doguner
+Author: Doguner
+Section: Tweaks
+Depends: mobilesubstrate (>= 0.9.5000), preferenceloader
+Tag: role::cydia, purpose::extension
+Icon: https://doguner1.github.io/repo/assets/notificationvault/icon.png
+SileoDepiction: https://doguner1.github.io/repo/depictions/notificationvault.json
+Filename: debs/notificationvault/com.doguner.notificationvault_1.0.0_iphoneos-arm64.deb
+Size: 3690828
+MD5sum: 8962a3d7155532898ce9d2dea424f31c
+SHA256: 2f08c8611c044aabb2b809b957875973b48c75ea4d2c55d0abcf63ccdc8d1e07
+
+Package: com.doguner.notificationvault
+Name: NotificationVault
+Version: 1.0.1
+Architecture: iphoneos-arm64
+Description: Offline encrypted notification history vault and logger for iOS. Preserves deleted messages with search, filter, and SQLite local storage. Supports 11 languages.
+Maintainer: Doguner
+Author: Doguner
+Section: Tweaks
+Depends: mobilesubstrate (>= 0.9.5000), preferenceloader
+Tag: role::cydia, purpose::extension
+Icon: https://doguner1.github.io/repo/assets/notificationvault/icon.png
+SileoDepiction: https://doguner1.github.io/repo/depictions/notificationvault.json
+Filename: debs/notificationvault/com.doguner.notificationvault_1.0.1_iphoneos-arm64.deb
+Size: 3690744
+MD5sum: d419b4b1e32ec3bb9a955011ceb0c5ba
+SHA256: 2b0025e746193d44063fe89a3333e844f27cc6b44cf9cb4cc05ec13fdd803bde
 
