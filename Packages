@@ -28,9 +28,9 @@ Tag: role::cydia, purpose::extension
 Icon: https://doguner1.github.io/repo/assets/longshot/icon.png
 SileoDepiction: https://doguner1.github.io/repo/depictions/longshot.json
 Filename: debs/longshot/com.doguner.longshot_1.1.2_iphoneos-arm64.deb
-Size: 896718
-MD5sum: a686fc01c9722d33c5d5af7c80bf5bf5
-SHA256: acca970d7ac60b018824aa3b512dcd4376543dbfc9810ef1ea9aeba355323ee2
+Size: 912980
+MD5sum: caca6b56a42e4b689ba956e846073966
+SHA256: 9ea5c2487aa4e23487d53c1b3277117f396ee23e60bd9500d7c4f0f52b648625
 
 Package: com.doguner.notificationvault
 Name: NotificationVault

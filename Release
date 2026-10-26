@@ -3,13 +3,13 @@ Label: Doguner Repo
 Suite: stable
 Version: 1.0
 Codename: ios
-Date: Mon, 26 Oct 2026 19:02:43 +0000
+Date: Mon, 26 Oct 2026 20:36:56 +0000
 Architectures: iphoneos-arm64
 Components: main
 Description: Official repository for Doguner Tweak Lab releases
 MD5Sum:
- d58a4206c286627b1c8aaab706bf7cfa 3928 Packages
- ceb3813ffb8ed5548348052ca4759927 1374 Packages.bz2
+ 7316d5448ec2ad773256a84889e60c84 3928 Packages
+ 684868a4f353d06bfbb7b12a787eb553 1382 Packages.bz2
 SHA256:
- c63ce937dcac6c196b37743a4bc040a94ae7978b89fce14831ae2661e3de7937 3928 Packages
- 6cdd4755152e913afb7572f51631d8c3a510c9e2144760bb5acee985e5fdca5e 1374 Packages.bz2
+ 9f86a8509f686638f29453a55a459ef2c7791ef3e9fd65a26386648e375a02a5 3928 Packages
+ c18bc5afcb5e696176290d312302f298bd9d390f530fffea7041acb03abc2100 1382 Packages.bz2
