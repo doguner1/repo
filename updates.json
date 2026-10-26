@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "timestamp": 1792412963,
+  "timestamp": 1793041363,
   "repo": "https://doguner1.github.io/repo",
   "packages": {
     "com.doguner.carsplit": {
@@ -9,14 +9,14 @@
       "min_ios": "14.0"
     },
     "com.doguner.longshot": {
-      "latest_version": "1.1.1",
+      "latest_version": "1.1.2",
       "name": "LongShot",
-      "min_ios": "14.0"
+      "min_ios": "15.0"
     },
     "com.doguner.notificationvault": {
       "latest_version": "1.0.2",
       "name": "NotificationVault",
-      "min_ios": "14.0"
+      "min_ios": "15.0"
     }
   }
 }

@@ -16,7 +16,7 @@ Official APT package repository for **LongShot** (intelligent long screenshot st
 
 ---
 
-## 📸 1. LongShot (v1.1.1)
+## 📸 1. LongShot (v1.1.2)
 Take seamless, high-resolution long / scrolling screenshots in any iOS application turn-by-turn with a single tap.
 
 ### 🖼️ How It Works (2-Step Capture)
@@ -45,6 +45,7 @@ An intelligent stitching tweak that scrolls vertically elongated pages in iOS ap
 
 * **🚀 Auto & Manual Modes:** 'Long Shot' for fully automated scrolling, or 'Manual' for granular step-by-step control.
 * **🛑 Live Stop Control:** No need to wait for the page bottom; tap 'Stop' anytime to immediately finalize and stitch slices up to that exact position without trailing blank space.
+* **📊 Status Bar Header:** The real status bar (clock, battery, signal) is kept at the top of the stitched image; toggleable in Settings and on by default.
 * **🖼️ Stock Thumbnail Suppression:** Automatically hides the stock iOS bottom-left screenshot thumbnail preview, restoring it instantly when disabled.
 * **⚡ Fast Respring:** One-tap SpringBoard restart directly from the Settings menu and navigation bar.
 * **💾 Photos Library & Native Sharing:** Saves directly to Photos and presents the native iOS Share Sheet (`UIActivityViewController`).

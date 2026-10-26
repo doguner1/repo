@@ -17,9 +17,9 @@ SHA256: 5f5cc1e5e37359f3af2d11ebf4d28f5a47a71968f5335dec51011047e203e66d
 
 Package: com.doguner.longshot
 Name: LongShot
-Version: 1.1.1
+Version: 1.1.2
 Architecture: iphoneos-arm64
-Description: Seamless vertical long screenshot stitcher for iOS apps! Tap LongShot or Manual after taking a screenshot to stitch scrolling content. Full English & Turkish localization. (Dopamine rootless, iOS 15 - 17)
+Description: Seamless long scrolling screenshot capture tool for iOS. Auto and manual stitching, optional status bar header, and 11-language support. Tested on iOS 15 - 17 Dopamine.
 Maintainer: Doguner
 Author: Doguner
 Section: Tweaks
@@ -27,10 +27,10 @@ Depends: mobilesubstrate (>= 0.9.5000), preferenceloader
 Tag: role::cydia, purpose::extension
 Icon: https://doguner1.github.io/repo/assets/longshot/icon.png
 SileoDepiction: https://doguner1.github.io/repo/depictions/longshot.json
-Filename: debs/longshot/com.doguner.longshot_1.1.1_iphoneos-arm64.deb
-Size: 892836
-MD5sum: 0e4a07429328d4c8d5db3bbc33eb14cb
-SHA256: d0913f0e871058f5642212c9bbf9b46e73344141229f96fbffcbe71fec1b1d91
+Filename: debs/longshot/com.doguner.longshot_1.1.2_iphoneos-arm64.deb
+Size: 896718
+MD5sum: a686fc01c9722d33c5d5af7c80bf5bf5
+SHA256: acca970d7ac60b018824aa3b512dcd4376543dbfc9810ef1ea9aeba355323ee2
 
 Package: com.doguner.notificationvault
 Name: NotificationVault
