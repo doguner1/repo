@@ -16,7 +16,7 @@ Official APT package repository for **LongShot** (intelligent long screenshot st
 
 ---
 
-## 📸 1. LongShot (v1.1.2)
+## 📸 1. LongShot (v1.1.3)
 Take seamless, high-resolution long / scrolling screenshots in any iOS application turn-by-turn with a single tap.
 
 ### 🖼️ How It Works (2-Step Capture)
