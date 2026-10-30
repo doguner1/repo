@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "timestamp": 1793396233,
+  "timestamp": 1793402609,
   "repo": "https://doguner1.github.io/repo",
   "packages": {
     "com.doguner.carsplit": {
@@ -9,7 +9,7 @@
       "min_ios": "14.0"
     },
     "com.doguner.longshot": {
-      "latest_version": "2.0.2",
+      "latest_version": "2.0.3",
       "name": "LongShot",
       "min_ios": "15.0"
     },
